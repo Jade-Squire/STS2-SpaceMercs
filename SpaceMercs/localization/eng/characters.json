@@ -1,3 +1,16 @@
 {
-  
+  "SPACEMERCS-SPACE_MERCS.aromaPrinciple": "Lore",
+  "SPACEMERCS-SPACE_MERCS.banter.alive.endTurnPing": "Co-op hurry up end turn ping message",
+  "SPACEMERCS-SPACE_MERCS.banter.dead.endTurnPing": "...",
+  "SPACEMERCS-SPACE_MERCS.cardsModifierDescription": "__ cards will now appear in rewards and shops.",
+  "SPACEMERCS-SPACE_MERCS.cardsModifierTitle": "__ Cards",
+  "SPACEMERCS-SPACE_MERCS.description": "Character Selection\nScreen Description",
+  "SPACEMERCS-SPACE_MERCS.eventDeathPrevention": "Co-op survival line",
+  "SPACEMERCS-SPACE_MERCS.goldMonologue": "Line spoken when obtaining a large amount of gold",
+  "SPACEMERCS-SPACE_MERCS.possessiveAdjective": "his/her/its",
+  "SPACEMERCS-SPACE_MERCS.pronounObject": "him/her/it",
+  "SPACEMERCS-SPACE_MERCS.pronounPossessive": "his/hers/its",
+  "SPACEMERCS-SPACE_MERCS.pronounSubject": "he/she/it",
+  "SPACEMERCS-SPACE_MERCS.title": "The SpaceMercs",
+  "SPACEMERCS-SPACE_MERCS.titleObject": "The SpaceMercs"
 }
