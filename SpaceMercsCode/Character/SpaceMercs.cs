@@ -6,31 +6,28 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Cards.Basic;
+using SpaceMercs.SpaceMercsCode.Cards.Common;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
 public class SpaceMercs : PlaceholderCharacterModel
 {
-    public const string CharacterId = "SpaceMercs";
+    public const string CharacterId = "Cosmopaladin";
 
     public static readonly Color Color = new("ffffff");
 
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override CharacterGender Gender => CharacterGender.Masculine;
     public override int StartingHp => 70;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<StrikeCosmopaladin>(),
+        ModelDb.Card<DefendCosmopaladin>(),
+        ModelDb.Card<ThrowingHammer>(),
+        ModelDb.Card<Armaments>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

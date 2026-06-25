@@ -1,3 +1,10 @@
 {
+  "SPACEMERCS-STRIKE_COSMOPALADIN.description": "Deal {Damage:diff()} damage.",
+  "SPACEMERCS-STRIKE_COSMOPALADIN.title": "Strike",
+
+  "SPACEMERCS-DEFEND_COSMOPALADIN.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "SPACEMERCS-DEFEND_COSMOPALADIN.title": "Defend",
   
+  "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [gold]Cure[/gold].\nPut this {IfUpgraded:show:back in your hand.|on top of your draw pile.}",
+  "SPACEMERCS-THROWING_HAMMER.title": "Throwing Hammer"
 }
