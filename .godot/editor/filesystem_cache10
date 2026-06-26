@@ -46,9 +46,9 @@ SpaceMercsCard.cs::CSharpScript::9044222539749811211::1782489571::0::1::::<><><>
 ::res://SpaceMercsCode/Cards/Basic/::1782489884
 DefendCosmopaladin.cs::CSharpScript::8313279328033639835::1782489571::0::1::::<><><>0<>0<><>::
 StrikeCosmopaladin.cs::CSharpScript::8572200196069301046::1782489571::0::1::::<><><>0<>0<><>::
-::res://SpaceMercsCode/Cards/Common/::1782499687
+::res://SpaceMercsCode/Cards/Common/::1782509222
 HammerStrike.cs::CSharpScript::1396191115518642814::1782499687::0::1::::<><><>0<>0<><>::
-ThrowingHammer.cs::CSharpScript::3969555098717679873::1782494740::0::1::::<><><>0<>0<><>::
+ThrowingHammer.cs::CSharpScript::3969555098717679873::1782509222::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Cards/Variables/::1782489884
 CureVar.cs::CSharpScript::799695790883980551::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Character/::1782499037
@@ -60,9 +60,9 @@ SpaceMercsRelicPool.cs::CSharpScript::5947626640071578561::1782489571::0::1::::<
 StringExtensions.cs::CSharpScript::1457436498080195519::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Potions/::1782489571
 SpaceMercsPotion.cs::CSharpScript::7723880168482406706::1782489571::0::1::::<><><>0<>0<><>::
-::res://SpaceMercsCode/Powers/::1782508426
+::res://SpaceMercsCode/Powers/::1782510417
 CurePower.cs::CSharpScript::2176310675198737965::1782507231::0::1::::<><><>0<>0<><>::
-ScorchPower.cs::CSharpScript::8118721870881739750::1782508426::0::1::::<><><>0<>0<><>::
+ScorchPower.cs::CSharpScript::8118721870881739750::1782510417::0::1::::<><><>0<>0<><>::
 SpaceMercsPower.cs::CSharpScript::1857601521410511731::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Relics/::1782489571
 SpaceMercsRelic.cs::CSharpScript::1845930452206173263::1782489571::0::1::::<><><>0<>0<><>::
