@@ -1,4 +1,5 @@
 ﻿using Godot;
+using Godot.Collections;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -30,6 +31,19 @@ public class ScorchPower() : SpaceMercsPower
         {
             if (power.Amount >= 10)
             {
+                List<Creature> creatures = new List<Creature>();
+                foreach (var currCreature in CombatState.Enemies)
+                {
+                    if (currCreature.IsAlive && currCreature != power.Owner)
+                    {
+                        creatures.Add(currCreature);
+                    }
+                }
+
+                foreach (var currCreature in creatures)
+                {
+                    CreatureCmd.Damage(choiceContext, currCreature, 15M, ValueProp.Unpowered, null, null);
+                }
                 CreatureCmd.Damage(choiceContext, power.Owner, 30M, ValueProp.Unpowered, null, null);
                 PowerCmd.ModifyAmount(choiceContext, power, -10, applier, cardSource);
             }

@@ -25,7 +25,7 @@ public class ThrowingHammer() : SpaceMercsCard(1,
         new DamageVar(3M, ValueProp.Move),
         new PowerVar<CurePower>(2),
         new PowerVar<StrengthPower>(0),
-        new PowerVar<ScorchPower>(1)
+        new PowerVar<ScorchPower>(7)
     ];
 
     protected override async Task OnPlay(
