@@ -60,9 +60,9 @@ SpaceMercsRelicPool.cs::CSharpScript::5947626640071578561::1782489571::0::1::::<
 StringExtensions.cs::CSharpScript::1457436498080195519::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Potions/::1782489571
 SpaceMercsPotion.cs::CSharpScript::7723880168482406706::1782489571::0::1::::<><><>0<>0<><>::
-::res://SpaceMercsCode/Powers/::1782497901
-CurePower.cs::CSharpScript::2176310675198737965::1782489571::0::1::::<><><>0<>0<><>::
-ScorchPower.cs::CSharpScript::8118721870881739750::1782497901::0::1::::<><><>0<>0<><>::
+::res://SpaceMercsCode/Powers/::1782508426
+CurePower.cs::CSharpScript::2176310675198737965::1782507231::0::1::::<><><>0<>0<><>::
+ScorchPower.cs::CSharpScript::8118721870881739750::1782508426::0::1::::<><><>0<>0<><>::
 SpaceMercsPower.cs::CSharpScript::1857601521410511731::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Relics/::1782489571
 SpaceMercsRelic.cs::CSharpScript::1845930452206173263::1782489571::0::1::::<><><>0<>0<><>::

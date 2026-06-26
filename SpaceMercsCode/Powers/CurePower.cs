@@ -28,6 +28,13 @@ public class CurePower() : SpaceMercsPower
         _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
     }
 
+    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
+        ICombatState combatState)
+    {
+        _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
+        return base.AfterSideTurnStart(side, participants, combatState);
+    }
+
     public override decimal ModifyHpLostAfterOsty(Creature target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {

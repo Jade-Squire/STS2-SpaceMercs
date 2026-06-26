@@ -1,5 +1,6 @@
 ﻿using Godot;
 using Godot.Collections;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -19,6 +20,23 @@ public class ScorchPower() : SpaceMercsPower
     public override PowerStackType StackType =>
         PowerStackType.Counter;
 
+    private bool _hasGainedScorch = false;
+
+    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
+        ICombatState combatState)
+    {
+        if (side != Owner.Side)
+        {
+            return base.AfterSideTurnStart(side, participants, combatState);
+        }
+        if (!_hasGainedScorch)
+        {
+            PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), this, -Math.Max(Amount / 2, 1), null, null);
+        }
+        _hasGainedScorch = false;
+        return base.AfterSideTurnStart(side, participants, combatState);
+    }
+
     public override Task AfterPowerAmountChanged(
         PlayerChoiceContext choiceContext,
         PowerModel power,
@@ -29,6 +47,10 @@ public class ScorchPower() : SpaceMercsPower
         //TODO: try to add a delay to show you reached 10 stacks before removing and damaging
         if (power is ScorchPower)
         {
+            if (amount > 0)
+            {
+                _hasGainedScorch = true;
+            }
             if (power.Amount >= 10)
             {
                 List<Creature> creatures = new List<Creature>();
