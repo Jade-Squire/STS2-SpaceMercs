@@ -37,7 +37,7 @@ public class ScorchPower() : SpaceMercsPower
         return base.AfterSideTurnStart(side, participants, combatState);
     }
 
-    public override Task AfterPowerAmountChanged(
+    public override async Task AfterPowerAmountChanged(
         PlayerChoiceContext choiceContext,
         PowerModel power,
         Decimal amount,
@@ -64,13 +64,11 @@ public class ScorchPower() : SpaceMercsPower
 
                 foreach (var currCreature in creatures)
                 {
-                    CreatureCmd.Damage(choiceContext, currCreature, 15M, ValueProp.Unpowered, null, null);
+                    await CreatureCmd.Damage(choiceContext, currCreature, 15M, ValueProp.Unpowered, null, null);
                 }
-                CreatureCmd.Damage(choiceContext, power.Owner, 30M, ValueProp.Unpowered, null, null);
-                PowerCmd.ModifyAmount(choiceContext, power, -10, applier, cardSource);
+                await CreatureCmd.Damage(choiceContext, power.Owner, 30M, ValueProp.Unpowered, null, null);
+                await PowerCmd.ModifyAmount(choiceContext, power, -10, applier, cardSource);
             }
         }
-
-        return Task.CompletedTask;
     }   
 }

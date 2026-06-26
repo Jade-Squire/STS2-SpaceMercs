@@ -9,5 +9,14 @@
   "SPACEMERCS-THROWING_HAMMER.title": "Throwing Hammer",
   
   "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()}{IfUpgraded:show:(X+1)|X} damage.\nGain {IfUpgraded:show:{CurePower:diff()}}{IfUpgraded:show:(X+1)|X} [gold]Cure[/gold].",
-  "SPACEMERCS-HAMMER_STRIKE.title": "Hammer Strike"
+  "SPACEMERCS-HAMMER_STRIKE.title": "Hammer Strike",
+  
+  "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1.",
+  "SPACEMERCS-SMOKE_SCREEN.title": "Smoke Screen",
+
+  "SPACEMERCS-TACTICAL_STRAFE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{IfUpgraded:show:s}.",
+  "SPACEMERCS-TACTICAL_STRAFE.title": "Tactical Strafe",
+
+  "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
+  "SPACEMERCS-JETPACK.title": "Jetpack"
 }

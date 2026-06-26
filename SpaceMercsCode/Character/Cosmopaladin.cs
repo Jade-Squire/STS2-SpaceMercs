@@ -12,7 +12,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Common;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
-public class SpaceMercs : PlaceholderCharacterModel
+public class Cosmopaladin : PlaceholderCharacterModel
 {
     public const string CharacterId = "Cosmopaladin";
 
@@ -28,7 +28,9 @@ public class SpaceMercs : PlaceholderCharacterModel
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<ThrowingHammer>(),
         ModelDb.Card<HammerStrike>(),
-        ModelDb.Card<Armaments>()
+        ModelDb.Card<Armaments>(),
+        ModelDb.Card<SmokeScreen>(),
+        ModelDb.Card<TacticalStrafe>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
@@ -36,9 +38,9 @@ public class SpaceMercs : PlaceholderCharacterModel
         ModelDb.Relic<BurningBlood>()
     ];
 
-    public override CardPoolModel CardPool => ModelDb.CardPool<SpaceMercsCardPool>();
-    public override RelicPoolModel RelicPool => ModelDb.RelicPool<SpaceMercsRelicPool>();
-    public override PotionPoolModel PotionPool => ModelDb.PotionPool<SpaceMercsPotionPool>();
+    public override CardPoolModel CardPool => ModelDb.CardPool<CosmopaladinCardPool>();
+    public override RelicPoolModel RelicPool => ModelDb.RelicPool<CosmopaladinRelicPool>();
+    public override PotionPoolModel PotionPool => ModelDb.PotionPool<CosmopaladinPotionPool>();
 
     /*  PlaceholderCharacterModel will utilize placeholder basegame assets for most of your character assets until you
         override all the other methods that define those assets.

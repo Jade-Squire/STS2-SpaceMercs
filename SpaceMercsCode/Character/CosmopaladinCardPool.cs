@@ -4,9 +4,9 @@ using Godot;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
-public class SpaceMercsCardPool : CustomCardPoolModel
+public class CosmopaladinCardPool : CustomCardPoolModel
 {
-    public override string Title => SpaceMercs.CharacterId; //This is not a display name.
+    public override string Title => Cosmopaladin.CharacterId; //This is not a display name.
 
     public override string BigEnergyIconPath => "charui/big_energy.png".ImagePath();
     public override string TextEnergyIconPath => "charui/text_energy.png".ImagePath();

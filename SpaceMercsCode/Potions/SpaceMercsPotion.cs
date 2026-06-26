@@ -4,5 +4,5 @@ using SpaceMercs.SpaceMercsCode.Character;
 
 namespace SpaceMercs.SpaceMercsCode.Potions;
 
-[Pool(typeof(SpaceMercsPotionPool))]
+[Pool(typeof(CosmopaladinPotionPool))]
 public abstract class SpaceMercsPotion : CustomPotionModel;

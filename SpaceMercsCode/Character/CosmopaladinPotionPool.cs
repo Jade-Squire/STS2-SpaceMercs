@@ -4,9 +4,10 @@ using Godot;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
-public class SpaceMercsRelicPool : CustomRelicPoolModel
+public class CosmopaladinPotionPool : CustomPotionPoolModel
 {
-    public override Color LabOutlineColor => SpaceMercs.Color;
+    public override Color LabOutlineColor => Cosmopaladin.Color;
+
 
     public override string BigEnergyIconPath => "charui/big_energy.png".ImagePath();
     public override string TextEnergyIconPath => "charui/text_energy.png".ImagePath();

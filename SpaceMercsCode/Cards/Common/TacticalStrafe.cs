@@ -5,32 +5,29 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
 
-namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
+namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
-public class DefendCosmopaladin() : SpaceMercsCard(1,
-    CardType.Skill, CardRarity.Basic,
+public class TacticalStrafe() : SpaceMercsCard(0,
+    CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
     public override bool GainsBlock => true;
 
-    protected override HashSet<CardTag> CanonicalTags
-    {
-        get => new HashSet<CardTag>() { CardTag.Defend };
-    }
-    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(5M, ValueProp.Move)
+        new BlockVar(3, ValueProp.Move),
+        new CardsVar(1)
     ];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.GainBlock(this.Owner.Creature, this.DynamicVars.Block, play);
+        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, Owner);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(3M);
+        DynamicVars.Cards.UpgradeValueBy(1);
     }
 }
