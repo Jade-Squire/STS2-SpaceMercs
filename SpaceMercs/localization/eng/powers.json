@@ -1,5 +1,9 @@
 {
   "SPACEMERCS-CURE_POWER.description": "Heal an amount of hp equal to [gold]Cure[/gold] stacks at the end if your turn. If you are not at full health at the end of your turn, every instance of unblocked damage halves its [gold]Cure[/gold].",
   "SPACEMERCS-CURE_POWER.smartDescription": "Heal [blue]{Amount}[/blue] hp at the end of your turn. If you are not at full health at the end of your turn, every instance of unblocked damage halves your [gold]Cure[/gold].",
-  "SPACEMERCS-CURE_POWER.title": "Cure"
+  "SPACEMERCS-CURE_POWER.title": "Cure",
+
+  "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies.",
+  "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies.",
+  "SPACEMERCS-SCORCH_POWER.title": "Scorch"
 }

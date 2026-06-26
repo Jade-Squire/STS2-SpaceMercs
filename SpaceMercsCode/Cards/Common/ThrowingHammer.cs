@@ -17,13 +17,15 @@ public class ThrowingHammer() : SpaceMercsCard(1,
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<CurePower>()
+        HoverTipFactory.FromPower<CurePower>(),
+        HoverTipFactory.FromPower<ScorchPower>()
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(3M, ValueProp.Move),
         new PowerVar<CurePower>(2),
-        new PowerVar<StrengthPower>(0)
+        new PowerVar<StrengthPower>(0),
+        new PowerVar<ScorchPower>(1)
     ];
 
     protected override async Task OnPlay(
@@ -41,7 +43,8 @@ public class ThrowingHammer() : SpaceMercsCard(1,
             await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars[nameof(StrengthPower)].BaseValue, Owner.Creature, this);
         }
         await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature, DynamicVars[nameof(CurePower)].BaseValue, Owner.Creature, this);
-        await CardPileCmd.Add(this, IsUpgraded ? PileType.Hand : PileType.Draw, CardPilePosition.Top);
+        await PowerCmd.Apply<ScorchPower>(choiceContext, play.Target, DynamicVars[nameof(ScorchPower)].BaseValue, play.Target, this);
+        await CardPileCmd.Add(this, IsUpgraded ? PileType.Hand : PileType.Draw, IsUpgraded ? CardPilePosition.Bottom : CardPilePosition.Top);
     }
 
     protected override void OnUpgrade()
