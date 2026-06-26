@@ -27,6 +27,7 @@ public class SpaceMercs : PlaceholderCharacterModel
         ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<ThrowingHammer>(),
+        ModelDb.Card<HammerStrike>(),
         ModelDb.Card<Armaments>()
     ];
 
