@@ -62,6 +62,8 @@ public class ScorchPower() : SpaceMercsPower
                     }
                 }
 
+                await Cmd.CustomScaledWait(0.2f, 0.4f);
+                
                 foreach (var currCreature in creatures)
                 {
                     await CreatureCmd.Damage(choiceContext, currCreature, 15M, ValueProp.Unpowered, null, null);

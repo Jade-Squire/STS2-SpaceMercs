@@ -22,8 +22,28 @@
 
   "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
   "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow",
-
-
+  
   "SPACEMERCS-BROKEN_OATH.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nCosts 1 less if [gold]Remembered Vow[/gold] is not in your deck.",
-  "SPACEMERCS-BROKEN_OATH.title": "Broken Oath"
+  "SPACEMERCS-BROKEN_OATH.title": "Broken Oath",
+  
+  "SPACEMERCS-INCENDIARY_GRENADE.description": "Apply {ScorchPower:diff()} [gold]Scorch[/gold].\nGain {CurePower:diff()} [gold]Cure[/gold].",
+  "SPACEMERCS-INCENDIARY_GRENADE.title": "Incendiary Grenade",
+
+  "SPACEMERCS-THERMITE_GRENADE.description": "At the start of your turn, apply {ThermitePower:diff()} [gold]Scorch[/gold] to ALL enemies.",
+  "SPACEMERCS-THERMITE_GRENADE.title": "Thermite Grenade",
+
+  "SPACEMERCS-FUSION_GRENADE.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [gold]Scorch[/gold].",
+  "SPACEMERCS-FUSION_GRENADE.title": "Fusion Grenade",
+
+  "SPACEMERCS-ASHES_TO_ASHES.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES.title": "Ashes to Ashes",
+
+  "SPACEMERCS-SOLAR_RAMPART.description": "[gold]Unplayable[/gold] unless the previous card played was a skill.\nGain {Block:diff()} [gold]Block[/gold].\nGain {CurePower:diff()} [gold]Cure[/gold].",
+  "SPACEMERCS-SOLAR_RAMPART.title": "Solar Rampart",
+
+  "SPACEMERCS-FIERY_SPLENDOR.description": "Double your [gold]Cure[/gold].{IfUpgraded:show:\nDouble each enemy's [gold]Scorch[/gold].}",
+  "SPACEMERCS-FIERY_SPLENDOR.title": "Fiery Splendor",
+
+  "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()}X [gold]Scorch[/gold].{IfUpgraded:show:\nGain {CurePower:diff}X [gold]Cure[/gold].}",
+  "SPACEMERCS-CAUTERIZE.title": "Cauterize"
 }

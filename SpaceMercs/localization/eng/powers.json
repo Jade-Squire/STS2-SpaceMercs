@@ -3,7 +3,15 @@
   "SPACEMERCS-CURE_POWER.smartDescription": "Heal [blue]{Amount}[/blue] hp at the end of your turn. If you are not at full health at the end of your turn, every instance of unblocked damage halves your [gold]Cure[/gold].",
   "SPACEMERCS-CURE_POWER.title": "Cure",
 
-  "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies.",
-  "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies.",
-  "SPACEMERCS-SCORCH_POWER.title": "Scorch"
+  "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to the creature during your turn, the enemy loses half its stacks.",
+  "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, deal [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to this creature during your turn, this enemy loses half its stacks.",
+  "SPACEMERCS-SCORCH_POWER.title": "Scorch",
+  
+  "SPACEMERCS-THERMITE_POWER.description": "At the start of your turn, apply [gold]Scorch[/gold] to ALL enemies equal to [gold]Thermite[/gold] stacks.",
+  "SPACEMERCS-THERMITE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Scorch[/gold] to ALL enemies.",
+  "SPACEMERCS-THERMITE_POWER.title": "Thermite",
+
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.smartDescription": "Whenever you play a card containing \"Grenade\", return it to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.title": "Ashes to Ashes"
 }

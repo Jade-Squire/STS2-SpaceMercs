@@ -9,6 +9,8 @@ using MegaCrit.Sts2.Core.Models.Relics;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Common;
+using SpaceMercs.SpaceMercsCode.Cards.Rare;
+using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
@@ -28,11 +30,17 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<ThrowingHammer>(),
         ModelDb.Card<HammerStrike>(),
-        ModelDb.Card<Armaments>(),
         ModelDb.Card<SmokeScreen>(),
         ModelDb.Card<TacticalStrafe>(),
         ModelDb.Card<RememberedVow>(),
-        ModelDb.Card<BrokenOath>()
+        ModelDb.Card<BrokenOath>(),
+        ModelDb.Card<IncendiaryGrenade>(),
+        ModelDb.Card<ThermiteGrenade>(),
+        ModelDb.Card<FusionGrenade>(),
+        ModelDb.Card<AshesToAshes>(),
+        ModelDb.Card<SolarRampart>(),
+        ModelDb.Card<FierySplendor>(),
+        ModelDb.Card<Cauterize>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
