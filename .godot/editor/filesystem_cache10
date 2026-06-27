@@ -31,9 +31,9 @@ relic_outline.png::CompressedTexture2D::7440650747869478993::1782489571::1782489
 ::res://SpaceMercs/images/relics/big/::1782489571
 relic.png::CompressedTexture2D::5157319453275778723::1782489571::1782489571::1::::<><><>0<>0<>b7a9da0c832ab117b67899b9b54d44ba<>res://.godot/imported/relic.png-16dd34337320799f3995c5ce5ecac923.ctex::
 ::res://SpaceMercs/localization/::1782489571
-::res://SpaceMercs/localization/eng/::1782519450
+::res://SpaceMercs/localization/eng/::1782535370
 ancients.json::JSON::-1::1782511093::0::1::::<><><>0<>0<><>::
-cards.json::JSON::-1::1782519450::0::1::::<><><>0<>0<><>::
+cards.json::JSON::-1::1782535370::0::1::::<><><>0<>0<><>::
 card_keywords.json::JSON::-1::1782489571::0::1::::<><><>0<>0<><>::
 characters.json::JSON::-1::1782511093::0::1::::<><><>0<>0<><>::
 powers.json::JSON::-1::1782497993::0::1::::<><><>0<>0<><>::
@@ -43,9 +43,10 @@ static_hover_tips.json::JSON::-1::1782489571::0::1::::<><><>0<>0<><>::
 MainFile.cs::CSharpScript::2331605409125735213::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Cards/::1782511112
 SpaceMercsCard.cs::CSharpScript::9044222539749811211::1782511112::0::1::::<><><>0<>0<><>::
-::res://SpaceMercsCode/Cards/Basic/::1782519381
+::res://SpaceMercsCode/Cards/Basic/::1782535193
+BrokenOath.cs::CSharpScript::4583253347709609552::1782535193::0::1::::<><><>0<>0<><>::
 DefendCosmopaladin.cs::CSharpScript::8313279328033639835::1782511817::0::1::::<><><>0<>0<><>::
-RememberedVow.cs::CSharpScript::2209661189841456824::1782519381::0::1::::<><><>0<>0<><>::
+RememberedVow.cs::CSharpScript::2209661189841456824::1782534938::0::1::::<><><>0<>0<><>::
 StrikeCosmopaladin.cs::CSharpScript::8572200196069301046::1782489571::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Cards/Common/::1782515653
 HammerStrike.cs::CSharpScript::1396191115518642814::1782499687::0::1::::<><><>0<>0<><>::
@@ -55,8 +56,8 @@ TacticalStrafe.cs::CSharpScript::1375780404413845022::1782514919::0::1::::<><><>
 ThrowingHammer.cs::CSharpScript::3969555098717679873::1782510624::0::1::::<><><>0<>0<><>::
 ::res://SpaceMercsCode/Cards/Variables/::1782489884
 CureVar.cs::CSharpScript::799695790883980551::1782489571::0::1::::<><><>0<>0<><>::
-::res://SpaceMercsCode/Character/::1782519450
-Cosmopaladin.cs::CSharpScript::285686206876714842::1782519450::0::1::::<><><>0<>0<><>::
+::res://SpaceMercsCode/Character/::1782532429
+Cosmopaladin.cs::CSharpScript::285686206876714842::1782532429::0::1::::<><><>0<>0<><>::
 CosmopaladinCardPool.cs::CSharpScript::7813218391040084696::1782511112::0::1::::<><><>0<>0<><>::
 CosmopaladinPotionPool.cs::CSharpScript::2604448047478319857::1782511130::0::1::::<><><>0<>0<><>::
 CosmopaladinRelicPool.cs::CSharpScript::5947626640071578561::1782511146::0::1::::<><><>0<>0<><>::

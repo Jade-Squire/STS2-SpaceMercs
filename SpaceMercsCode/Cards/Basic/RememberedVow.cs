@@ -2,6 +2,7 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -20,8 +21,20 @@ public class RememberedVow() : SpaceMercsCard(1,
     private int _increasedBlock;
     private int _currentDamage = 1;
     private int _increasedDamage;
+    private bool _costReduced;
 
     public override bool GainsBlock => true;
+
+    [SavedProperty]
+    public bool CostReduced
+    {
+        get => _costReduced;
+        set 
+        {
+            AssertMutable();
+            _costReduced = value;
+        }
+    }
 
     [SavedProperty]
     public int CurrentBlock
@@ -138,5 +151,41 @@ public class RememberedVow() : SpaceMercsCard(1,
     {
         this.CurrentDamage = 1 + IncreasedDamage;
         this.CurrentBlock = 1 + IncreasedBlock;
+    }
+    
+    public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
+    {
+        if (card is BrokenOath)
+        {
+            EnergyCost.SetCustomBaseCost(1);
+            CostReduced = false;
+        }
+        return base.TryModifyCardBeingAddedToDeck(card, out newCard);
+    }
+
+    public override Task BeforeCardRemoved(CardModel card)
+    {
+        if (card is BrokenOath)
+        {
+            foreach (CardModel c in card.Pile.Cards)
+            {
+                if (c != card && c is BrokenOath)
+                {
+                    return base.BeforeCardRemoved(c);
+                }
+            }
+            
+            EnergyCost.SetCustomBaseCost(0);
+            CostReduced = true;
+        }
+        return base.BeforeCardRemoved(card);
+    }
+    
+    protected override void AfterDeserialized()
+    {
+        if (CostReduced)
+        {
+            EnergyCost.SetCustomBaseCost(0);
+        }
     }
 }

@@ -31,7 +31,8 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<Armaments>(),
         ModelDb.Card<SmokeScreen>(),
         ModelDb.Card<TacticalStrafe>(),
-        ModelDb.Card<RememberedVow>()
+        ModelDb.Card<RememberedVow>(),
+        ModelDb.Card<BrokenOath>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

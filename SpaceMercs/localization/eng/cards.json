@@ -20,6 +20,10 @@
   "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
   "SPACEMERCS-JETPACK.title": "Jetpack",
 
-  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1.\nCosts 1 less is Broken Oath is not in your deck.",
-  "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow"
+  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
+  "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow",
+
+
+  "SPACEMERCS-BROKEN_OATH.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nCosts 1 less if [gold]Remembered Vow[/gold] is not in your deck.",
+  "SPACEMERCS-BROKEN_OATH.title": "Broken Oath"
 }
