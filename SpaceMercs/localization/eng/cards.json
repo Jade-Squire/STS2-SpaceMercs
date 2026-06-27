@@ -18,5 +18,8 @@
   "SPACEMERCS-TACTICAL_STRAFE.title": "Tactical Strafe",
 
   "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
-  "SPACEMERCS-JETPACK.title": "Jetpack"
+  "SPACEMERCS-JETPACK.title": "Jetpack",
+
+  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1.\nCosts 1 less is Broken Oath is not in your deck.",
+  "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow"
 }
