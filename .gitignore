@@ -6,3 +6,4 @@ riderModule.iml
 .godot/
 *.user
 *.uid
+.idea/
