@@ -45,5 +45,17 @@
   "SPACEMERCS-FIERY_SPLENDOR.title": "Fiery Splendor",
 
   "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()}X [gold]Scorch[/gold].{IfUpgraded:show:\nGain {CurePower:diff}X [gold]Cure[/gold].}",
-  "SPACEMERCS-CAUTERIZE.title": "Cauterize"
+  "SPACEMERCS-CAUTERIZE.title": "Cauterize",
+
+  "SPACEMERCS-BRING_THE_HEAT.description": "Deal damage to ALL enemies equal to {IfUpgraded:show:double }your [gold]Cure[/gold].",
+  "SPACEMERCS-BRING_THE_HEAT.title": "Bring the Heat",
+
+  "SPACEMERCS-BURNING_FISTS.description": "Deal {Damage:diff()} damage.\nApply [gold]Scorch[/gold] equal to your [gold]Cure[/gold].",
+  "SPACEMERCS-BURNING_FISTS.title": "Burning Fists",
+
+  "SPACEMERCS-PERCUSSIVE_FLAMES.description": "Whenever you apply [gold]Scorch[/gold], apply 1 more.\nAdd {Burns:diff()} [gold]Burn{IfUpgraded:show:|s}[/gold] to your hand.",
+  "SPACEMERCS-PERCUSSIVE_FLAMES.title": "Percussive Flames",
+
+  "SPACEMERCS-CONSECRATE.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nHeal hp equal to the unblocked damage.",
+  "SPACEMERCS-CONSECRATE.title": "Consecrate"
 }

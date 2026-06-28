@@ -40,7 +40,11 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<AshesToAshes>(),
         ModelDb.Card<SolarRampart>(),
         ModelDb.Card<FierySplendor>(),
-        ModelDb.Card<Cauterize>()
+        ModelDb.Card<Cauterize>(),
+        ModelDb.Card<BringTheHeat>(),
+        ModelDb.Card<BurningFists>(),
+        ModelDb.Card<PercussiveFlames>(),
+        ModelDb.Card<Consecrate>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

@@ -13,5 +13,9 @@
 
   "SPACEMERCS-ASHES_TO_ASHES_POWER.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES_POWER.smartDescription": "Whenever you play a card containing \"Grenade\", return it to your hand.",
-  "SPACEMERCS-ASHES_TO_ASHES_POWER.title": "Ashes to Ashes"
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.title": "Ashes to Ashes",
+
+  "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.description": "Whenever you apply [gold]Scorch[/gold], apply [blue]1[/blue] more.",
+  "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.smartDescription": "Whenever you apply [gold]Scorch[/gold], apply [blue]{Amount}[/blue] more.",
+  "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.title": "Percussive Flames"
 }

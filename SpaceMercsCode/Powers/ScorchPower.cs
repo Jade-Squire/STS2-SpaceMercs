@@ -44,7 +44,6 @@ public class ScorchPower() : SpaceMercsPower
         Creature? applier,
         CardModel? cardSource)
     {
-        //TODO: try to add a delay to show you reached 10 stacks before removing and damaging
         if (power is ScorchPower && power.Owner == Owner)
         {
             if (amount > 0)
