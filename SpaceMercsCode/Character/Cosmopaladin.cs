@@ -11,6 +11,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Common;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
+using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
@@ -49,7 +50,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<TestRelic>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<CosmopaladinCardPool>();
