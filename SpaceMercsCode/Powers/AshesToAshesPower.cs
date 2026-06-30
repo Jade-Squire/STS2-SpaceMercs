@@ -17,7 +17,7 @@ public class AshesToAshesPower() : SpaceMercsPower
     public override (PileType, CardPilePosition) ModifyCardPlayResultPileTypeAndPosition(CardModel card, bool isAutoPlay,
         ResourceInfo resources, PileType pileType, CardPilePosition position)
     {
-        if (card.Tags.Contains(SpaceMercsTags.Grenade) && card.Type != CardType.Power)
+        if (card.Tags.Contains(SpaceMercsTags.Grenade) && card.Type != CardType.Power && card.Owner.Creature == Owner)
         {
             return (PileType.Hand, CardPilePosition.Bottom);
         }

@@ -1,10 +1,10 @@
 {
-  "SPACEMERCS-CURE_POWER.description": "Heal an amount of hp equal to [gold]Cure[/gold] stacks at the end if your turn. If you are not at full health at the end of your turn, every instance of unblocked damage halves its [gold]Cure[/gold].",
-  "SPACEMERCS-CURE_POWER.smartDescription": "Heal [blue]{Amount}[/blue] hp at the end of your turn. If you are not at full health at the end of your turn, every instance of unblocked damage halves your [gold]Cure[/gold].",
+  "SPACEMERCS-CURE_POWER.description": "Heal an amount of hp equal to [gold]Cure[/gold] stacks at the end if your turn. Every instance of unblocked damage halves its [gold]Cure[/gold].",
+  "SPACEMERCS-CURE_POWER.smartDescription": "Heal [blue]{Amount}[/blue] hp at the end of your turn. Every instance of unblocked damage halves your [gold]Cure[/gold].",
   "SPACEMERCS-CURE_POWER.title": "Cure",
 
-  "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, it [gold]Ignites[/gold], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to the creature during your turn, the enemy loses half its stacks.",
-  "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, it [gold]Ignites[/gold], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to this creature during your turn, this enemy loses half its stacks.",
+  "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, it [red]Ignites[/red], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to the creature during your turn, the enemy loses half its stacks.",
+  "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, it [red]Ignites[/red], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to this creature during your turn, this enemy loses half its stacks.",
   "SPACEMERCS-SCORCH_POWER.title": "Scorch",
   
   "SPACEMERCS-THERMITE_POWER.description": "At the start of your turn, apply [gold]Scorch[/gold] to ALL enemies equal to [gold]Thermite[/gold] stacks.",
@@ -21,5 +21,9 @@
 
   "SPACEMERCS-FORGE_MASTER_POWER.description": "[gold]Ignitions[/gold] you cause apply 2 [gold]Scorch[/gold] to ALL other enemies. ALL ignitions deal 30 damage to all other enemies instead of 15.",
   "SPACEMERCS-FORGE_MASTER_POWER.smartDescription": "[gold]Ignitions[/gold] you cause apply [blue]{Amount}[/blue] [gold]Scorch[/gold] to ALL other enemies. ALL ignitions deal 30 damage to all other enemies instead of 15.",
-  "SPACEMERCS-FORGE_MASTER_POWER.title": "Forge Master"
+  "SPACEMERCS-FORGE_MASTER_POWER.title": "Forge Master",
+
+  "SPACEMERCS-BURNING_TREADS_POWER.description": "Whenever you play a card, this creature gains 1 [gold]Scorch[/gold].",
+  "SPACEMERCS-BURNING_TREADS_POWER.smartDescription": "Whenever you play a card, this creature gains [blue]{Amount}[/blue] [gold]Scorch[/gold].",
+  "SPACEMERCS-BURNING_TREADS_POWER.title": "Burning Treads"
 }

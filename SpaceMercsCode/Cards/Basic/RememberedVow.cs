@@ -155,7 +155,7 @@ public class RememberedVow() : SpaceMercsCard(1,
     
     public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
     {
-        if (card is BrokenOath)
+        if (card is BrokenOath && card.Owner == Owner)
         {
             EnergyCost.SetCustomBaseCost(1);
             CostReduced = false;
@@ -165,7 +165,7 @@ public class RememberedVow() : SpaceMercsCard(1,
 
     public override Task BeforeCardRemoved(CardModel card)
     {
-        if (card is BrokenOath)
+        if (card is BrokenOath && card.Owner == Owner)
         {
             foreach (CardModel c in card.Pile.Cards)
             {

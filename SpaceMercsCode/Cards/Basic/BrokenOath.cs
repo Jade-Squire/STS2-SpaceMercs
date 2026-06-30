@@ -14,7 +14,7 @@ using SpaceMercs.SpaceMercsCode.Cards;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
-public class BrokenOath() : SpaceMercsCard(3,
+public class BrokenOath() : SpaceMercsCard(2,
     CardType.Attack, CardRarity.Basic,
     TargetType.AnyEnemy)
 {
@@ -43,9 +43,9 @@ public class BrokenOath() : SpaceMercsCard(3,
 
     public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
     {
-        if (card is RememberedVow)
+        if (card is RememberedVow && card.Owner == Owner)
         {
-            EnergyCost.SetCustomBaseCost(3);
+            EnergyCost.SetCustomBaseCost(2);
             CostReduced = false;
         }
         return base.TryModifyCardBeingAddedToDeck(card, out newCard);
@@ -53,7 +53,7 @@ public class BrokenOath() : SpaceMercsCard(3,
 
     public override Task BeforeCardRemoved(CardModel card)
     {
-        if (card is RememberedVow)
+        if (card is RememberedVow && card.Owner == Owner)
         {
             foreach (CardModel c in card.Pile.Cards)
             {
@@ -63,7 +63,7 @@ public class BrokenOath() : SpaceMercsCard(3,
                 }
             }
             
-            EnergyCost.SetCustomBaseCost(2);
+            EnergyCost.SetCustomBaseCost(1);
             CostReduced = true;
         }
         return base.BeforeCardRemoved(card);
@@ -92,7 +92,7 @@ public class BrokenOath() : SpaceMercsCard(3,
     {
         if (CostReduced)
         {
-            EnergyCost.SetCustomBaseCost(2);
+            EnergyCost.SetCustomBaseCost(1);
         }
     }
 }

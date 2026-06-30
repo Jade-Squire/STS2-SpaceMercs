@@ -26,10 +26,6 @@ public class CurePower() : SpaceMercsPower
             return;
         Flash();
         await CreatureCmd.Heal(Owner, Amount);
-        if (!_overrideCanLoseStacks)
-        {
-            _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
-        }
     }
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
@@ -39,7 +35,7 @@ public class CurePower() : SpaceMercsPower
         {
             return base.AfterSideTurnStart(side, participants, combatState);
         }
-        _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
+        _canLoseStacks = true;
         _overrideCanLoseStacks = false;
         return base.AfterSideTurnStart(side, participants, combatState);
     }

@@ -29,6 +29,6 @@ public class AshesToAshes() : SpaceMercsCard(2,
 
     protected override void OnUpgrade()
     {
-        Keywords.AddItem(CardKeyword.Innate);
+        AddKeyword(CardKeyword.Innate);
     }
 }

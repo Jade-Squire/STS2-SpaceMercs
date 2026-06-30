@@ -5,10 +5,10 @@
   "SPACEMERCS-DEFEND_COSMOPALADIN.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "SPACEMERCS-DEFEND_COSMOPALADIN.title": "Defend",
   
-  "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [gold]Cure[/gold].\nApply {ScorchPower:diff()} [gold]Scorch[/gold].\nPut this {IfUpgraded:show:back in your hand.|on top of your draw pile.}",
+  "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [pink]Cure[/pink].\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nPut this {IfUpgraded:show:back in your hand.|on top of your draw pile.}",
   "SPACEMERCS-THROWING_HAMMER.title": "Throwing Hammer",
   
-  "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()}{IfUpgraded:show:(X+1)|X} damage.\nGain {IfUpgraded:show:{CurePower:diff()}}{IfUpgraded:show:(X+1)|X} [gold]Cure[/gold].",
+  "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()}{IfUpgraded:show:(X+1)|X} damage.\nGain {IfUpgraded:show:{CurePower:diff()}}{IfUpgraded:show:(X+1)|X} [pink]Cure[/pink].",
   "SPACEMERCS-HAMMER_STRIKE.title": "Hammer Strike",
   
   "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1.",
@@ -26,45 +26,51 @@
   "SPACEMERCS-BROKEN_OATH.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nCosts 1 less if [gold]Remembered Vow[/gold] is not in your deck.",
   "SPACEMERCS-BROKEN_OATH.title": "Broken Oath",
   
-  "SPACEMERCS-INCENDIARY_GRENADE.description": "Apply {ScorchPower:diff()} [gold]Scorch[/gold].\nGain {CurePower:diff()} [gold]Cure[/gold].",
+  "SPACEMERCS-INCENDIARY_GRENADE.description": "Apply {ScorchPower:diff()} [orange]Scorch[/orange].\nGain {CurePower:diff()} [pink]Cure[/pink].",
   "SPACEMERCS-INCENDIARY_GRENADE.title": "Incendiary Grenade",
 
-  "SPACEMERCS-THERMITE_GRENADE.description": "At the start of your turn, apply {ThermitePower:diff()} [gold]Scorch[/gold] to ALL enemies.",
+  "SPACEMERCS-THERMITE_GRENADE.description": "At the start of your turn, apply {ThermitePower:diff()} [orange]Scorch[/orange] to ALL enemies.",
   "SPACEMERCS-THERMITE_GRENADE.title": "Thermite Grenade",
 
-  "SPACEMERCS-FUSION_GRENADE.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [gold]Scorch[/gold].",
+  "SPACEMERCS-FUSION_GRENADE.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].",
   "SPACEMERCS-FUSION_GRENADE.title": "Fusion Grenade",
 
   "SPACEMERCS-ASHES_TO_ASHES.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES.title": "Ashes to Ashes",
 
-  "SPACEMERCS-SOLAR_RAMPART.description": "[gold]Unplayable[/gold] unless the previous card played was a skill.\nGain {Block:diff()} [gold]Block[/gold].\nGain {CurePower:diff()} [gold]Cure[/gold].",
+  "SPACEMERCS-SOLAR_RAMPART.description": "[gold]Unplayable[/gold] unless the previous card played was a skill.\nGain {Block:diff()} [gold]Block[/gold].\nGain {CurePower:diff()} [pink]Cure[/pink].",
   "SPACEMERCS-SOLAR_RAMPART.title": "Solar Rampart",
 
-  "SPACEMERCS-FIERY_SPLENDOR.description": "Double your [gold]Cure[/gold].{IfUpgraded:show:\nDouble each enemy's [gold]Scorch[/gold].}",
+  "SPACEMERCS-FIERY_SPLENDOR.description": "Double your [pink]Cure[/pink].{IfUpgraded:show:\nDouble each enemy's [orange]Scorch[/orange].}",
   "SPACEMERCS-FIERY_SPLENDOR.title": "Fiery Splendor",
 
-  "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()}X [gold]Scorch[/gold].{IfUpgraded:show:\nGain {CurePower:diff}X [gold]Cure[/gold].}",
+  "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()}X [orange]Scorch[/orange].{IfUpgraded:show:\nGain {CurePower:diff}X [pink]Cure[/pink].}",
   "SPACEMERCS-CAUTERIZE.title": "Cauterize",
 
-  "SPACEMERCS-BRING_THE_HEAT.description": "Deal damage to ALL enemies equal to {IfUpgraded:show:double }your [gold]Cure[/gold].",
+  "SPACEMERCS-BRING_THE_HEAT.description": "Deal damage to ALL enemies equal to {IfUpgraded:show:double }your [pink]Cure[/pink].",
   "SPACEMERCS-BRING_THE_HEAT.title": "Bring the Heat",
 
-  "SPACEMERCS-BURNING_FISTS.description": "Deal {Damage:diff()} damage.\nApply [gold]Scorch[/gold] equal to your [gold]Cure[/gold].",
+  "SPACEMERCS-BURNING_FISTS.description": "Deal {Damage:diff()} damage.\nApply [orange]Scorch[/orange] equal to your [pink]Cure[/pink].",
   "SPACEMERCS-BURNING_FISTS.title": "Burning Fists",
 
-  "SPACEMERCS-PERCUSSIVE_FLAMES.description": "Whenever you apply [gold]Scorch[/gold], apply 1 more.\nAdd {Burns:diff()} [gold]Burn{IfUpgraded:show:|s}[/gold] to your hand.",
+  "SPACEMERCS-PERCUSSIVE_FLAMES.description": "Whenever you apply [orange]Scorch[/orange], apply 1 more.\nAdd {Burns:diff()} [gold]Burn{IfUpgraded:show:|s}[/gold] to your hand.",
   "SPACEMERCS-PERCUSSIVE_FLAMES.title": "Percussive Flames",
 
   "SPACEMERCS-CONSECRATE.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nHeal hp equal to the unblocked damage.",
   "SPACEMERCS-CONSECRATE.title": "Consecrate",
 
-  "SPACEMERCS-FORGE_MASTER.description": "Ignitions you cause apply 2 [gold]Scorch[/gold].\nALL ignitions deal 30 damage to all other enemies instead.",
+  "SPACEMERCS-FORGE_MASTER.description": "Ignitions you cause apply 2 [orange]Scorch[/orange].\nALL [red]Ignitions[/red] deal 30 damage to all other enemies instead.",
   "SPACEMERCS-FORGE_MASTER.title": "Forge Master",
 
-  "SPACEMERCS-SUNFIRE_FURNACE.description": "Gain {CurePower:diff()} [gold]Cure[/gold].\nYou cannot lose [gold]Cure[/gold] until your next turn.",
+  "SPACEMERCS-SUNFIRE_FURNACE.description": "Gain {CurePower:diff()} [pink]Cure[/pink].\nYou cannot lose [pink]Cure[/pink] until your next turn.",
   "SPACEMERCS-SUNFIRE_FURNACE.title": "Sunfire Furnace",
 
-  "SPACEMERCS-PHOENIX_RISING.description": "Gain {CurePower:diff()} [gold]Cure[/gold].\nIncrease this by {CureIncrease:diff()} permanently.",
-  "SPACEMERCS-PHOENIX_RISING.title": "Phoenix Rising"
+  "SPACEMERCS-PHOENIX_RISING.description": "Gain {CurePower:diff()} [pink]Cure[/pink].\nIncrease this by {CureIncrease:diff()} permanently.",
+  "SPACEMERCS-PHOENIX_RISING.title": "Phoenix Rising",
+
+  "SPACEMERCS-BURNING_TREADS.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nUntil end of turn, whenever you play a card, apply {BurningTreadsPower:diff()} [orange]Scorch[/orange] to the enemy.",
+  "SPACEMERCS-BURNING_TREADS.title": "Burning Treads",
+
+  "SPACEMERCS-FIREWALKER.description": "Apply {ScorchPower:diff()} [orange]Scorch[/orange] to ALL enemies.\nGain {ArtifactPower:diff()} [gold]Artifact[/gold].",
+  "SPACEMERCS-FIREWALKER.title": "Firewalker"
 }
