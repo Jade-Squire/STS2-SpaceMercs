@@ -1,10 +1,6 @@
 ﻿using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Map;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Encounters;
-using MegaCrit.Sts2.Core.Models.Events;
 using MegaCrit.Sts2.Core.Runs;
-using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Relics;
 

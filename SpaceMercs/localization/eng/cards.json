@@ -20,7 +20,7 @@
   "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
   "SPACEMERCS-JETPACK.title": "Jetpack",
 
-  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
+  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1 permanently.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
   "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow",
   
   "SPACEMERCS-BROKEN_OATH.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nCosts 1 less if [gold]Remembered Vow[/gold] is not in your deck.",
@@ -57,5 +57,14 @@
   "SPACEMERCS-PERCUSSIVE_FLAMES.title": "Percussive Flames",
 
   "SPACEMERCS-CONSECRATE.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nHeal hp equal to the unblocked damage.",
-  "SPACEMERCS-CONSECRATE.title": "Consecrate"
+  "SPACEMERCS-CONSECRATE.title": "Consecrate",
+
+  "SPACEMERCS-FORGE_MASTER.description": "Ignitions you cause apply 2 [gold]Scorch[/gold].\nALL ignitions deal 30 damage to all other enemies instead.",
+  "SPACEMERCS-FORGE_MASTER.title": "Forge Master",
+
+  "SPACEMERCS-SUNFIRE_FURNACE.description": "Gain {CurePower:diff()} [gold]Cure[/gold].\nYou cannot lose [gold]Cure[/gold] until your next turn.",
+  "SPACEMERCS-SUNFIRE_FURNACE.title": "Sunfire Furnace",
+
+  "SPACEMERCS-PHOENIX_RISING.description": "Gain {CurePower:diff()} [gold]Cure[/gold].\nIncrease this by {CureIncrease:diff()} permanently.",
+  "SPACEMERCS-PHOENIX_RISING.title": "Phoenix Rising"
 }

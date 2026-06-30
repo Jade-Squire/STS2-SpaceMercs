@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using BaseLib.Extensions;
+using Godot;
 using Godot.Collections;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -61,11 +62,25 @@ public class ScorchPower() : SpaceMercsPower
                     }
                 }
 
+                decimal damageToDeal = 15M;
+                
+                foreach (var player in CombatState.Players)
+                {
+                    if (player.HasPower<ForgeMasterPower>())
+                    {
+                        damageToDeal = 30M;
+                    }
+                }
+
                 await Cmd.CustomScaledWait(0.2f, 0.4f);
                 
                 foreach (var currCreature in creatures)
                 {
-                    await CreatureCmd.Damage(choiceContext, currCreature, 15M, ValueProp.Unpowered, null, null);
+                    if (applier != null && applier.HasPower<ForgeMasterPower>())
+                    {
+                        await PowerCmd.Apply<ScorchPower>(choiceContext, currCreature, applier.GetPowerAmount<ForgeMasterPower>(), applier, null);
+                    }
+                    await CreatureCmd.Damage(choiceContext, currCreature, damageToDeal, ValueProp.Unpowered, null, null);
                 }
                 await CreatureCmd.Damage(choiceContext, power.Owner, 30M, ValueProp.Unpowered, null, null);
                 await PowerCmd.ModifyAmount(choiceContext, power, -10, applier, cardSource);

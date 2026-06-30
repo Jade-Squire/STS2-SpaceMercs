@@ -18,6 +18,7 @@ public class CurePower() : SpaceMercsPower
         PowerStackType.Counter;
 
     private bool _canLoseStacks = true;
+    private bool _overrideCanLoseStacks = false;
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
@@ -25,14 +26,28 @@ public class CurePower() : SpaceMercsPower
             return;
         Flash();
         await CreatureCmd.Heal(Owner, Amount);
-        _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
+        if (!_overrideCanLoseStacks)
+        {
+            _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
+        }
     }
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
+        if (!participants.Contains(Owner) || Owner.IsDead)
+        {
+            return base.AfterSideTurnStart(side, participants, combatState);
+        }
         _canLoseStacks = Owner.CurrentHp < Owner.MaxHp;
+        _overrideCanLoseStacks = false;
         return base.AfterSideTurnStart(side, participants, combatState);
+    }
+
+    public void CanLoseStacksThisTurn(bool canLoseStacks)
+    {
+        _canLoseStacks = canLoseStacks;
+        _overrideCanLoseStacks = true;
     }
 
     public override decimal ModifyHpLostAfterOsty(Creature target, decimal amount, ValueProp props, Creature? dealer,

@@ -11,6 +11,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Common;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
+using SpaceMercs.SpaceMercsCode.Powers;
 using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
@@ -45,7 +46,10 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<BringTheHeat>(),
         ModelDb.Card<BurningFists>(),
         ModelDb.Card<PercussiveFlames>(),
-        ModelDb.Card<Consecrate>()
+        ModelDb.Card<Consecrate>(),
+        ModelDb.Card<ForgeMaster>(),
+        ModelDb.Card<SunfireFurnace>(),
+        ModelDb.Card<PhoenixRising>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
