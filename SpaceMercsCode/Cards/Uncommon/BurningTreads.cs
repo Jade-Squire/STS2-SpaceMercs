@@ -9,10 +9,15 @@ using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 
-public class BurningTreads() : SpaceMercsCard(1,
+public class BurningTreads() : SpaceMercsCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
+    public override CardMultiplayerConstraint MultiplayerConstraint
+    {
+        get => CardMultiplayerConstraint.MultiplayerOnly;
+    }
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<ScorchPower>()

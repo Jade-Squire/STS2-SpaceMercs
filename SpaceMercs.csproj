@@ -5,7 +5,7 @@
         <ImplicitUsings>true</ImplicitUsings>
         <Nullable>enable</Nullable> <!--Makes code analysis regarding null values stricter.-->
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-
+        <LangVersion>14.0</LangVersion>
         <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
         <PathMap>$(AppOutputBase)=.\</PathMap>
         <GodotDisabledSourceGenerators>GodotPluginsInitializer</GodotDisabledSourceGenerators>
@@ -64,6 +64,10 @@
         <Folder Include="SpaceMercs\images\card_portraits\big\"/>
         <Folder Include="SpaceMercs\images\powers\big\"/>
         <Folder Include="SpaceMercs\images\relics\big\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="LICENSE" />
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">

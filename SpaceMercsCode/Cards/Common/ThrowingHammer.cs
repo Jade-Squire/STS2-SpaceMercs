@@ -11,7 +11,7 @@ using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
-public class ThrowingHammer() : SpaceMercsCard(1,
+public class ThrowingHammer() : SpaceMercsCard(0,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
@@ -44,7 +44,8 @@ public class ThrowingHammer() : SpaceMercsCard(1,
         }
         await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature, DynamicVars[nameof(CurePower)].BaseValue, Owner.Creature, this);
         await PowerCmd.Apply<ScorchPower>(choiceContext, play.Target, DynamicVars[nameof(ScorchPower)].BaseValue, play.Target, this);
-        await CardPileCmd.Add(this, IsUpgraded ? PileType.Hand : PileType.Draw, IsUpgraded ? CardPilePosition.Bottom : CardPilePosition.Top);
+        await CardPileCmd.Add(this,PileType.Hand);
+        EnergyCost.AddThisTurn(1);
     }
 
     protected override void OnUpgrade()

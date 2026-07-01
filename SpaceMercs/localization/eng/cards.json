@@ -5,13 +5,13 @@
   "SPACEMERCS-DEFEND_COSMOPALADIN.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "SPACEMERCS-DEFEND_COSMOPALADIN.title": "Defend",
   
-  "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [color=springgreen]Cure[/color].\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nPut this {IfUpgraded:show:back in your hand.|on top of your draw pile.}",
+  "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [color=springgreen]Cure[/color].\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nPut this back in your hand.\nCosts 1 more this turn.",
   "SPACEMERCS-THROWING_HAMMER.title": "Throwing Hammer",
   
   "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()}{IfUpgraded:show:(X+1)|X} damage.\nGain {IfUpgraded:show:{CurePower:diff()}}{IfUpgraded:show:(X+1)|X} [color=springgreen]Cure[/color].",
   "SPACEMERCS-HAMMER_STRIKE.title": "Hammer Strike",
   
-  "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1.",
+  "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1 until played.",
   "SPACEMERCS-SMOKE_SCREEN.title": "Smoke Screen",
 
   "SPACEMERCS-TACTICAL_STRAFE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{IfUpgraded:show:s}.",
@@ -35,7 +35,7 @@
   "SPACEMERCS-FUSION_GRENADE.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].",
   "SPACEMERCS-FUSION_GRENADE.title": "Fusion Grenade",
 
-  "SPACEMERCS-ASHES_TO_ASHES.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES.description": "Whenever you play a card containing \"Grenade\" without [gold]Exhaust[/gold], add a 0 cost copy with [gold]Exhaust[/gold] to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES.title": "Ashes to Ashes",
 
   "SPACEMERCS-SOLAR_RAMPART.description": "[gold]Unplayable[/gold] unless the previous card played was a skill.\nGain {Block:diff()} [gold]Block[/gold].\nGain {CurePower:diff()} [color=springgreen]Cure[/color].",
@@ -68,9 +68,15 @@
   "SPACEMERCS-PHOENIX_RISING.description": "Gain {CurePower:diff()} [color=springgreen]Cure[/color].\nIncrease this by {CureIncrease:diff()} permanently.",
   "SPACEMERCS-PHOENIX_RISING.title": "Phoenix Rising",
 
-  "SPACEMERCS-BURNING_TREADS.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nUntil end of turn, whenever you play a card, apply {BurningTreadsPower:diff()} [orange]Scorch[/orange] to the enemy.",
+  "SPACEMERCS-BURNING_TREADS.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nUntil end of turn, whenever anybody plays a card, apply {BurningTreadsPower:diff()} [orange]Scorch[/orange] to the enemy.",
   "SPACEMERCS-BURNING_TREADS.title": "Burning Treads",
 
   "SPACEMERCS-FIREWALKER.description": "Apply {ScorchPower:diff()} [orange]Scorch[/orange] to ALL enemies.\nGain {ArtifactPower:diff()} [gold]Artifact[/gold].",
-  "SPACEMERCS-FIREWALKER.title": "Firewalker"
+  "SPACEMERCS-FIREWALKER.title": "Firewalker",
+  
+  "SPACEMERCS-TEST_WILL_GAIN.description": "Gain 1 Will",
+  "SPACEMERCS-TEST_WILL_GAIN.title": "Test Will Gain",
+
+  "SPACEMERCS-TEST_WILL_COST.description": "Costs 1 Will",
+  "SPACEMERCS-TEST_WILL_COST.title": "Test Will Cost"
 }

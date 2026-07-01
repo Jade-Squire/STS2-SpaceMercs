@@ -1,5 +1,7 @@
-﻿using MegaCrit.Sts2.Core.Entities.Cards;
+﻿using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Powers;
@@ -12,15 +14,20 @@ public class AshesToAshesPower() : SpaceMercsPower
         PowerType.Buff;
 
     public override PowerStackType StackType =>
-        PowerStackType.Single;
+        PowerStackType.Counter;
 
-    public override (PileType, CardPilePosition) ModifyCardPlayResultPileTypeAndPosition(CardModel card, bool isAutoPlay,
-        ResourceInfo resources, PileType pileType, CardPilePosition position)
+    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (card.Tags.Contains(SpaceMercsTags.Grenade) && card.Type != CardType.Power && card.Owner.Creature == Owner)
+        if (cardPlay.Card.Owner.Creature == Owner && cardPlay.Card.Tags.Contains(SpaceMercsTags.Grenade) &&
+            !cardPlay.Card.Keywords.Contains(CardKeyword.Exhaust))
         {
-            return (PileType.Hand, CardPilePosition.Bottom);
+            CardModel card = cardPlay.Card.CreateClone();
+            card.AddKeyword(CardKeyword.Exhaust);
+            card.EnergyCost.SetThisCombat(0);
+            for (int i = 0; i < Amount; i++)
+            {
+                await CardPileCmd.AddGeneratedCardToCombat(card.CreateClone(), PileType.Hand, cardPlay.Card.Owner);
+            }
         }
-        return base.ModifyCardPlayResultPileTypeAndPosition(card, isAutoPlay, resources, pileType, position);
     }
 }

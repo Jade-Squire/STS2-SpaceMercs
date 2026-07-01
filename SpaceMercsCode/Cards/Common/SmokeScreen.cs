@@ -43,7 +43,7 @@ public class SmokeScreen() : SpaceMercsCard(2,
         {
             return;
         }
-        selectedCard.EnergyCost.AddThisTurnOrUntilPlayed(-1);
+        selectedCard.EnergyCost.AddUntilPlayed(-1);
     }
 
     protected override void OnUpgrade()

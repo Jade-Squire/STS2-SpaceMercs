@@ -11,8 +11,8 @@
   "SPACEMERCS-THERMITE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [orange]Scorch[/orange] to ALL enemies.",
   "SPACEMERCS-THERMITE_POWER.title": "Thermite",
 
-  "SPACEMERCS-ASHES_TO_ASHES_POWER.description": "Whenever you play a card containing \"Grenade\", return it to your hand.",
-  "SPACEMERCS-ASHES_TO_ASHES_POWER.smartDescription": "Whenever you play a card containing \"Grenade\", return it to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.description": "Whenever you play a card containing \"Grenade\" without [gold]Exhaust[/gold], add a 0 cost copy with [gold]Exhaust[/gold] to your hand.",
+  "SPACEMERCS-ASHES_TO_ASHES_POWER.smartDescription": "Whenever you play a card containing \"Grenade\" without [gold]Exhaust[/gold], add [blue]{Amount}[/blue] 0 cost cop{Amount:plural(en):ies|y|ies} with [gold]Exhaust[/gold] to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES_POWER.title": "Ashes to Ashes",
 
   "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.description": "Whenever you apply [orange]Scorch[/orange], apply [blue]1[/blue] more.",
@@ -23,7 +23,15 @@
   "SPACEMERCS-FORGE_MASTER_POWER.smartDescription": "[gold]Ignitions[/gold] you cause apply [blue]{Amount}[/blue] [orange]Scorch[/orange] to ALL other enemies. ALL ignitions deal 30 damage to all other enemies instead of 15.",
   "SPACEMERCS-FORGE_MASTER_POWER.title": "Forge Master",
 
-  "SPACEMERCS-BURNING_TREADS_POWER.description": "Whenever you play a card, this creature gains 1 [orange]Scorch[/orange].",
-  "SPACEMERCS-BURNING_TREADS_POWER.smartDescription": "Whenever you play a card, this creature gains [blue]{Amount}[/blue] [orange]Scorch[/orange].",
-  "SPACEMERCS-BURNING_TREADS_POWER.title": "Burning Treads"
+  "SPACEMERCS-BURNING_TREADS_POWER.description": "Whenever anybody plays a card, this creature gains 1 [orange]Scorch[/orange].",
+  "SPACEMERCS-BURNING_TREADS_POWER.smartDescription": "Whenever anybody plays a card, this creature gains [blue]{Amount}[/blue] [orange]Scorch[/orange].",
+  "SPACEMERCS-BURNING_TREADS_POWER.title": "Burning Treads",
+
+  "SPACEMERCS-FROST_ARMOR_POWER.description": "Gain [gold]Block[/gold] equal to the amount of [gold]Slowed[/gold] on enemies. Lose [gold]Frost Armor[/gold] at the start of your turn.",
+  "SPACEMERCS-FROST_ARMOR_POWER.smartDescription": "Gain [gold]Block[/gold] equal to{Amount:plural(en):|| [blue]{Amount}[/blue] times} the amount of [gold]Slowed[/gold] on enemies. Lose [gold]Frost Armor[/gold] at the start of your turn.",
+  "SPACEMERCS-FROST_ARMOR_POWER.title": "Frost Armor",
+
+  "SPACEMERCS-SLOWED_POWER.description": "Doubles stacks at the start of the enemies turn. When the enemy has [blue]20[/blue] [gold]Slowed[/gold], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
+  "SPACEMERCS-SLOWED_POWER.smartDescription": "Doubles stacks at the start of the enemies turn. When the enemy has [blue]20[/blue] [gold]Slowed[/gold], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
+  "SPACEMERCS-SLOWED_POWER.title": "Slowed"
 }
