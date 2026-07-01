@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Hooks;
 using SpaceMercs.SpaceMercsCode.CombatState;
+using SpaceMercs.SpaceMercsCode.Keywords;
 
 namespace SpaceMercs.SpaceMercsCode.Cards;
 
@@ -188,5 +189,28 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
         return Task.CompletedTask;
         /* in case i want to have a hook after Determination spent
         await SpaceMercsHook.AfterDeterminationSpent(Owner.Creature.CombatState, amount, Owner);*/
+    }
+
+    public override void AfterCreated()
+    {
+        if (Keywords.Contains(SpaceMercsKeywords.Exert))
+        {
+            Owner.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
+            base.AfterCreated();
+        }
+    }
+
+    public void DeterminationChanged(int oldValue, int newValue)
+    {
+        if (newValue > 0)
+        {
+            EnergyCost.SetThisCombat(0);
+            SetDeterminationCostThisCombat(1);
+        }
+        else
+        {
+            EnergyCost.SetThisCombat(EnergyCost.Canonical);
+            SetDeterminationCostThisCombat(0);
+        }
     }
 }

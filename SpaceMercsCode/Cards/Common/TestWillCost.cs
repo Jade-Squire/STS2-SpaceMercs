@@ -20,26 +20,6 @@ public class TestWillCost() : SpaceMercsCard(3,
         SpaceMercsKeywords.Exert
     ];
 
-    public override void AfterCreated()
-    {
-        Owner.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
-        base.AfterCreated();
-    }
-
-    public void DeterminationChanged(int oldValue, int newValue)
-    {
-        if (newValue > 0)
-        {
-            EnergyCost.SetThisCombat(0);
-            SetDeterminationCostThisCombat(1);
-        }
-        else
-        {
-            EnergyCost.SetThisCombat(EnergyCost.Canonical);
-            SetDeterminationCostThisCombat(0);
-        }
-    }
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
