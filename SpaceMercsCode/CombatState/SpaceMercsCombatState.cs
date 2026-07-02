@@ -1,5 +1,10 @@
-﻿using MegaCrit.Sts2.Core.Entities.Players;
+﻿using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Players;
+using SpaceMercs.SpaceMercsCode.Commands;
+using SpaceMercs.SpaceMercsCode.Extensions;
 using SpaceMercs.SpaceMercsCode.Fields;
+using SpaceMercs.SpaceMercsCode.Nodes;
 
 namespace SpaceMercs.SpaceMercsCode.CombatState;
 
@@ -7,22 +12,25 @@ public static class PlayerCombatStateExtensions
 {
     public class CosmopaladinCombatState(PlayerCombatState combatState)
     {
-        private int _Determination;
         public event Action<int, int>? DeterminationChanged;
 
         public int Determination
         {
-            get => _Determination;
+            get;
             private set
             {
-                if (_Determination == value)
-                    return;
-                int Determination = _Determination;
-                _Determination = value;
+                if (field == value) return;
+                int determination = field;
+                field = value;
+                var state = combatState._player.Creature.CombatState;
+                if (state != null)
+                {
+                    CombatManager.Instance.History.DeterminationModified(state, field - determination, combatState._player);
+                }
                 Action<int, int> determinationChanged = DeterminationChanged;
                 if (determinationChanged == null)
                     return;
-                determinationChanged(Determination, _Determination);
+                determinationChanged(determination, field);
             }
         }
 

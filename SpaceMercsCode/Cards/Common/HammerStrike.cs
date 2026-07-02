@@ -19,6 +19,11 @@ public class HammerStrike() : SpaceMercsCard(0,
         HoverTipFactory.FromPower<CurePower>()
     ];
 
+    protected override HashSet<CardTag> CanonicalTags =>
+    [
+        CardTag.Strike
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(5M, ValueProp.Move),
         new PowerVar<CurePower>(1)

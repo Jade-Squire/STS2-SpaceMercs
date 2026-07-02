@@ -9,6 +9,7 @@ using SpaceMercs.SpaceMercsCode.Character;
 
 namespace SpaceMercs.SpaceMercsCode.Patches;
 
+/*
 [HarmonyPatch(typeof(NEnergyCounter), nameof(NEnergyCounter.Create))]
 public class NEnergyCounterPatch
 {
@@ -29,5 +30,19 @@ public class NEnergyCounterPatch
     static void SetPlayer(NEnergyCounter energyCounter, Player player)
     {
         AddedNodes.AddedNodes.NDeterminationCounter[energyCounter].SetPlayer(player);
+    }
+}*/
+
+[HarmonyPatch(typeof(NCombatUi), nameof(NCombatUi.Activate))]
+internal class NCombatUiPatches
+{
+    [HarmonyPostfix]
+    private static void Postfix(NCombatUi __instance, MegaCrit.Sts2.Core.Combat.CombatState state)
+    {
+        var determinationCounter = AddedNodes.AddedNodes.NDeterminationCounter[__instance];
+        determinationCounter.Initialize(LocalContext.GetMe(state)!);
+        determinationCounter.Reparent(__instance._energyCounter);
+        determinationCounter.ShowBehindParent = true;
+        determinationCounter.Position = new Vector2(0, -120);
     }
 }

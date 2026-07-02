@@ -1,6 +1,7 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using SpaceMercs.SpaceMercsCode.Character;
 using SpaceMercs.SpaceMercsCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -8,6 +9,7 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.CombatState;
+using SpaceMercs.SpaceMercsCode.Commands;
 using SpaceMercs.SpaceMercsCode.Keywords;
 
 namespace SpaceMercs.SpaceMercsCode.Cards;
@@ -216,6 +218,16 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
         {
             EnergyCost.SetThisCombat(EnergyCost.Canonical);
             SetDeterminationCostThisCombat(0);
+        }
+    }
+    
+    public void TryToConvertDetermination()
+    {
+        var combatState = Owner.PlayerCombatState;
+        if (combatState.Cosmopaladin().Determination >= 2)
+        {
+            PlayerCmd.GainEnergy(1, combatState._player);
+            CosmopaladinPlayerCmd.LoseDetermination(2, combatState._player);
         }
     }
 }

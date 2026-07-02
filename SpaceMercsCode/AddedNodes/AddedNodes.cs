@@ -1,5 +1,6 @@
 ﻿using BaseLib.Utils;
 using Godot;
+using MegaCrit.Sts2.Core.Assets;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Nodes.Cards;
@@ -10,12 +11,11 @@ namespace SpaceMercs.SpaceMercsCode.AddedNodes;
 
 public class AddedNodes
 {
-    public static AddedNode<NEnergyCounter, NDeterminationCounter> NDeterminationCounter = new(
-        "res://SpaceMercs/scenes/DeterminationCounter.tscn/",
-        (energyCounter, display) =>
-        {
-            var energyContainer = energyCounter.GetChild(0);
-            
-            energyContainer.AddChild(display);
-        });
+    public static AddedNode<NCombatUi, NDeterminationCounter> NDeterminationCounter = new(ui =>
+    {
+        var determinationCounter = PreloadManager.Cache.GetScene("res://SpaceMercs/scenes/DeterminationCounter.tscn")
+            .Instantiate<NDeterminationCounter>();
+        ui.AddChild(determinationCounter);
+        return determinationCounter;
+    });
 }

@@ -1,12 +1,24 @@
 ﻿using Godot;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Context;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Nodes.GodotExtensions;
 using MegaCrit.Sts2.Core.Nodes.HoverTips;
+using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
+using SpaceMercs.SpaceMercsCode.Cards.Unique;
 using SpaceMercs.SpaceMercsCode.CombatState;
+using SpaceMercs.SpaceMercsCode.Commands;
+using SpaceMercs.SpaceMercsCode.GameActions;
 
 namespace SpaceMercs.SpaceMercsCode.Nodes;
 
@@ -16,10 +28,14 @@ public partial class NDeterminationCounter : NClickableControl
     private Player? _player;
     private Label? _determinationText;
     private HoverTip _hoverTip;
-    
-    public void SetPlayer(Player player)
+    private bool _isListeningToCombatState;
+
+    public void Initialize(Player player)
     {
         _player = player;
+        _determinationText = GetNode<Label>("Label");
+        _determinationText.Text = "0";
+        ConnectDeterminationChangedSignal();
     }
 
     public override void _Ready()
@@ -28,10 +44,6 @@ public partial class NDeterminationCounter : NClickableControl
         Connect(Godot.Control.SignalName.MouseEntered, Callable.From(OnHovered));
         Connect(Godot.Control.SignalName.MouseExited, Callable.From(OnUnhovered));
         Connect(NClickableControl.SignalName.MousePressed, Callable.From<InputEvent>(onClicked));
-        _determinationText = GetNode<Label>("Label");
-        _determinationText.Text = _player.PlayerCombatState.Cosmopaladin().Determination.ToString();
-        _player.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
-        checkVisibility();
         base._Ready();
     }
 
@@ -48,15 +60,19 @@ public partial class NDeterminationCounter : NClickableControl
 
     public void OnUnhovered() => NHoverTipSet.Remove(this);
 
-    public void onClicked(InputEvent inputEvent)
+    public async void onClicked(InputEvent inputEvent)
     {
         if (!Visible) return;
 
         PlayerCombatStateExtensions.CosmopaladinCombatState cosmo = _player.PlayerCombatState.Cosmopaladin();
         if (cosmo.Determination >= 2)
         {
+            //await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), _player.Creature, new DamageVar(1, ValueProp.Move), _player.Creature);
+            /*
             cosmo.LoseDetermination(2);
-            _player.PlayerCombatState.GainEnergy(1);
+            CardPileCmd.AddToCombatAndPreview<Manifest>(_player.Creature, PileType.Hand, 1, _player);
+            */
+            RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(new ConvertDeterminationAction(_player));
         }
         else
         {
@@ -77,5 +93,15 @@ public partial class NDeterminationCounter : NClickableControl
         }
 
         Visible = cosmo.Determination > 0;
+    }
+
+    private void ConnectDeterminationChangedSignal()
+    {
+        if (_player != null && !_isListeningToCombatState)
+        {
+            var cosmoCombatState = _player.PlayerCombatState?.Cosmopaladin();
+            cosmoCombatState?.DeterminationChanged += DeterminationChanged;
+            _isListeningToCombatState = true;
+        }
     }
 }

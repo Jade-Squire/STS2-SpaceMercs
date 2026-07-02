@@ -19,7 +19,7 @@ public class TestWillGain() : SpaceMercsCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        Owner.PlayerCombatState.Cosmopaladin().GainDetermination(1);
+        Owner.PlayerCombatState.Cosmopaladin().GainDetermination(2);
         GD.Print("Current Determination: " + Owner.PlayerCombatState.Cosmopaladin().Determination);
     }
 

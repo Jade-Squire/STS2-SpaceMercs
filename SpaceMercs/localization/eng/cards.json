@@ -74,7 +74,7 @@
   "SPACEMERCS-FIREWALKER.description": "Apply {ScorchPower:diff()} [orange]Scorch[/orange] to ALL enemies.\nGain {ArtifactPower:diff()} [gold]Artifact[/gold].",
   "SPACEMERCS-FIREWALKER.title": "Firewalker",
   
-  "SPACEMERCS-TEST_WILL_GAIN.description": "Gain 1 Will",
+  "SPACEMERCS-TEST_WILL_GAIN.description": "Gain 2 Will",
   "SPACEMERCS-TEST_WILL_GAIN.title": "Test Will Gain",
 
   "SPACEMERCS-FROSTBURN.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color].\nGain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
@@ -84,5 +84,29 @@
   "SPACEMERCS-HUNGERING_FLAME.title": "Hungering Flame",
 
   "SPACEMERCS-GNAW.description": "Deal {Damage:diff()} damage for each {energyPrefix:energyIcons(1)} you have.",
-  "SPACEMERCS-GNAW.title": "Gnaw"
+  "SPACEMERCS-GNAW.title": "Gnaw",
+
+  "SPACEMERCS-STARVING_GRENADE.description": "Deal {Damage:diff()} damage.\nGain {HungerPower:diff()} [gold]Hunger[/gold].\nTake {SelfDamage:diff()} damage for each {energyPrefix:energyIcons(1)} you have.",
+  "SPACEMERCS-STARVING_GRENADE.title": "Starving Grenade",
+
+  "SPACEMERCS-VOIDWALL_GRENADE.description": "Whenever an enemy hits your [gold]Block[/gold], apply {VoidwallPower:diff()} [gold]Suppress[/gold] to them.",
+  "SPACEMERCS-VOIDWALL_GRENADE.title": "Voidwall Grenade",
+
+  "SPACEMERCS-SUPPRESSION_GRENADE.description": "Apply {SuppressPower:diff()} [gold]Suppress[/gold] for each {energyPrefix:energyIcons(1)} you have.",
+  "SPACEMERCS-SUPPRESSION_GRENADE.title": "Suppression Grenade",
+
+  "SPACEMERCS-PURGING_MAW.description": "Deal {Damage:diff()} damage to EVERYONE.\nGain {HungerPower:diff()} [gold]Hunger[/gold] for each hit.",
+  "SPACEMERCS-PURGING_MAW.title": "Purging Maw",
+
+  "SPACEMERCS-ORBITAL_SHIELD.description": "Deal {Damage:diff()} damage to a random enemy {Multihit:diff()} times.\nGain [gold]Block[/gold] equal to the unblocked damage.",
+  "SPACEMERCS-ORBITAL_SHIELD.title": "Orbital Shield",
+
+  "SPACEMERCS-DREADED_VISAGE.description": "Apply {SuppressPower:diff()} [gold]Suppress[/gold] to ALL enemies for each [gold]Void[/gold] in your draw pile, then [gold]Exhaust[/gold] ALL of them.",
+  "SPACEMERCS-DREADED_VISAGE.title": "Dreaded Visage",
+
+  "SPACEMERCS-MANIFEST.description": "Gain {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-MANIFEST.title": "Manifest",
+
+  "SPACEMERCS-UNWAVERING_STAR_BASE.description": "Does nothing until you've chosen a path.{IfUpgraded:show:\n(Remove either [gold]Remembered Vow[/gold] or [gold]Broken Oath[/gold] from your deck.)}",
+  "SPACEMERCS-UNWAVERING_STAR_BASE.title": "Unwavering Star"
 }

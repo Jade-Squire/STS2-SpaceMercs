@@ -2,11 +2,13 @@
 using BaseLib.Utils.Patching;
 using Godot;
 using HarmonyLib;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.CombatState;
+using SpaceMercs.SpaceMercsCode.Extensions;
 using SpaceMercs.SpaceMercsCode.Fields;
 
 namespace SpaceMercs.SpaceMercsCode.Patches;
@@ -24,6 +26,18 @@ public static class PlayerCombatStateConstructorPatch
     {
         var cosmopaladinCombatState = new PlayerCombatStateExtensions.CosmopaladinCombatState(__instance);
         CosmopaladinField.CosmopaladinCombatState[__instance] = cosmopaladinCombatState;
+        CombatManager.Instance.StateTracker.SubscribeDetermination(cosmopaladinCombatState);
+    }
+}
+
+[HarmonyPatch(typeof(PlayerCombatState), nameof(PlayerCombatState.AfterCombatEnd))]
+internal class PlayerCombatStateAfterCombatEndPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(PlayerCombatState __instance)
+    {
+        var cosmoCombatState = __instance.Cosmopaladin();
+        if(cosmoCombatState != null) CombatManager.Instance.StateTracker.UnsubscribeDetermination(cosmoCombatState);
     }
 }
 

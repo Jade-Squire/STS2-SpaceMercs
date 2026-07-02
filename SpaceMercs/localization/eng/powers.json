@@ -38,9 +38,16 @@
   "SPACEMERCS-FROZEN_POWER.description": "The creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If it is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
   "SPACEMERCS-FROZEN_POWER.smartDescription": "This creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If this creature is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
   "SPACEMERCS-FROZEN_POWER.title": "Frozen",
-
-
+  
   "SPACEMERCS-HUNGER_POWER.description": "Gain Energy equal to stacks now and at the start of your next turn. Shuffle that many [gold]Voids[/gold] into your draw pile.",
   "SPACEMERCS-HUNGER_POWER.smartDescription": "When you gain [gold]Hunger[/gold], shuffle that many [gold]Voids[/gold] into your draw pile. Gain {Amount} Energy at the start of your next turn.",
-  "SPACEMERCS-HUNGER_POWER.title": "Hunger"
+  "SPACEMERCS-HUNGER_POWER.title": "Hunger",
+
+  "SPACEMERCS-VOIDWALL_POWER.description": "Whenever an enemy hits your [gold]Block[/gold], apply [gold]Suppress[/gold] equal to your [gold]Voidwall[/gold].",
+  "SPACEMERCS-VOIDWALL_POWER.smartDescription": "Whenever an enemy hits your [gold]Block[/gold], apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the enemy.",
+  "SPACEMERCS-VOIDWALL_POWER.title": "Voidwall",
+
+  "SPACEMERCS-SUPPRESS_POWER.description": "Whenever the enemy takes unblocked damage, apply 1 [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
+  "SPACEMERCS-SUPPRESS_POWER.smartDescription": "Whenever the enemy takes unblocked damage, apply [blue]1[/blue] [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
+  "SPACEMERCS-SUPPRESS_POWER.title": "Suppress"
 }
