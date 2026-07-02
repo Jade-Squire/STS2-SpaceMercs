@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Powers;
 
@@ -17,9 +18,13 @@ public class SlowedPower() : SpaceMercsPower
     public override PowerStackType StackType =>
         PowerStackType.Counter;
 
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<FrozenPower>()
+    ];
+
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == Owner.Side && Owner.IsAlive)
+        if (side != Owner.Side && Owner.IsAlive)
         {
             await PowerCmd.Apply<SlowedPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, null, null);
         }
@@ -31,6 +36,7 @@ public class SlowedPower() : SpaceMercsPower
         if (amount > 0 && power is SlowedPower && Amount >= 20)
         {
             await PowerCmd.Remove<SlowedPower>(Owner);
+            await PowerCmd.Apply<FrozenPower>(choiceContext, Owner, 1, applier, cardSource);
         }
     }
 }

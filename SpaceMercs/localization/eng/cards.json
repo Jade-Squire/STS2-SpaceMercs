@@ -8,7 +8,7 @@
   "SPACEMERCS-THROWING_HAMMER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain {StrengthPower:diff()} [gold]Strength[/gold].\n|}Gain {CurePower:diff()} [color=springgreen]Cure[/color].\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nPut this back in your hand.\nCosts 1 more this turn.",
   "SPACEMERCS-THROWING_HAMMER.title": "Throwing Hammer",
   
-  "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()}{IfUpgraded:show:(X+1)|X} damage.\nGain {IfUpgraded:show:{CurePower:diff()}}{IfUpgraded:show:(X+1)|X} [color=springgreen]Cure[/color].",
+  "SPACEMERCS-HAMMER_STRIKE.description": "Deal {Damage:diff()} damage {IfUpgraded:show:(X+1)|X} times.\nGain {CurePower:diff()} [color=springgreen]Cure[/color] {IfUpgraded:show:(X+1)|X} times.",
   "SPACEMERCS-HAMMER_STRIKE.title": "Hammer Strike",
   
   "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1 until played.",
@@ -44,7 +44,7 @@
   "SPACEMERCS-FIERY_SPLENDOR.description": "Double your [color=springgreen]Cure[/color].{IfUpgraded:show:\nDouble each enemy's [orange]Scorch[/orange].}",
   "SPACEMERCS-FIERY_SPLENDOR.title": "Fiery Splendor",
 
-  "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()}X [orange]Scorch[/orange].{IfUpgraded:show:\nGain {CurePower:diff}X [color=springgreen]Cure[/color].}",
+  "SPACEMERCS-CAUTERIZE.description": "Apply {ScorchPower:diff()} [orange]Scorch[/orange] X times.{IfUpgraded:show:\nGain {CurePower:diff} [color=springgreen]Cure[/color] X times.}",
   "SPACEMERCS-CAUTERIZE.title": "Cauterize",
 
   "SPACEMERCS-BRING_THE_HEAT.description": "Deal damage to ALL enemies equal to {IfUpgraded:show:double }your [color=springgreen]Cure[/color].",
@@ -77,6 +77,12 @@
   "SPACEMERCS-TEST_WILL_GAIN.description": "Gain 1 Will",
   "SPACEMERCS-TEST_WILL_GAIN.title": "Test Will Gain",
 
-  "SPACEMERCS-TEST_WILL_COST.description": "Costs 1 Will",
-  "SPACEMERCS-TEST_WILL_COST.title": "Test Will Cost"
+  "SPACEMERCS-FROSTBURN.description": "Deal {Damage:diff()} damage.\nApply {ScorchPower:diff()} [orange]Scorch[/orange].\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color].\nGain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
+  "SPACEMERCS-FROSTBURN.title": "Frostburn",
+
+  "SPACEMERCS-HUNGERING_FLAME.description": "Equalize your [gold]Hunger[/gold] and [color=SpringGreen]Cure[/color].\nEnd your turn.",
+  "SPACEMERCS-HUNGERING_FLAME.title": "Hungering Flame",
+
+  "SPACEMERCS-GNAW.description": "Deal {Damage:diff()} damage for each {energyPrefix:energyIcons(1)} you have.",
+  "SPACEMERCS-GNAW.title": "Gnaw"
 }

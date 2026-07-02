@@ -28,12 +28,15 @@ public class Cauterize() : SpaceMercsCard(0,
         CardPlay play)
     {
         int energyOnPlay = ResolveEnergyXValue();
-        await PowerCmd.Apply<ScorchPower>(choiceContext, play.Target,
-            DynamicVars[nameof(ScorchPower)].BaseValue * energyOnPlay, Owner.Creature, this);
-        if (IsUpgraded)
+        for (int i = 0; i < energyOnPlay; i++)
         {
-            await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature,
-                DynamicVars[nameof(CurePower)].BaseValue * energyOnPlay, Owner.Creature, this);
+            await PowerCmd.Apply<ScorchPower>(choiceContext, play.Target,
+                DynamicVars[nameof(ScorchPower)].BaseValue, Owner.Creature, this);
+            if (IsUpgraded)
+            {
+                await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature,
+                    DynamicVars[nameof(CurePower)].BaseValue, Owner.Creature, this);
+            }
         }
     }
 

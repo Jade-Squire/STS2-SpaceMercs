@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbvuveeqin8or"]
+[gd_scene load_steps=3 format=3 uid="uid://cbvuveeqin8or"]
 
 [ext_resource type="Texture2D" uid="uid://d1imx6h8fykj1" path="res://SpaceMercs/images/charui/big_energy.png" id="1_fj1qe"]
+[ext_resource type="Script" uid="uid://bmnvpuvda0kmm" path="res://SpaceMercsCode/Nodes/NDeterminationCounter.cs" id="1_pj4ku"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -8,6 +9,7 @@ anchors_preset = 0
 offset_right = 128.0
 offset_bottom = 128.0
 pivot_offset = Vector2(64, 64)
+script = ExtResource("1_pj4ku")
 metadata/_edit_lock_ = true
 
 [node name="EnergyVfxBack" type="Node2D" parent="."]
@@ -52,9 +54,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3647059)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 16
 theme_override_constants/shadow_outline_size = 16
+theme_override_font_sizes/font_size = 40
+text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1

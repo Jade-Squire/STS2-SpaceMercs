@@ -13,6 +13,7 @@ public class TestWillGain() : SpaceMercsCard(0,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
+    public override bool HasDeterminationAbility => true;
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

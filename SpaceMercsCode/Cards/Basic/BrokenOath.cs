@@ -33,7 +33,8 @@ public class BrokenOath() : SpaceMercsCard(2,
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<VulnerablePower>()
+        HoverTipFactory.FromPower<VulnerablePower>(),
+        HoverTipFactory.FromCard<RememberedVow>()
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [

@@ -31,7 +31,16 @@
   "SPACEMERCS-FROST_ARMOR_POWER.smartDescription": "Gain [gold]Block[/gold] equal to{Amount:plural(en):|| [blue]{Amount}[/blue] times} the amount of [gold]Slowed[/gold] on enemies. Lose [gold]Frost Armor[/gold] at the start of your turn.",
   "SPACEMERCS-FROST_ARMOR_POWER.title": "Frost Armor",
 
-  "SPACEMERCS-SLOWED_POWER.description": "Doubles stacks at the start of the enemies turn. When the enemy has [blue]20[/blue] [gold]Slowed[/gold], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
-  "SPACEMERCS-SLOWED_POWER.smartDescription": "Doubles stacks at the start of the enemies turn. When the enemy has [blue]20[/blue] [gold]Slowed[/gold], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
-  "SPACEMERCS-SLOWED_POWER.title": "Slowed"
+  "SPACEMERCS-SLOWED_POWER.description": "Doubles stacks at the start of the players' turn. When the enemy has [blue]20[/blue] [color=cyan]Slowed[/color], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
+  "SPACEMERCS-SLOWED_POWER.smartDescription": "Doubles stacks at the start of the players' turn. When the enemy has [blue]20[/blue] [color=cyan]Slowed[/color], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
+  "SPACEMERCS-SLOWED_POWER.title": "Slowed",
+
+  "SPACEMERCS-FROZEN_POWER.description": "The creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If it is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
+  "SPACEMERCS-FROZEN_POWER.smartDescription": "This creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If this creature is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
+  "SPACEMERCS-FROZEN_POWER.title": "Frozen",
+
+
+  "SPACEMERCS-HUNGER_POWER.description": "Gain Energy equal to stacks now and at the start of your next turn. Shuffle that many [gold]Voids[/gold] into your draw pile.",
+  "SPACEMERCS-HUNGER_POWER.smartDescription": "When you gain [gold]Hunger[/gold], shuffle that many [gold]Voids[/gold] into your draw pile. Gain {Amount} Energy at the start of your next turn.",
+  "SPACEMERCS-HUNGER_POWER.title": "Hunger"
 }

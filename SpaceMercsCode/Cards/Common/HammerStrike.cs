@@ -34,15 +34,19 @@ public class HammerStrike() : SpaceMercsCard(0,
         {
             energyOnPlay++;
         }
-        if (energyOnPlay > 0 )
+        if (energyOnPlay > 0)
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue * energyOnPlay)
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
                 .FromCard(this)
                 .Targeting(play.Target)
                 .WithHitFx("vfx/vfx_attack_blunt")
+                .WithHitCount(energyOnPlay)
                 .Execute(choiceContext);
-            await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature,
-                DynamicVars[nameof(CurePower)].BaseValue * energyOnPlay, Owner.Creature, this);
+            for (int i = 0; i < energyOnPlay; i++)
+            {
+                await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature,
+                    DynamicVars[nameof(CurePower)].BaseValue, Owner.Creature, this);
+            }
         }
     }
 

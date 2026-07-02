@@ -6,6 +6,7 @@ using SpaceMercs.SpaceMercsCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Hooks;
+using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.CombatState;
 using SpaceMercs.SpaceMercsCode.Keywords;
 
@@ -31,6 +32,7 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
     private List<TemporaryCardCost> _temporaryDeterminationCosts = new();
     private int _lastDeterminationSpent;
     private bool _wasDeterminationCostJustUpgraded;
+    private bool _hookedIntoDetChanged = false;
     
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it Determination simply be scaled.)
@@ -46,6 +48,7 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
 
     protected virtual int CanonicalDeterminationCost => -1;
+    public virtual bool HasDeterminationAbility => false;
     public virtual bool HasDeterminationCostX => false;
     public bool WasDeterminationCostJustUpgraded => _wasDeterminationCostJustUpgraded;
 
@@ -191,13 +194,15 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
         await SpaceMercsHook.AfterDeterminationSpent(Owner.Creature.CombatState, amount, Owner);*/
     }
 
-    public override void AfterCreated()
+    public override Task AfterCardEnteredCombat(CardModel card)
     {
-        if (Keywords.Contains(SpaceMercsKeywords.Exert))
+        if (!_hookedIntoDetChanged && Keywords.Contains(SpaceMercsKeywords.Exert))
         {
+            if (Owner.PlayerCombatState == null) return base.AfterCardEnteredCombat(card);
             Owner.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
-            base.AfterCreated();
+            _hookedIntoDetChanged = true;
         }
+        return base.AfterCardEnteredCombat(card);
     }
 
     public void DeterminationChanged(int oldValue, int newValue)

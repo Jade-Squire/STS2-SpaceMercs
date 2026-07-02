@@ -51,7 +51,10 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<SunfireFurnace>(),
         ModelDb.Card<PhoenixRising>(),
         ModelDb.Card<BurningTreads>(),
-        ModelDb.Card<Firewalker>()
+        ModelDb.Card<Firewalker>(),
+        ModelDb.Card<Frostburn>(),
+        ModelDb.Card<HungeringFlame>(),
+        ModelDb.Card<Gnaw>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
