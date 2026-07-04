@@ -107,11 +107,11 @@
   "SPACEMERCS-UNWAVERING_STAR_BASE.description": "Does nothing until you've chosen a path.{IfUpgraded:show:\n(Remove either [gold]Remembered Vow[/gold] or [gold]Broken Oath[/gold] from your deck.)}",
   "SPACEMERCS-UNWAVERING_STAR_BASE.title": "Unwavering Star",
 
-  "SPACEMERCS-UNWAVERING_STAR_VOW.description": "",
+  "SPACEMERCS-UNWAVERING_STAR_VOW.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {HungerPower:diff()} [gold]Hunger[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1 permanently.",
   "SPACEMERCS-UNWAVERING_STAR_VOW.title": "Unwavering Star Vow",
 
-  "SPACEMERCS-UNWAVERING_STAR_OATH.description": "",
-  "SPACEMERCS-UNWAVERING_STAR_OATH.title": "Unwavering Star Oath",
+  "SPACEMERCS-UNWAVERING_STAR_OATH.description": "Apply {SuppressPower:diff()} [gold]Suppress[/gold], then deal {Damage:diff()} damage.",
+  "SPACEMERCS-UNWAVERING_STAR_OATH.title": "Unwavering Star",
   
   "SPACEMERCS-ANSWER_THE_CALL.description": "",
   "SPACEMERCS-ANSWER_THE_CALL.title": "Answer the Call"

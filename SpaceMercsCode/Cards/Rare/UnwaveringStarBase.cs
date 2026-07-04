@@ -14,11 +14,6 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
-    protected override HashSet<CardTag> CanonicalTags =>
-    [
-        SpaceMercsTags.UnwaveringStar
-    ];
-
     public override IEnumerable<CardKeyword> CanonicalKeywords =>
     [
         CardKeyword.Unplayable
