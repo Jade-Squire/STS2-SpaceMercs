@@ -1,23 +1,13 @@
 ﻿using Godot;
-using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Context;
-using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Nodes.GodotExtensions;
 using MegaCrit.Sts2.Core.Nodes.HoverTips;
 using MegaCrit.Sts2.Core.Runs;
-using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
-using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
-using SpaceMercs.SpaceMercsCode.Cards.Unique;
 using SpaceMercs.SpaceMercsCode.CombatState;
-using SpaceMercs.SpaceMercsCode.Commands;
 using SpaceMercs.SpaceMercsCode.GameActions;
 
 namespace SpaceMercs.SpaceMercsCode.Nodes;

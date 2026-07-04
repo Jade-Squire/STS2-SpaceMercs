@@ -13,7 +13,7 @@ public class TestRelic() : SpaceMercsRelic
     {
         if (actIndex == 0)
         {
-            map.StartingMapPoint.PointType = MapPointType.RestSite;
+            map.StartingMapPoint.PointType = MapPointType.Shop;
         }        
         return map;
     }

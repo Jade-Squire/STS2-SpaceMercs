@@ -8,6 +8,9 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
+using SpaceMercs.SpaceMercsCode.Cards.Basic;
+using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.CombatState;
 using SpaceMercs.SpaceMercsCode.Commands;
 using SpaceMercs.SpaceMercsCode.Keywords;
@@ -229,5 +232,51 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
             PlayerCmd.GainEnergy(1, combatState._player);
             CosmopaladinPlayerCmd.LoseDetermination(2, combatState._player);
         }
+    }
+
+    public override bool TryModifyCardRewardOptions(Player player, List<CardCreationResult> cardRewardOptions,
+        CardCreationOptions creationOptions)
+    {
+        foreach (var rewardOptions in cardRewardOptions)
+        {
+            if (rewardOptions.Card is UnwaveringStarBase)
+            {
+                bool hasOath = false;
+                bool hasVow = false;
+                foreach (var card in rewardOptions.Card.Owner.Deck.Cards)
+                {
+                    if (card is BrokenOath)
+                    {
+                        hasOath = true;
+                        if (hasVow)
+                        {
+                            return base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
+                        }
+                    }
+                    else if (card is RememberedVow)
+                    {
+                        hasVow = true;
+                        if (hasOath)
+                        {
+                            return  base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
+                        }
+                    }
+                }
+
+                if (!hasOath && hasVow)
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<UnwaveringStarOath>(rewardOptions.Card.Owner));
+                } 
+                else if (hasOath && !hasVow)
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<UnwaveringStarVow>(rewardOptions.Card.Owner));
+                }
+                else
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<AnswerTheCall>(rewardOptions.Card.Owner));
+                }
+            }
+        }
+        return base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
     }
 }

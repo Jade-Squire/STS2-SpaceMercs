@@ -1,14 +1,18 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.CardPools;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
+using SpaceMercs.SpaceMercsCode.Character;
 using SpaceMercs.SpaceMercsCode.Enums;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Rare;
 
-public class UnwaveringStarBase() : SpaceMercsCard(0,
+[Pool(typeof(CosmopaladinUniqueCardPool))]
+public class UnwaveringStarOath() : SpaceMercsCard(3,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
@@ -18,12 +22,7 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
     [
         SpaceMercsTags.UnwaveringStar
     ];
-
-    public override IEnumerable<CardKeyword> CanonicalKeywords =>
-    [
-        CardKeyword.Unplayable
-    ];
-
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
@@ -31,6 +30,11 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
         
     }
 
+    protected override void OnUpgrade()
+    {
+
+    }
+    
     public override Task BeforeCardRemoved(CardModel card)
     {
         if (Owner.Deck.Cards.Contains(this))
@@ -38,10 +42,6 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
             if (card is RememberedVow)
             {
                 RemovedRememberedVow(card);
-            }
-            else if (card is BrokenOath)
-            {
-                RemovedBrokenOath(card);
             }
         }
         return base.BeforeCardRemoved(card);
@@ -58,37 +58,17 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
             }
         }
         
-        foreach (var card in Owner.Deck.Cards)
-        {
-            if (card is BrokenOath && card != cardRemoved)
-            {
-                CardCmd.TransformTo<UnwaveringStarVow>(this);
-                return;
-            }
-        }
-        
         CardCmd.TransformTo<AnswerTheCall>(this);
     }
 
-    private void RemovedBrokenOath(CardModel cardRemoved)
+    public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
     {
-        foreach (var card in Owner.Deck.Cards)
+        if (card is BrokenOath)
         {
-            if (card is BrokenOath && card != cardRemoved)
-            {
-                return;
-            }
+            CardCmd.TransformTo<UnwaveringStarBase>(this);
+            newCard = card;
+            return true;
         }
-
-        foreach (var card in Owner.Deck.Cards)
-        {
-            if (card is RememberedVow && card != cardRemoved)
-            {
-                CardCmd.TransformTo<UnwaveringStarOath>(this);
-                return;
-            }
-        }
-        
-        CardCmd.TransformTo<AnswerTheCall>(this);
+        return base.TryModifyCardBeingAddedToDeck(card, out newCard);
     }
 }
