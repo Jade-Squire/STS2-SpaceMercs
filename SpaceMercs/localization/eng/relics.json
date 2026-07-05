@@ -2,5 +2,9 @@
 
   "SPACEMERCS-TEST_RELIC.description": "",
   "SPACEMERCS-TEST_RELIC.flavor": "",
-  "SPACEMERCS-TEST_RELIC.title": "TestRelic"
+  "SPACEMERCS-TEST_RELIC.title": "TestRelic",
+
+  "SPACEMERCS-OF_THE_VOID.description": "Whenever you draw a [gold]Void[/gold], heal [blue]1[/blue] hp and gain [blue]1[/blue] [gold]Hunger[/gold].",
+  "SPACEMERCS-OF_THE_VOID.flavor": "It's calling...",
+  "SPACEMERCS-OF_THE_VOID.title": "Of The Void"
 }

@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Enums;
 
@@ -57,7 +58,14 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
         {
             if (card is BrokenOath && card != cardRemoved)
             {
-                CardCmd.TransformTo<UnwaveringStarVow>(this);
+                CardModel newCard = ModelDb.Card<UnwaveringStarVow>().ToMutable();
+                newCard.Owner = Owner;
+                if (IsUpgraded)
+                {
+                    CardCmd.Upgrade(newCard, CardPreviewStyle.None);
+                }
+
+                CardCmd.Transform(this, newCard);
                 return;
             }
         }
@@ -79,7 +87,14 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
         {
             if (card is RememberedVow && card != cardRemoved)
             {
-                CardCmd.TransformTo<UnwaveringStarOath>(this);
+                CardModel newCard = ModelDb.Card<UnwaveringStarOath>().ToMutable();
+                newCard.Owner = Owner;
+                if (IsUpgraded)
+                {
+                    CardCmd.Upgrade(newCard, CardPreviewStyle.None);
+                }
+
+                CardCmd.Transform(this, newCard);
                 return;
             }
         }

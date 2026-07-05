@@ -49,5 +49,13 @@
 
   "SPACEMERCS-SUPPRESS_POWER.description": "Whenever the enemy takes unblocked damage, apply 1 [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
   "SPACEMERCS-SUPPRESS_POWER.smartDescription": "Whenever the enemy takes unblocked damage, apply [blue]1[/blue] [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
-  "SPACEMERCS-SUPPRESS_POWER.title": "Suppress"
+  "SPACEMERCS-SUPPRESS_POWER.title": "Suppress",
+
+  "SPACEMERCS-VENGEANCE_POWER_BUFF.description": "Whenever you take unblocked damage, apply [blue]1[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
+  "SPACEMERCS-VENGEANCE_POWER_BUFF.smartDescription": "Whenever you take unblocked damage, apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
+  "SPACEMERCS-VENGEANCE_POWER_BUFF.title": "Vengeance",
+  
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.description": "When this enemy dies, gain [gold]Hunger[/gold] equal to its max health.",
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.smartDescription": "When this creature dies, gain [gold]Hunger[/gold] equal to this creature's max health.",
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.title": "Vengeance"
 }

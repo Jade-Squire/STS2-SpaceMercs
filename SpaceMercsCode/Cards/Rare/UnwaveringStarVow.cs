@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
@@ -139,14 +140,28 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
             }
         }
 
-        CardCmd.TransformTo<AnswerTheCall>(this);
+        CardModel newCard = ModelDb.Card<AnswerTheCall>().ToMutable();
+        newCard.Owner = Owner;
+        if (IsUpgraded)
+        {
+            CardCmd.Upgrade(newCard, CardPreviewStyle.None);
+        }
+
+        CardCmd.Transform(this, newCard);
     }
 
     public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
     {
         if (card is RememberedVow)
         {
-            CardCmd.TransformTo<UnwaveringStarBase>(this);
+            CardModel endCard = ModelDb.Card<AnswerTheCall>().ToMutable();
+            endCard.Owner = Owner;
+            if (IsUpgraded)
+            {
+                CardCmd.Upgrade(endCard, CardPreviewStyle.None);
+            }
+            
+            CardCmd.Transform(this, endCard);
         }
 
         return base.TryModifyCardBeingAddedToDeck(card, out newCard);

@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Character;
@@ -74,16 +75,28 @@ public class UnwaveringStarOath() : SpaceMercsCard(3,
             }
         }
         
-        CardCmd.TransformTo<AnswerTheCall>(this);
+        CardModel newCard = ModelDb.Card<AnswerTheCall>().ToMutable();
+        newCard.Owner = Owner;
+        if (IsUpgraded)
+        {
+            CardCmd.Upgrade(newCard, CardPreviewStyle.None);
+        }
+
+        CardCmd.Transform(this, newCard);
     }
 
     public override bool TryModifyCardBeingAddedToDeck(CardModel card, out CardModel? newCard)
     {
         if (card is BrokenOath)
         {
-            CardCmd.TransformTo<UnwaveringStarBase>(this);
-            newCard = card;
-            return true;
+            CardModel endCard = ModelDb.Card<UnwaveringStarBase>().ToMutable();
+            endCard.Owner = Owner;
+            if (IsUpgraded)
+            {
+                CardCmd.Upgrade(endCard, CardPreviewStyle.None);
+            }
+
+            CardCmd.Transform(this, endCard);
         }
         return base.TryModifyCardBeingAddedToDeck(card, out newCard);
     }

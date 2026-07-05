@@ -108,11 +108,14 @@
   "SPACEMERCS-UNWAVERING_STAR_BASE.title": "Unwavering Star",
 
   "SPACEMERCS-UNWAVERING_STAR_VOW.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {HungerPower:diff()} [gold]Hunger[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1 permanently.",
-  "SPACEMERCS-UNWAVERING_STAR_VOW.title": "Unwavering Star Vow",
+  "SPACEMERCS-UNWAVERING_STAR_VOW.title": "Unwavering Star",
 
   "SPACEMERCS-UNWAVERING_STAR_OATH.description": "Apply {SuppressPower:diff()} [gold]Suppress[/gold], then deal {Damage:diff()} damage.",
   "SPACEMERCS-UNWAVERING_STAR_OATH.title": "Unwavering Star",
   
-  "SPACEMERCS-ANSWER_THE_CALL.description": "",
-  "SPACEMERCS-ANSWER_THE_CALL.title": "Answer the Call"
+  "SPACEMERCS-ANSWER_THE_CALL.description": "Obtain the [gold]Of The Void[/gold] relic.",
+  "SPACEMERCS-ANSWER_THE_CALL.title": "Answer the Call",
+
+  "SPACEMERCS-VENGEANCE.description": "Whenever you take unblocked damage, apply {VengeancePowerBuff:diff()} [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
+  "SPACEMERCS-VENGEANCE.title": "Vengeance"
 }
