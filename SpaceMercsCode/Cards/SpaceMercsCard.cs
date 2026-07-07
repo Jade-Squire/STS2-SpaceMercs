@@ -210,6 +210,17 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
         return base.AfterCardEnteredCombat(card);
     }
 
+    public override Task BeforeCombatStart()
+    {
+        if (!_hookedIntoDetChanged && Keywords.Contains(SpaceMercsKeywords.Exert))
+        {
+            if (Owner.PlayerCombatState == null) return base.BeforeCombatStart();
+            Owner.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
+            _hookedIntoDetChanged = true;
+        }
+        return base.BeforeCombatStart();
+    }
+
     public void DeterminationChanged(int oldValue, int newValue)
     {
         if (newValue > 0)

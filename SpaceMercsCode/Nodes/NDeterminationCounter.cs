@@ -26,6 +26,7 @@ public partial class NDeterminationCounter : NClickableControl
         _determinationText = GetNode<Label>("Label");
         _determinationText.Text = "0";
         ConnectDeterminationChangedSignal();
+        checkVisibility();
     }
 
     public override void _Ready()
