@@ -21,6 +21,8 @@ public class FrozenPower() : SpaceMercsPower
 
     public override PowerStackType StackType =>
         PowerStackType.Single;
+    
+    public event Action<FrozenPower>? FreezeRemoved;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
@@ -45,7 +47,7 @@ public class FrozenPower() : SpaceMercsPower
     public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (cardSource != null && cardSource.Type == CardType.Attack)
+        if (cardSource != null && cardSource.Type == CardType.Attack && target == Owner)
         {
             if (Owner.IsStunned)
             {
@@ -67,5 +69,10 @@ public class FrozenPower() : SpaceMercsPower
     private void UnstunCreature()
     {
         Owner.Monster.SetMoveImmediate(_nextMove, true);
+        Action<FrozenPower>? freezeRemoved = FreezeRemoved;
+        if (freezeRemoved != null)
+        {
+            freezeRemoved(this);
+        }
     }
 }

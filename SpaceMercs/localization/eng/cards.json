@@ -116,6 +116,27 @@
   "SPACEMERCS-ANSWER_THE_CALL.description": "Obtain the [gold]Of The Void[/gold] relic.",
   "SPACEMERCS-ANSWER_THE_CALL.title": "Answer the Call",
 
-  "SPACEMERCS-VENGEANCE.description": "Whenever you take unblocked damage, apply {VengeancePowerBuff:diff()} [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
-  "SPACEMERCS-VENGEANCE.title": "Vengeance"
+  "SPACEMERCS-VENGEANCE.description": "Gain {VengeancePowerBuff:diff()} [gold]Vengeance[/gold].",
+  "SPACEMERCS-VENGEANCE.title": "Vengeance",
+
+  "SPACEMERCS-DESOLATE_WILL.description": "Whenever you draw an [gold]Unplayable[/gold] card, draw a card.",
+  "SPACEMERCS-DESOLATE_WILL.title": "Desolate Will",
+
+  "SPACEMERCS-DOOM_FALL.description": "Deal {Damage:diff()} damage for every [gold]Void[/gold] in your draw pile, then [gold]Exhaust[/gold] ALL of them.",
+  "SPACEMERCS-DOOM_FALL.title": "Doom Fall",
+
+  "SPACEMERCS-EMPTY_EMBRACE.description": "[gold]Voids[/gold] lose [gold]Ethereal[/gold].\nWhenever you draw a [gold]Void[/gold], deal {EmptyEmbracePower:diff()} damage to ALL enemies.",
+  "SPACEMERCS-EMPTY_EMBRACE.title": "Empty Embrace",
+
+  "SPACEMERCS-DARK_GIFT.description": "Gain a random{IfUpgraded:show:| common} relic.\nLose {MaxHp:diff()} Max HP.",
+  "SPACEMERCS-DARK_GIFT.title": "Dark Gift",
+
+  "SPACEMERCS-SATIATION.description": "{IfUpgraded:show:Gain {HungerPower:diff()} [gold]Hunger[/gold].\n}Gain {Block:diff()} [gold]Block[/gold] for each [gold]Void[/gold] in your draw pile, then [gold]Exhaust[/gold] ALL of them.\n[gold]Block[/gold] is not removed at the start of your next turn.",
+  "SPACEMERCS-SATIATION.title": "Satiation",
+
+  "SPACEMERCS-STARVATION.description": "Gain 1 [gold]Hunger[/gold] at the start of your turn.\nIncrease this amount by {StarvationPower:diff()}.\nDeal damage equal to unspent {energyPrefix:energyIcons(1)} at the end of your turn.",
+  "SPACEMERCS-STARVATION.title": "Starvation",
+
+  "SPACEMERCS-COLD_DARK_GENTLE.description": "Deal {Damage:diff()} damage.\nGain {HungerPower:diff()} [gold]Hunger[/gold].\nThis costs 0 if an enemy is [jitter][color=blue]Frozen[/color][/jitter].",
+  "SPACEMERCS-COLD_DARK_GENTLE.title": "Cold, Dark, Gentle"
 }

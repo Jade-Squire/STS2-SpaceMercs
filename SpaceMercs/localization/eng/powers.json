@@ -28,7 +28,7 @@
   "SPACEMERCS-BURNING_TREADS_POWER.title": "Burning Treads",
 
   "SPACEMERCS-FROST_ARMOR_POWER.description": "Gain [gold]Block[/gold] equal to the amount of [gold]Slowed[/gold] on enemies. Lose [gold]Frost Armor[/gold] at the start of your turn.",
-  "SPACEMERCS-FROST_ARMOR_POWER.smartDescription": "Gain [gold]Block[/gold] equal to{Amount:plural(en):|| [blue]{Amount}[/blue] times} the amount of [gold]Slowed[/gold] on enemies. Lose [gold]Frost Armor[/gold] at the start of your turn.",
+  "SPACEMERCS-FROST_ARMOR_POWER.smartDescription": "Gain [gold]Block[/gold] equal to the amount of [gold]Slowed[/gold] on enemies for [blue]{Amount}[/blue] turn{Amount:plural(en):||s}. Lose a [gold]Frost Armor[/gold] at the start of your turn.",
   "SPACEMERCS-FROST_ARMOR_POWER.title": "Frost Armor",
 
   "SPACEMERCS-SLOWED_POWER.description": "Doubles stacks at the start of the players' turn. When the enemy has [blue]20[/blue] [color=cyan]Slowed[/color], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
@@ -51,11 +51,27 @@
   "SPACEMERCS-SUPPRESS_POWER.smartDescription": "Whenever the enemy takes unblocked damage, apply [blue]1[/blue] [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
   "SPACEMERCS-SUPPRESS_POWER.title": "Suppress",
 
-  "SPACEMERCS-VENGEANCE_POWER_BUFF.description": "Whenever you take unblocked damage, apply [blue]1[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
-  "SPACEMERCS-VENGEANCE_POWER_BUFF.smartDescription": "Whenever you take unblocked damage, apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to its max health.",
+  "SPACEMERCS-VENGEANCE_POWER_BUFF.description": "Whenever you take unblocked damage, apply [blue]1[/blue] [gold]Suppress[/gold] to the attacker equal to your [gold]Vengeance[/gold].\nWhen it dies, gain [gold]Hunger[/gold] equal to 10 times your [gold]Vengeance[/gold].",
+  "SPACEMERCS-VENGEANCE_POWER_BUFF.smartDescription": "Whenever you take unblocked damage, apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to [blue]10[/blue] times your [gold]Vengeance[/gold].",
   "SPACEMERCS-VENGEANCE_POWER_BUFF.title": "Vengeance",
   
-  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.description": "When this enemy dies, gain [gold]Hunger[/gold] equal to its max health.",
-  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.smartDescription": "When this creature dies, gain [gold]Hunger[/gold] equal to this creature's max health.",
-  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.title": "Vengeance"
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.description": "When this enemy dies, gain [gold]Hunger[/gold] equal to 10 times your [gold]Vengeance[/gold].",
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.smartDescription": "When this creature dies, gain [gold]Hunger[/gold] equal to [blue]10[/blue] times your [gold]Vengeance[/gold].",
+  "SPACEMERCS-VENGEANCE_POWER_DEBUFF.title": "Vengeance",
+  
+  "SPACEMERCS-DESOLATE_WILL_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, draw a card.",
+  "SPACEMERCS-DESOLATE_WILL_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, draw [blue]{Amount}[/blue] card{Amount:plural(en):||s}.",
+  "SPACEMERCS-DESOLATE_WILL_POWER.title": "Desolate Will",
+
+  "SPACEMERCS-EMPTY_EMBRACE_POWER.description": "[gold]Voids[/gold] lose [gold]Ethereal[/gold]. Whenever you draw a [gold]Void[/gold], deal damage to ALL enemies equal to stacks.",
+  "SPACEMERCS-EMPTY_EMBRACE_POWER.smartDescription": "[gold]Voids[/gold] lose [gold]Ethereal[/gold]. Whenever you draw a [gold]Void[/gold], deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "SPACEMERCS-EMPTY_EMBRACE_POWER.title": "Empty Embrace",
+
+  "SPACEMERCS-SATIATION_POWER.description": "[gold]Block[/gold] is not removed at the start of your next turn.",
+  "SPACEMERCS-SATIATION_POWER.smartDescription": "[gold]Block[/gold] is not removed at the start of your next {Amount:plural(en):||[blue]{Amount}[/blue]} turn{Amount:plural(en):||s}.",
+  "SPACEMERCS-SATIATION_POWER.title": "Satiation",
+
+  "SPACEMERCS-STARVATION_POWER.description": "Gain 1 [gold]Hunger[/gold] at the start of your turn. Increase this amount by 1. Deal damage to ALL enemies equal to unspent Energy at the end of your turn.",
+  "SPACEMERCS-STARVATION_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Hunger[/gold] at the start of your turn. Increase this amount by [blue]{IncreaseAmt:diff()}[/blue]. Deal damage to ALL enemies equal to unspent energy at the end of your turn.",
+  "SPACEMERCS-STARVATION_POWER.title": "Starvation"
 }

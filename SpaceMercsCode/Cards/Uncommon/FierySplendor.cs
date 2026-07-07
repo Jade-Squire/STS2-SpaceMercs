@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.GameInfo.Objects;
 using SpaceMercs.SpaceMercsCode.Cards;
@@ -19,7 +20,11 @@ public class FierySplendor() : SpaceMercsCard(1,
     [
         CardKeyword.Exhaust
     ];
-    
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<CurePower>()
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
     protected override async Task OnPlay(

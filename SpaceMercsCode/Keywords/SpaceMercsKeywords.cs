@@ -7,5 +7,7 @@ public static class SpaceMercsKeywords
 {
     [CustomEnum, KeywordProperties(AutoKeywordPosition.After)]
     public static CardKeyword Exert;
-    
+
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
+    public static CardKeyword GainsHunger;
 }

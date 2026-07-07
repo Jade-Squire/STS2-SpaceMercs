@@ -17,6 +17,7 @@ public class Vengeance() : SpaceMercsCard(0,
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<VengeancePowerBuff>(),
         HoverTipFactory.FromPower<SuppressPower>(),
         HoverTipFactory.FromPower<HungerPower>()
     ];

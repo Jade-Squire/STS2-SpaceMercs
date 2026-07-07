@@ -1,4 +1,7 @@
 {
   "SPACEMERCS-EXERT.description": "This card costs 1 [rainbow]Determination[/rainbow] instead of energy if you have [rainbow]Determination[/rainbow].",
-  "SPACEMERCS-EXERT.title": "Exert"
+  "SPACEMERCS-EXERT.title": "Exert",
+
+  "SPACEMERCS-GAINSHUNGER.description": "Gain Energy equal to stacks now and at the start of your next turn. Shuffle that many [gold]Voids[/gold] into your draw pile.",
+  "SPACEMERCS-GAINSHUNGER.title": "Hunger"
 }

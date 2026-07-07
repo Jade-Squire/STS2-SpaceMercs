@@ -36,7 +36,7 @@ public class FrostArmorPower() : SpaceMercsPower
                 }
             }
 
-            await CreatureCmd.GainBlock(Owner, total * Amount, ValueProp.Unpowered, null);
+            await CreatureCmd.GainBlock(Owner, total, ValueProp.Unpowered, null);
         }
     }
 
@@ -45,7 +45,7 @@ public class FrostArmorPower() : SpaceMercsPower
     {
         if (side == CombatSide.Player)
         {
-            await PowerCmd.Remove<FrostArmorPower>(Owner);
+            await PowerCmd.Decrement(this);
         }
     }
 }

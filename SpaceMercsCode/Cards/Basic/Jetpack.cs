@@ -8,8 +8,8 @@ using SpaceMercs.SpaceMercsCode.Cards;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
-public class Jetpack() : SpaceMercsCard(1,
-    CardType.Skill, CardRarity.Common,
+public class Jetpack() : SpaceMercsCard(2,
+    CardType.Skill, CardRarity.Basic,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
