@@ -10,4 +10,7 @@ public static class SpaceMercsKeywords
 
     [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
     public static CardKeyword GainsHunger;
+    
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
+    public static CardKeyword GainsScorch;
 }

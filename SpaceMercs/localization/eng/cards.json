@@ -138,5 +138,8 @@
   "SPACEMERCS-STARVATION.title": "Starvation",
 
   "SPACEMERCS-COLD_DARK_GENTLE.description": "Deal {Damage:diff()} damage.\nGain {HungerPower:diff()} [gold]Hunger[/gold].\nThis costs 0 if an enemy is [jitter][color=blue]Frozen[/color][/jitter].",
-  "SPACEMERCS-COLD_DARK_GENTLE.title": "Cold, Dark, Gentle"
+  "SPACEMERCS-COLD_DARK_GENTLE.title": "Cold, Dark, Gentle",
+
+  "SPACEMERCS-ABYSSAL_FLARE.description": "Convert your [color=springgreen]Cure[/color] into [gold]Block[/gold] and gain that much [gold]Hunger[/gold].{IfUpgraded:show:\nApply {ScorchPower:diff()} [orange]Scorch[/orange] to a random enemy.}",
+  "SPACEMERCS-ABYSSAL_FLARE.title": "Abyssal Flare"
 }

@@ -26,7 +26,7 @@ public class HungerPower() : SpaceMercsPower
     public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,
         CardModel? cardSource)
     {
-        if (power is HungerPower && amount > 0 && Owner.Player != null)
+        if (power is HungerPower && amount > 0 && Owner.Player != null && power == this)
         {
             PlayerCmd.GainEnergy(amount, Owner.Player);
             CardPileCmd.AddToCombatAndPreview<Void>(Owner, PileType.Draw, (int)amount, Owner.Player, CardPilePosition.Random);

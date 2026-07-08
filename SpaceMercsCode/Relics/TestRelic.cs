@@ -31,14 +31,14 @@ public class TestRelic() : SpaceMercsRelic
         }
     }
 
-    public override ActMap ModifyGeneratedMap(IRunState runState, ActMap map, int actIndex)
+    /*public override ActMap ModifyGeneratedMap(IRunState runState, ActMap map, int actIndex)
     {
         if (actIndex == 0)
         {
             map.StartingMapPoint.PointType = MapPointType.Shop;
         }        
         return map;
-    }
+    }*/
 
     public override Task AfterCombatVictory(CombatRoom room)
     {

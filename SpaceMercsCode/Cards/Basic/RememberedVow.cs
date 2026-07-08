@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Cards.Rare;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
@@ -172,7 +173,7 @@ public class RememberedVow() : SpaceMercsCard(1,
     {
         if (card is BrokenOath && card.Owner == Owner)
         {
-            foreach (CardModel c in card.Pile.Cards)
+            foreach (CardModel c in Owner.Deck.Cards)
             {
                 if (c != card && c is BrokenOath)
                 {
@@ -185,7 +186,40 @@ public class RememberedVow() : SpaceMercsCard(1,
         }
         return base.BeforeCardRemoved(card);
     }
-    
+
+    public override void AfterTransformedFrom()
+    {
+        List<UnwaveringStarBase> bases = new();
+        List<UnwaveringStarOath> oaths = new();
+
+        foreach (var card in Owner.Deck.Cards)
+        {
+            if (card is BrokenOath)
+            {
+                card.BeforeCardRemoved(this);
+            }
+            else if (card is UnwaveringStarBase)
+            {
+                bases.Add((UnwaveringStarBase)card);
+            }
+            else if (card is UnwaveringStarOath)
+            {
+                oaths.Add((UnwaveringStarOath)card);
+            }
+        }
+
+        foreach (var card in bases)
+        {
+            card.RemovedRememberedVow(this);
+        }
+
+        foreach (var card in oaths)
+        {
+            card.RemovedRememberedVow(this);
+        }
+        base.AfterTransformedTo();
+    }
+
     protected override void AfterDeserialized()
     {
         if (CostReduced)

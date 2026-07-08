@@ -26,7 +26,7 @@ public class VengeancePowerBuff() : SpaceMercsPower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (result.UnblockedDamage > 0 && props == ValueProp.Move && target == Owner)
+        if (result.UnblockedDamage > 0 && props == ValueProp.Move && target == Owner && dealer is { IsPlayer: false })
         {
             await PowerCmd.Apply<SuppressPower>(choiceContext, dealer, Amount, Owner, null);
             await PowerCmd.Apply<VengeancePowerDebuff>(choiceContext, dealer, 1, Owner, null);

@@ -3,5 +3,8 @@
   "SPACEMERCS-EXERT.title": "Exert",
 
   "SPACEMERCS-GAINSHUNGER.description": "Gain Energy equal to stacks now and at the start of your next turn. Shuffle that many [gold]Voids[/gold] into your draw pile.",
-  "SPACEMERCS-GAINSHUNGER.title": "Hunger"
+  "SPACEMERCS-GAINSHUNGER.title": "Hunger",
+  
+  "SPACEMERCS-GAINSSCORCH.description": "When the creature reaches [blue]10[/blue] stacks, it [color=orangered]Ignites[/color], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to the creature during your turn, the enemy loses half its stacks.",
+  "SPACEMERCS-GAINSSCORCH.title": "Scorch"
 }

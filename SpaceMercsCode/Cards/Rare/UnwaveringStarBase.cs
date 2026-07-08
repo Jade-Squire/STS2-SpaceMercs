@@ -15,6 +15,10 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.NonTransformPool
+    ];
+
     public override IEnumerable<CardKeyword> CanonicalKeywords =>
     [
         CardKeyword.Unplayable
@@ -43,7 +47,7 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
         return base.BeforeCardRemoved(card);
     }
 
-    private void RemovedRememberedVow(CardModel cardRemoved)
+    public void RemovedRememberedVow(CardModel cardRemoved)
     {
         // make sure theres no more vows
         foreach (var card in Owner.Deck.Cards)
@@ -73,7 +77,7 @@ public class UnwaveringStarBase() : SpaceMercsCard(0,
         CardCmd.TransformTo<AnswerTheCall>(this);
     }
 
-    private void RemovedBrokenOath(CardModel cardRemoved)
+    public void RemovedBrokenOath(CardModel cardRemoved)
     {
         foreach (var card in Owner.Deck.Cards)
         {

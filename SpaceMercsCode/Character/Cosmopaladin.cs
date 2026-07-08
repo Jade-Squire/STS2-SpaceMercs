@@ -69,7 +69,8 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<DarkGift>(),
         ModelDb.Card<Satiation>(),
         ModelDb.Card<Starvation>(),
-        ModelDb.Card<ColdDarkGentle>()
+        ModelDb.Card<ColdDarkGentle>(),
+        ModelDb.Card<AbyssalFlare>(),
         
         /*ModelDb.Card<Jetpack>(),
         ModelDb.Card<RememberedVow>(),

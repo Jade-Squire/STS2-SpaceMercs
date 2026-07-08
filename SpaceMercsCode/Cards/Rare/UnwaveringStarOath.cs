@@ -64,7 +64,7 @@ public class UnwaveringStarOath() : SpaceMercsCard(3,
         return base.BeforeCardRemoved(card);
     }
 
-    private void RemovedRememberedVow(CardModel cardRemoved)
+    public void RemovedRememberedVow(CardModel cardRemoved)
     {
         // make sure theres no more vows
         foreach (var card in Owner.Deck.Cards)
