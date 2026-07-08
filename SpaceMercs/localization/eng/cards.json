@@ -14,7 +14,7 @@
   "SPACEMERCS-SMOKE_SCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce the cost of a random card in your hand by 1 until played.",
   "SPACEMERCS-SMOKE_SCREEN.title": "Smoke Screen",
 
-  "SPACEMERCS-TACTICAL_STRAFE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} card{IfUpgraded:show:s}.",
+  "SPACEMERCS-TACTICAL_STRAFE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural(en):|card|cards}.",
   "SPACEMERCS-TACTICAL_STRAFE.title": "Tactical Strafe",
 
   "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
@@ -165,5 +165,8 @@
   "SPACEMERCS-THUNDERCLAP.title": "Thunderclap",
 
   "SPACEMERCS-SEISMIC_STRIKE.description": "Deal X damage twice.\nApply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(1)}.",
-  "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike"
+  "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike",
+
+  "SPACEMERCS-STURDY_CIRCUITRY.description": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to {SturdyCircuitryPower:diff()}{energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-STURDY_CIRCUITRY.title": "Sturdy Circuitry"
 }

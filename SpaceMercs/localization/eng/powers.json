@@ -89,5 +89,9 @@
 
   "SPACEMERCS-PULSE_GRENADE_POWER.description": "At the start of your turn, apply 1 [gold]Jolt[/gold] per stack to ALL enemies.",
   "SPACEMERCS-PULSE_GRENADE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Jolt[/gold] to ALL enemies.",
-  "SPACEMERCS-PULSE_GRENADE_POWER.title": "Pulse Grenade"
+  "SPACEMERCS-PULSE_GRENADE_POWER.title": "Pulse Grenade",
+
+  "SPACEMERCS-STURDY_CIRCUITRY_POWER.description": "Whenever you play a card that costs more than 2, refund energy up to your stacks of [gold]Sturdy Circuitry[/gold].",
+  "SPACEMERCS-STURDY_CIRCUITRY_POWER.smartDescription": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to [blue]{Amount}[/blue]{energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-STURDY_CIRCUITRY_POWER.title": "Sturdy Circuitry"
 }
