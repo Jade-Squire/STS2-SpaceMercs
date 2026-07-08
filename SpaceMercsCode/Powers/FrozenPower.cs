@@ -39,8 +39,16 @@ public class FrozenPower() : SpaceMercsPower
 
     public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if(side == Owner.Side)
+        if (side == Owner.Side)
+        {
+            Action<FrozenPower>? freezeRemoved = FreezeRemoved;
+            if (freezeRemoved != null)
+            {
+                freezeRemoved(this);
+            }
             PowerCmd.Remove(this);
+        }
+
         return base.AfterSideTurnEnd(choiceContext, side, participants);
     }
 

@@ -13,6 +13,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 using SpaceMercs.SpaceMercsCode.Powers;
 using SpaceMercs.SpaceMercsCode.Relics;
+using Thunderclap = SpaceMercs.SpaceMercsCode.Cards.Uncommon.Thunderclap;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 
@@ -71,6 +72,14 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<Starvation>(),
         ModelDb.Card<ColdDarkGentle>(),
         ModelDb.Card<AbyssalFlare>(),
+        ModelDb.Card<LeechingGrab>(),
+        ModelDb.Card<DirePredicament>(),
+        ModelDb.Card<KnowledgeShock>(),
+        ModelDb.Card<FlashGrenade>(),
+        ModelDb.Card<PulseGrenade>(),
+        ModelDb.Card<LightningGrenade>(),
+        ModelDb.Card<Thunderclap>(),
+        ModelDb.Card<SeismicStrike>(),
         
         /*ModelDb.Card<Jetpack>(),
         ModelDb.Card<RememberedVow>(),

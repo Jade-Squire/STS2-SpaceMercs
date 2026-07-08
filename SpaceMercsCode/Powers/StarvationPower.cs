@@ -43,9 +43,13 @@ public class StarvationPower() : SpaceMercsPower
             return Task.CompletedTask;
         foreach (var enemy in CombatState.HittableEnemies)
         {
-            CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), enemy,
-                new DamageVar(Owner.Player?.PlayerCombatState?.Energy ?? 0, ValueProp.Unpowered), Owner, null);
+            if ((Owner.Player?.PlayerCombatState?.Energy ?? 0) > 0)
+            {
+                CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), enemy,
+                    new DamageVar(Owner.Player?.PlayerCombatState?.Energy ?? 0, ValueProp.Unpowered), Owner, null);
+            }
         }
+
         return Task.CompletedTask;
     }
 

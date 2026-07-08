@@ -73,5 +73,21 @@
 
   "SPACEMERCS-STARVATION_POWER.description": "Gain 1 [gold]Hunger[/gold] at the start of your turn. Increase this amount by 1. Deal damage to ALL enemies equal to unspent Energy at the end of your turn.",
   "SPACEMERCS-STARVATION_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Hunger[/gold] at the start of your turn. Increase this amount by [blue]{IncreaseAmt:diff()}[/blue]. Deal damage to ALL enemies equal to unspent energy at the end of your turn.",
-  "SPACEMERCS-STARVATION_POWER.title": "Starvation"
+  "SPACEMERCS-STARVATION_POWER.title": "Starvation",
+
+  "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.description": "Whenever you draw a [gold]Void[/gold], draw 1 card and gain 1 [gold]Amp[/gold].",
+  "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.smartDescription": "Whenever you draw a [gold]Void[/gold], draw [blue]{Amount}[/blue] {Amount:plural(en):|card|cards} and gain [blue]{Amount}[/blue] [gold]Amp[/gold].",
+  "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.title": "Knowledge Shock",
+
+  "SPACEMERCS-AMP_POWER.description": "Whenever you play a card, deal damage equal to your [gold]Amp[/gold] to a random enemy and lose 1 [gold]Amp[/gold]. Whenever you take unblocked damage, take extra damage equal to your [gold]Amp[/gold].",
+  "SPACEMERCS-AMP_POWER.smartDescription": "Whenever you play a card, deal [blue]{Amount}[/blue] damage to a random enemy and lose 1 [gold]Amp[/gold]. Whenever you take unblocked damage, take [blue]{Amount}[/blue] more.",
+  "SPACEMERCS-AMP_POWER.title": "Amp",
+
+  "SPACEMERCS-JOLT_POWER.description": "When the [gold]Jolted[/gold] creature takes damage, up to X of that damage is dealt to another random enemy, where X is this creatures [gold]Jolt[/gold]. When [gold]Jolt[/gold] does damage this way, remove that many stacks.",
+  "SPACEMERCS-JOLT_POWER.smartDescription": "When this creature takes damage, deal up to [blue]{Amount}[/blue] of that damage to another random enemy, then remove that many stacks.",
+  "SPACEMERCS-JOLT_POWER.title": "Jolt",
+
+  "SPACEMERCS-PULSE_GRENADE_POWER.description": "At the start of your turn, apply 1 [gold]Jolt[/gold] per stack to ALL enemies.",
+  "SPACEMERCS-PULSE_GRENADE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-PULSE_GRENADE_POWER.title": "Pulse Grenade"
 }

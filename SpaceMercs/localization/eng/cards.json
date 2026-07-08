@@ -141,5 +141,29 @@
   "SPACEMERCS-COLD_DARK_GENTLE.title": "Cold, Dark, Gentle",
 
   "SPACEMERCS-ABYSSAL_FLARE.description": "Convert your [color=springgreen]Cure[/color] into [gold]Block[/gold] and gain that much [gold]Hunger[/gold].{IfUpgraded:show:\nApply {ScorchPower:diff()} [orange]Scorch[/orange] to a random enemy.}",
-  "SPACEMERCS-ABYSSAL_FLARE.title": "Abyssal Flare"
+  "SPACEMERCS-ABYSSAL_FLARE.title": "Abyssal Flare",
+
+  "SPACEMERCS-LEECHING_GRAB.description": "Remove ALL debuffs from an enemy.\nDeal {Damage:diff()} damage and gain {Block:diff()} [gold]Block[/gold] for each stack removed.",
+  "SPACEMERCS-LEECHING_GRAB.title": "Leeching Grab",
+
+  "SPACEMERCS-DIRE_PREDICAMENT.description": "Remove ALL your debuffs.\nHeal {Heal:diff()} HP.\nGain {Block:diff()} [gold]Block[/gold].\nExhaust all cards in your {IfUpgraded:show:|hand and }discard pile.",
+  "SPACEMERCS-DIRE_PREDICAMENT.title": "Dire Predicament",
+
+  "SPACEMERCS-KNOWLEDGE_SHOCK.description": "Whenever you draw a [gold]Void[/gold], gain {KnowledgeShockPower:diff()} [gold]Amp[/gold] and draw {KnowledgeShockPower:diff()} card{KnowledgeShockPower:plural(en):||s}.",
+  "SPACEMERCS-KNOWLEDGE_SHOCK.title": "Knowledge Shock",
+
+  "SPACEMERCS-FLASH_GRENADE.description": "Apply {JoltPower:diff()} [gold]Jolt[/gold] to {NumTargets:plural(en):|a|{NumTargets:diff()}} random {NumTargets:plural(en):|enemy|enemies}.",
+  "SPACEMERCS-FLASH_GRENADE.title": "Flash Grenade",
+
+  "SPACEMERCS-PULSE_GRENADE.description": "At the start of your turn, apply {PulseGrenadePower:diff()} [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-PULSE_GRENADE.title": "Pulse Grenade",
+
+  "SPACEMERCS-LIGHTNING_GRENADE.description": "Deal {Damage:diff()} damage.\nGain {AmpPower:diff()} [gold]Amp[/gold].",
+  "SPACEMERCS-LIGHTNING_GRENADE.title": "Lightning Grenade",
+
+  "SPACEMERCS-THUNDERCLAP.description": "Double the [gold]Jolt[/gold] on an enemy, then deal {Damage:diff()} damage.",
+  "SPACEMERCS-THUNDERCLAP.title": "Thunderclap",
+
+  "SPACEMERCS-SEISMIC_STRIKE.description": "Deal X damage twice.\nApply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike"
 }

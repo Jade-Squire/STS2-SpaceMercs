@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -17,6 +18,12 @@ public class ColdDarkGentle() : SpaceMercsCard(10,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(40, ValueProp.Move),
         new PowerVar<HungerPower>(10)
+    ];
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<HungerPower>(),
+        HoverTipFactory.FromPower<FrozenPower>()
     ];
 
     public override Task AfterCardEnteredCombat(CardModel card)
