@@ -11,7 +11,7 @@ using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 
-public class SolarRampart() : SpaceMercsCard(1,
+public class SolarRampart() : SpaceMercsCard(0,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {

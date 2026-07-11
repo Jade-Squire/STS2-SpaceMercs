@@ -93,5 +93,25 @@
 
   "SPACEMERCS-STURDY_CIRCUITRY_POWER.description": "Whenever you play a card that costs more than 2, refund energy up to your stacks of [gold]Sturdy Circuitry[/gold].",
   "SPACEMERCS-STURDY_CIRCUITRY_POWER.smartDescription": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to [blue]{Amount}[/blue]{energyPrefix:energyIcons(1)}.",
-  "SPACEMERCS-STURDY_CIRCUITRY_POWER.title": "Sturdy Circuitry"
+  "SPACEMERCS-STURDY_CIRCUITRY_POWER.title": "Sturdy Circuitry",
+
+  "SPACEMERCS-SEARING_VOLTAGE_POWER.description": "Whenever an enemy gains [orange]Scorch[/orange], they gain 3 [gold]Jolt[/gold].",
+  "SPACEMERCS-SEARING_VOLTAGE_POWER.smartDescription": "Whenever an enemy gains [orange]Scorch[/orange], they also gain [blue]{Amount}[/blue] [gold]Jolt[/gold].",
+  "SPACEMERCS-SEARING_VOLTAGE_POWER.title": "Searing Voltage",
+
+  "SPACEMERCS-BATTERY_POWER.description": "Gain [gold]Amp[/gold] at the start of your next turn.",
+  "SPACEMERCS-BATTERY_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Amp[/gold] at the start of your next turn.",
+  "SPACEMERCS-BATTERY_POWER.title": "Battery",
+
+  "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.description": "Whenever you take unblocked damage while you have [gold]Amp[/gold], apply 6 [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.smartDescription": "Whenever you take unblocked damage while you have [gold]Amp[/gold], apply {Amount} [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.title": "Negative Feedback",
+  
+  "SPACEMERCS-POSITIVE_FEEDBACK_POWER.description": "At the start of you turn, if you didn't take unblocked damage since last turn, gain 10 [gold]Amp[/gold].",
+  "SPACEMERCS-POSITIVE_FEEDBACK_POWER.smartDescription": "At the start of you turn, if you haven't taken unblocked damage since last turn, gain [blue]{Amount}[/blue] [gold]Amp[/gold].",
+  "SPACEMERCS-POSITIVE_FEEDBACK_POWER.title": "Positive Feedback",
+
+  "SPACEMERCS-CONSUMING_ENERGY_POWER.description": "The next time more than 3 energy is spent at once this turn, refund up to 3 energy.",
+  "SPACEMERCS-CONSUMING_ENERGY_POWER.smartDescription": "The next {Amount:plural(en):|time|[blue]{Amount}[/blue] times} more than 3 energy is spent at once, refund up to 3 energy.",
+  "SPACEMERCS-CONSUMING_ENERGY_POWER.title": "Consuming Energy"
 }

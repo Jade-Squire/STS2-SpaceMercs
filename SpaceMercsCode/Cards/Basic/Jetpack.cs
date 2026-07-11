@@ -8,7 +8,7 @@ using SpaceMercs.SpaceMercsCode.Cards;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
-public class Jetpack() : SpaceMercsCard(2,
+public class Jetpack() : SpaceMercsCard(3,
     CardType.Skill, CardRarity.Basic,
     TargetType.Self)
 {

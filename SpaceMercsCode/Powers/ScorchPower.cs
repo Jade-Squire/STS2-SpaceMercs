@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using SpaceMercs.SpaceMercsCode.Hooks;
 using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Powers;
@@ -53,6 +54,8 @@ public class ScorchPower() : SpaceMercsPower
             }
             if (power.Amount >= 10)
             {
+                await SpaceMercsHooks.BeforeEnemyIgnited(power.Owner.CombatState, choiceContext, power, amount, applier,
+                    cardSource);
                 List<Creature> creatures = new List<Creature>();
                 foreach (var currCreature in CombatState.Enemies)
                 {

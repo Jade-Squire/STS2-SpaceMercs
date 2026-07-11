@@ -168,5 +168,32 @@
   "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike",
 
   "SPACEMERCS-STURDY_CIRCUITRY.description": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to {SturdyCircuitryPower:diff()}{energyPrefix:energyIcons(1)}.",
-  "SPACEMERCS-STURDY_CIRCUITRY.title": "Sturdy Circuitry"
+  "SPACEMERCS-STURDY_CIRCUITRY.title": "Sturdy Circuitry",
+
+  "SPACEMERCS-POKE.description": "Deal damage equal to the enemy's [gold]Jolt[/gold].\nDraw {Cards:diff()} {Cards:plural(en):|card|cards}.",
+  "SPACEMERCS-POKE.title": "Poke",
+
+  "SPACEMERCS-PROD.description": "Apply {JoltPower:diff()} [gold]Jolt[/gold].\nDraw {Cards:diff()} {Cards:plural(en):|card|cards}.",
+  "SPACEMERCS-PROD.title": "Prod",
+
+  "SPACEMERCS-BOOST.description": "Gain {AmpPower:diff()} [gold]Amp[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "SPACEMERCS-BOOST.title": "Boost",
+
+  "SPACEMERCS-SEARING_VOLTAGE.description": "Whenever an enemy gains [orange]Scorch[/orange], they gain {SearingVoltagePower:diff()} [gold]Jolt[/gold].",
+  "SPACEMERCS-SEARING_VOLTAGE.title": "Searing Voltage",
+
+  "SPACEMERCS-BATTERY.description": "Remove ALL your [gold]Amp[/gold].\nRegain {IfUpgraded:show:double|it} at the start of your next turn.",
+  "SPACEMERCS-BATTERY.title": "Battery",
+
+  "SPACEMERCS-AMPLIFY_POTENTIAL.description": "Gain {AmpPower:diff()} [gold]Amp[/gold].\nDraw {Cards:diff()} cards.",
+  "SPACEMERCS-AMPLIFY_POTENTIAL.title": "Amplify Potential",
+
+  "SPACEMERCS-NEGATIVE_FEEDBACK.description": "Whenever you take unblocked damage while you have [gold]Amp[/gold], apply {NegativeFeedbackPower:diff()} [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-NEGATIVE_FEEDBACK.title": "Negative Feedback",
+
+  "SPACEMERCS-POSITIVE_FEEDBACK.description": "At the start of your turn, if you haven't taken unblocked damage since last turn, gain {PositiveFeedbackPower:diff()} [gold]Amp[/gold].",
+  "SPACEMERCS-POSITIVE_FEEDBACK.title": "Positive Feedback",
+
+  "SPACEMERCS-CONSUMING_ENERGY.description": "The next time more than 3 energy is spent at once this turn, refund up to 3 energy.",
+  "SPACEMERCS-CONSUMING_ENERGY.title": "Consuming Energy"
 }

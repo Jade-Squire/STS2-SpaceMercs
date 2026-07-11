@@ -13,6 +13,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 using SpaceMercs.SpaceMercsCode.Powers;
 using SpaceMercs.SpaceMercsCode.Relics;
+using Poke = SpaceMercs.SpaceMercsCode.Cards.Common.Poke;
 using Thunderclap = SpaceMercs.SpaceMercsCode.Cards.Uncommon.Thunderclap;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
@@ -29,7 +30,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        /*ModelDb.Card<StrikeCosmopaladin>(),
+        ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<ThrowingHammer>(),
         ModelDb.Card<HammerStrike>(),
@@ -80,9 +81,18 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<LightningGrenade>(),
         ModelDb.Card<Thunderclap>(),
         ModelDb.Card<SeismicStrike>(),
-        ModelDb.Card<SturdyCircuitry>(),*/
+        ModelDb.Card<SturdyCircuitry>(),
+        ModelDb.Card<Poke>(),
+        ModelDb.Card<Prod>(),
+        ModelDb.Card<Boost>(),
+        ModelDb.Card<SearingVoltage>(),
+        ModelDb.Card<Battery>(),
+        ModelDb.Card<AmplifyPotential>(),
+        ModelDb.Card<NegativeFeedback>(),
+        ModelDb.Card<PositiveFeedback>(),
+        ModelDb.Card<ConsumingEnergy>(),
         
-        ModelDb.Card<Jetpack>(),
+        /*ModelDb.Card<Jetpack>(),
         ModelDb.Card<RememberedVow>(),
         ModelDb.Card<BrokenOath>(),
         ModelDb.Card<ThrowingHammer>(),
@@ -93,7 +103,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
-        ModelDb.Card<DefendCosmopaladin>()
+        ModelDb.Card<DefendCosmopaladin>()*/
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
