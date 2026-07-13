@@ -59,7 +59,7 @@
   "SPACEMERCS-CONSECRATE.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nHeal hp equal to the unblocked damage.",
   "SPACEMERCS-CONSECRATE.title": "Consecrate",
 
-  "SPACEMERCS-FORGE_MASTER.description": "Ignitions you cause apply 2 [orange]Scorch[/orange].\nALL [color=orangered]Ignitions[/color] deal 30 damage to all other enemies instead.",
+  "SPACEMERCS-FORGE_MASTER.description": "[color=orangered]Ignitions[/color] you cause apply 2 [orange]Scorch[/orange].\nALL [color=orangered]Ignitions[/color] deal 30 damage to all other enemies instead.",
   "SPACEMERCS-FORGE_MASTER.title": "Forge Master",
 
   "SPACEMERCS-SUNFIRE_FURNACE.description": "Gain {CurePower:diff()} [color=springgreen]Cure[/color].\nYou cannot lose [color=springgreen]Cure[/color] until your next turn.",
@@ -195,5 +195,32 @@
   "SPACEMERCS-POSITIVE_FEEDBACK.title": "Positive Feedback",
 
   "SPACEMERCS-CONSUMING_ENERGY.description": "The next time more than 3 energy is spent at once this turn, refund up to 3 energy.",
-  "SPACEMERCS-CONSUMING_ENERGY.title": "Consuming Energy"
+  "SPACEMERCS-CONSUMING_ENERGY.title": "Consuming Energy",
+
+  "SPACEMERCS-RECRUDESCE.description": "Whenever an [color=orangered]Ignition[/color] is triggered, apply {RecrudescePower:diff()} [orange]Scorch[/orange] and {RecrudescePower:diff()} [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-RECRUDESCE.title": "Recrudesce",
+
+  "SPACEMERCS-FINAL_STAND.description": "{IfUpgraded:show:Discard any number of cards then draw|Draw} cards until your hand is full.\nGain {energyPrefix:energyIcons(3)}.\nGain 3 [rainbow]Determination[/rainbow].\nCan only be played if you are under 25% HP.",
+  "SPACEMERCS-FINAL_STAND.selectionScreenPrompt": "Choose any number of cards to replace.",
+  "SPACEMERCS-FINAL_STAND.title": "Final Stand",
+
+  "SPACEMERCS-IMPEDE.description": "Gain {Block:diff()} [gold]Block[/gold] for each card played this turn.{InCombat:\n({CardsPlayed:diff()} {CardsPlayed:plural(en):cards have|card has|cards have} been played this turn)|}",
+  "SPACEMERCS-IMPEDE.title": "Impede",
+
+  "SPACEMERCS-ALTERNATE.description": "Discard a card, then deal {Damage:diff()} damage to random enemies {IfUpgraded:show:and draw cards }for each energy cost of the discarded card.",
+  "SPACEMERCS-ALTERNATE.selectionScreenPrompt": "Choose a card to discard.",
+  "SPACEMERCS-ALTERNATE.title": "Alternate",
+
+  "SPACEMERCS-OFF_AND_ON_AGAIN.description": "Draw {Cards:diff()} cards.\nDiscard {Cards:diff()} cards.\n{IfUpgraded:show:Gain 2 [gold]Temporary Strength[/gold].\n}Return this to your hand.",
+  "SPACEMERCS-OFF_AND_ON_AGAIN.selectionScreenPrompt": "Choose {Cards:diff()} cards to discard.",
+  "SPACEMERCS-OFF_AND_ON_AGAIN.title": "Off And On Again",
+
+  "SPACEMERCS-GLACIER_GRENADE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have {BlockTarget:diff()} or more [gold]Block[/gold], apply {SlowedPower:diff()} to ALL enemies.",
+  "SPACEMERCS-GLACIER_GRENADE.title": "Glacier Grenade",
+
+  "SPACEMERCS-ICEFALL.description": "Deal {Damage:diff()} damage.\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color]",
+  "SPACEMERCS-ICEFALL.title": "Icefall",
+
+  "SPACEMERCS-GLACIAL_GUARD.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhenever you're attacked this turn while you have [gold]Block[/gold], apply {GlacialGuardPower:diff()} [color=cyan]Slowed[/color] to the enemy.{IfUpgraded:show:\nWhen your [gold]Block[/gold] is broken this turn, apply {GlacialGuardPlusPower:diff()} [color=cyan]Slowed[/color] to ALL enemies.}",
+  "SPACEMERCS-GLACIAL_GUARD.title": "Glacial Guard"
 }

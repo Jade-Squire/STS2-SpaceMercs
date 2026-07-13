@@ -30,7 +30,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeCosmopaladin>(),
+        /*ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<ThrowingHammer>(),
         ModelDb.Card<HammerStrike>(),
@@ -91,8 +91,16 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<NegativeFeedback>(),
         ModelDb.Card<PositiveFeedback>(),
         ModelDb.Card<ConsumingEnergy>(),
+        ModelDb.Card<Recrudesce>(),
+        ModelDb.Card<FinalStand>(),
+        ModelDb.Card<Impede>(),
+        ModelDb.Card<Alternate>(),
+        ModelDb.Card<OffAndOnAgain>(),
+        ModelDb.Card<GlacierGrenade>(),
+        ModelDb.Card<Icefall>(),
+        ModelDb.Card<GlacialGuard>(),*/
         
-        /*ModelDb.Card<Jetpack>(),
+        ModelDb.Card<Jetpack>(),
         ModelDb.Card<RememberedVow>(),
         ModelDb.Card<BrokenOath>(),
         ModelDb.Card<ThrowingHammer>(),
@@ -103,7 +111,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
         ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
-        ModelDb.Card<DefendCosmopaladin>()*/
+        ModelDb.Card<DefendCosmopaladin>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

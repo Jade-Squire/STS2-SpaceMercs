@@ -17,15 +17,29 @@ public static class SpaceMercsHooks
         }
     }
 
-    public static async Task BeforeEnemyIgnited(ICombatState combatState, PlayerChoiceContext choiceContext, PowerModel power, Decimal amount,
-        Creature? applier, CardModel? cardSource)
+    public static async Task BeforeEnemyIgnited(ICombatState combatState, PlayerChoiceContext choiceContext, Creature ignitedCreature, Creature? applier,
+        CardModel? cardSource)
     {
         foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
         {
             if (model is IEnemyIgnited)
             {
-                ((IEnemyIgnited)model).BeforeEnemyIgnited(choiceContext, power, amount, applier, cardSource);
+                ((IEnemyIgnited)model).BeforeEnemyIgnited(choiceContext, ignitedCreature, applier, cardSource);
             }
+            model.InvokeExecutionFinished();
+        }
+    }
+
+    public static async Task AfterEnemyIgnited(ICombatState combatState, PlayerChoiceContext choiceContext, Creature ignitedCreature, Creature? applier,
+        CardModel? cardSource)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IEnemyIgnited)
+            {
+                ((IEnemyIgnited)model).AfterEnemyIgnited(choiceContext, ignitedCreature, applier, cardSource);
+            }
+
             model.InvokeExecutionFinished();
         }
     }

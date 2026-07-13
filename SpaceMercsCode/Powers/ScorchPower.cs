@@ -54,7 +54,7 @@ public class ScorchPower() : SpaceMercsPower
             }
             if (power.Amount >= 10)
             {
-                await SpaceMercsHooks.BeforeEnemyIgnited(power.Owner.CombatState, choiceContext, power, amount, applier,
+                await SpaceMercsHooks.BeforeEnemyIgnited(CombatState, choiceContext, power.Owner, applier,
                     cardSource);
                 List<Creature> creatures = new List<Creature>();
                 foreach (var currCreature in CombatState.Enemies)
@@ -85,8 +85,11 @@ public class ScorchPower() : SpaceMercsPower
                     }
                     await CreatureCmd.Damage(choiceContext, currCreature, damageToDeal, ValueProp.Unpowered, null, null);
                 }
+                var combatState = CombatState;
                 await CreatureCmd.Damage(choiceContext, power.Owner, 30M, ValueProp.Unpowered, null, null);
                 await PowerCmd.ModifyAmount(choiceContext, power, -10, applier, cardSource);
+                await SpaceMercsHooks.AfterEnemyIgnited(combatState, choiceContext, power.Owner, applier,
+                    cardSource);
             }
         }
     }   

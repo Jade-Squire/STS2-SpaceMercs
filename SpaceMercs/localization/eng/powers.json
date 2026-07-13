@@ -113,5 +113,17 @@
 
   "SPACEMERCS-CONSUMING_ENERGY_POWER.description": "The next time more than 3 energy is spent at once this turn, refund up to 3 energy.",
   "SPACEMERCS-CONSUMING_ENERGY_POWER.smartDescription": "The next {Amount:plural(en):|time|[blue]{Amount}[/blue] times} more than 3 energy is spent at once, refund up to 3 energy.",
-  "SPACEMERCS-CONSUMING_ENERGY_POWER.title": "Consuming Energy"
+  "SPACEMERCS-CONSUMING_ENERGY_POWER.title": "Consuming Energy",
+
+  "SPACEMERCS-RECRUDESCE_POWER.description": "When an [color=orangered]Ignition[/color] is triggered, apply 2 [orange]Scorch[/orange] and 2 [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-RECRUDESCE_POWER.smartDescription": "When an [color=orangered]Ignition[/color] is triggered, apply [blue]{Amount}[/blue] [orange]Scorch[/orange] and [blue]{Amount}[/blue] [gold]Jolt[/gold] to ALL enemies.",
+  "SPACEMERCS-RECRUDESCE_POWER.title": "Recrudesce",
+
+  "SPACEMERCS-GLACIAL_GUARD_POWER.description": "Whenever you're attacked this turn while you have [gold]Block[/gold], apply 1 [color=cyan]Slowed[/color] to the enemy.",
+  "SPACEMERCS-GLACIAL_GUARD_POWER.smartDescription": "Whenever you're attacked this turn while you have [gold]Block[/gold], apply [blue]{Amount}[/blue] [color=cyan]Slowed[/color] to the enemy",
+  "SPACEMERCS-GLACIAL_GUARD_POWER.title": "Glacial Guard",
+
+  "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.description": "When your [gold]Block[/gold] is broken this turn, apply 5 [color=cyan]Slowed[/color] to ALL enemies.",
+  "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.smartDescription": "When your [gold]Block[/gold] is broken this turn, apply [blue]{Amount}[/blue] [color=cyan]Slowed[/color] to ALL enemies.",
+  "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.title": "Glacial Guard+"
 }

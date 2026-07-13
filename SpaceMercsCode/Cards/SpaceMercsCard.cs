@@ -40,7 +40,7 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
     private bool _hookedIntoDetChanged = false;
     
     //Image size:
-    //Normal art: 1000x760 (Using 500x380 should also work, it Determination simply be scaled.)
+    //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
     //Full art: 606x852
     public override string CustomPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 

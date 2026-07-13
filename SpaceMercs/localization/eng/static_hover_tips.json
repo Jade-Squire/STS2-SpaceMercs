@@ -1,4 +1,7 @@
 {
   "SPACEMERCS-DETERMINATION_COUNTER.description": "Cards with [gold]Exert[/gold] can use [rainbow]Determination[/rainbow] instead of Energy to play them.\n\nClick to convert 2 [rainbow]Determination[/rainbow] into 1 Energy.",
-  "SPACEMERCS-DETERMINATION_COUNTER.title": "Determination"
+  "SPACEMERCS-DETERMINATION_COUNTER.title": "Determination",
+  
+  "SPACEMERCS-DETERMINATION.description": "Cards with [gold]Exert[/gold] can use [rainbow]Determination[/rainbow] instead of Energy to play them.",
+  "SPACEMERCS-DETERMINATION.title": "Determination"
 }

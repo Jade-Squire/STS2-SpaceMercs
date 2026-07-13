@@ -6,8 +6,13 @@ namespace SpaceMercs.SpaceMercsCode.Hooks;
 
 public interface IEnemyIgnited
 {
-    public void BeforeEnemyIgnited(PlayerChoiceContext choiceContext, PowerModel power, Decimal amount,
-        Creature? applier, CardModel? cardSource)
+    public void BeforeEnemyIgnited(PlayerChoiceContext choiceContext, Creature ignitedCreature, Creature? applier,
+        CardModel? cardSource)
+    {
+    }
+
+    public void AfterEnemyIgnited(PlayerChoiceContext choiceContext, Creature ignitedCreature, Creature? applier,
+        CardModel? cardSource)
     {
     }
 }
