@@ -1,28 +1,28 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
+using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Commands;
 using SpaceMercs.SpaceMercsCode.Powers;
 
-namespace SpaceMercs.SpaceMercsCode.Cards.Uncommon;
+namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
-public class BlissfulIgnorance() : SpaceMercsCard(3,
-    CardType.Skill, CardRarity.Uncommon,
-    TargetType.Self)
+public class ColdStare() : SpaceMercsCard(0,
+    CardType.Skill, CardRarity.Common,
+    TargetType.RandomEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(20, ValueProp.Unpowered),
-        new IntVar("Determination", 3)
+        new PowerVar<SlowedPower>(2),
+        new IntVar("Determination", 1)
     ];
 
-    public override bool GainsBlock => true;
-
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<SlowedPower>(),
         new HoverTip(new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.title"), new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.description"))
     ];
 
@@ -32,13 +32,17 @@ public class BlissfulIgnorance() : SpaceMercsCard(3,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        Creature randCreature = Owner.RunState.Rng.CombatTargets.NextItem(CombatState.HittableEnemies);
+        if (randCreature != null)
+        {
+            await PowerCmd.Apply<SlowedPower>(choiceContext, randCreature, DynamicVars[nameof(SlowedPower)].BaseValue, Owner.Creature, this);
+        }
+
         await CosmopaladinPlayerCmd.GainDetermination(DynamicVars["Determination"].IntValue, Owner, play);
-        await PowerCmd.Apply<BlissfulIgnorancePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
-        DynamicVars["Determination"].UpgradeValueBy(2);
+        DynamicVars["Determination"].UpgradeValueBy(1);
     }
 }

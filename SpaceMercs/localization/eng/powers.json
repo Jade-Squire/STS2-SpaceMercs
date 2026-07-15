@@ -142,5 +142,13 @@
 
   "SPACEMERCS-BLINDED_POWER.description": "You cannot see the cards you draw this turn.",
   "SPACEMERCS-BLINDED_POWER.smartDescription": "You cannot see the cards you draw this turn.",
-  "SPACEMERCS-BLINDED_POWER.title": "Blinded"
+  "SPACEMERCS-BLINDED_POWER.title": "Blinded",
+
+  "SPACEMERCS-FRIGID_FORTIFICATION_POWER.description": "Gain [gold]Frost Armor[/gold] next turn.",
+  "SPACEMERCS-FRIGID_FORTIFICATION_POWER.smartDescription": "Gain [gold]Frost Armor[/gold] {Amount:plural(en):|next turn|for the next [blue]{Amount}[/blue] turns}.",
+  "SPACEMERCS-FRIGID_FORTIFICATION_POWER.title": "Frigid Fortification",
+
+  "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.description": "Whenever you gain [gold]Hunger[/gold], gain 1 [gold]Frost Armor[/gold]",
+  "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.smartDescription": "Whenever you gain [gold]Hunger[/gold], gain [blue]{Amount}[/blue] [gold]Frost Armor[/gold].",
+  "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.title": "Empty and Unmoving"
 }

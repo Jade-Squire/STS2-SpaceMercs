@@ -243,5 +243,35 @@
   "SPACEMERCS-HOWLING_REVENGE.title": "Howling Revenge",
 
   "SPACEMERCS-BLISSFUL_IGNORANCE.description": "Gain {Determination:diff()} [rainbow]Determination[/rainbow].\nGain {Block:diff()} [gold]Block[/gold] next turn.\nYou can't see your cards next turn.",
-  "SPACEMERCS-BLISSFUL_IGNORANCE.title": "Blissful Ignorance"
+  "SPACEMERCS-BLISSFUL_IGNORANCE.title": "Blissful Ignorance",
+
+  "SPACEMERCS-COLD_STARE.description": "Apply {SlowedPower:diff()} [color=cyan]Slowed[/color] to a random enemy.\nGain {Determination:diff()} [rainbow]Determination[/rainbow].",
+  "SPACEMERCS-COLD_STARE.title": "Cold Stare",
+
+  "SPACEMERCS-ARCTIC_BLAST.description": "Deal {Damage:diff()} damage to ALL enemies.\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color] to ALL enemies.",
+  "SPACEMERCS-ARCTIC_BLAST.title": "Arctic Blast",
+
+  "SPACEMERCS-HONOR_THE_FALLEN.description": "Gain {Block:diff()} [gold]Block[/gold].\nPermanently increase this by {BlockIncrease:diff()} when an enemy dies.",
+  "SPACEMERCS-HONOR_THE_FALLEN.title": "Honor the Fallen",
+
+  "SPACEMERCS-FRIGID_FORTIFICATION.description": "Apply {SlowedPower:diff()} [color=cyan]Slowed[/color] to ALL enemies.\nGain [gold]Frost Armor[/gold] this and next turn.",
+  "SPACEMERCS-FRIGID_FORTIFICATION.title": "Frigid Fortification",
+  
+  "SPACEMERCS-HUNKER_DOWN.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
+  "SPACEMERCS-HUNKER_DOWN.title": "Hunker Down",
+
+  "SPACEMERCS-CANT_DIE_AGAIN.description": "Gain {Determination:diff()} [rainbow]Determination[/rainbow].\nGain [gold]Block[/gold] equal to {IfUpgraded:show:|half }your missing Hp.\nCosts 0 when under 50% Hp.",
+  "SPACEMERCS-CANT_DIE_AGAIN.title": "Can't Die Again",
+
+  "SPACEMERCS-HOARFROST_STOMP.description": "Costs 1 [rainbow]Determination[/rainbow].\nDeal {Damage:diff()} damage.\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color].\nPut this back in your hand.",
+  "SPACEMERCS-HOARFROST_STOMP.title": "Hoarfrost Stomp",
+
+  "SPACEMERCS-SHIVER_STRIKE.description": "Deal {Damage:diff()} damage.\nApply any debuffs on the enemy to ALL other enemies.",
+  "SPACEMERCS-SHIVER_STRIKE.title": "Shiver Strike",
+
+  "SPACEMERCS-HOT_AND_COLD.description": "Double the [orange]Scorch[/orange] and [color=cyan]Slowed[/color] on ALL enemies.\nGain 1 [rainbow]Determination[/rainbow] for each enemy [color=orangered]Ignited[/color] or [color=blue][jitter]Frozen[/jitter][/color] this way.",
+  "SPACEMERCS-HOT_AND_COLD.title": "Hot and Cold",
+
+  "SPACEMERCS-EMPTY_AND_UNMOVING.description": "Whenever you gain [gold]Hunger[/gold], gain {EmptyAndUnmovingPower:diff()} [gold]Frost Armor[/gold].",
+  "SPACEMERCS-EMPTY_AND_UNMOVING.title": "Empty and Unmoving"
 }

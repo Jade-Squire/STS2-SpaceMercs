@@ -43,4 +43,32 @@ public static class SpaceMercsHooks
             model.InvokeExecutionFinished();
         }
     }
+
+    public static async Task BeforeEnemyFrozen(ICombatState combatState, PlayerChoiceContext choiceContext,
+        Creature frozenCreature, Creature? applier, CardModel? cardSource)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IEnemyFrozen)
+            {
+                ((IEnemyFrozen)model).BeforeEnemyFrozen(choiceContext, frozenCreature, applier, cardSource);
+            }
+            
+            model.InvokeExecutionFinished();
+        }
+    }
+    
+    public static async Task AfterEnemyFrozen(ICombatState combatState, PlayerChoiceContext choiceContext, Creature frozenCreature, Creature? applier,
+        CardModel? cardSource)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IEnemyFrozen)
+            {
+                ((IEnemyFrozen)model).AfterEnemyFrozen(choiceContext, frozenCreature, applier, cardSource);
+            }
+
+            model.InvokeExecutionFinished();
+        }
+    }
 }
