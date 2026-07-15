@@ -125,5 +125,22 @@
 
   "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.description": "When your [gold]Block[/gold] is broken this turn, apply 5 [color=cyan]Slowed[/color] to ALL enemies.",
   "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.smartDescription": "When your [gold]Block[/gold] is broken this turn, apply [blue]{Amount}[/blue] [color=cyan]Slowed[/color] to ALL enemies.",
-  "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.title": "Glacial Guard+"
+  "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.title": "Glacial Guard+",
+
+  "SPACEMERCS-HOWLING_REVENGE_POWER.description": "Prevent death and heal to [blue]25%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
+  "SPACEMERCS-HOWLING_REVENGE_POWER.smartDescription": "Prevent death and heal to [blue]25%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
+  "SPACEMERCS-HOWLING_REVENGE_POWER.title": "Howling Revenge",
+
+  "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.description": "Prevent death and heal to [blue]75%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
+  "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.smartDescription": "Prevent death and heal to [blue]75%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
+  "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.title": "Howling Revenge+",
+
+
+  "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.description": "Gain 20 [gold]Block[/gold] at the start of your next turn. You cannot see the cards you draw next turn.",
+  "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.smartDescription": "Gain [blue]{Block:diff()}[/blue] [gold]Block[/gold] at the start of your next {Amount:plural(en):|turn|[blue]{Amount}[/blue] turns}. You cannot see the cards you draw {Amount:plural(en):|next turn|for the next [blue]{Amount}[/blue] turns}.",
+  "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.title": "Blissful Ignorance",
+
+  "SPACEMERCS-BLINDED_POWER.description": "You cannot see the cards you draw this turn.",
+  "SPACEMERCS-BLINDED_POWER.smartDescription": "You cannot see the cards you draw this turn.",
+  "SPACEMERCS-BLINDED_POWER.title": "Blinded"
 }

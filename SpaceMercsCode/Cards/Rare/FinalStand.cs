@@ -22,6 +22,8 @@ public class FinalStand() : SpaceMercsCard(1,
         new HoverTip(new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.title"), new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.description"))
     ];
 
+    public override bool HasDeterminationAbility => true;
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

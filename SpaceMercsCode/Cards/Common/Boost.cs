@@ -11,7 +11,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
 public class Boost() : SpaceMercsCard(0,
     CardType.Skill, CardRarity.Common,
-    TargetType.AnyEnemy)
+    TargetType.Self)
 {
     public override bool GainsBlock => true;
 

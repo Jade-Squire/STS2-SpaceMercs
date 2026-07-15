@@ -89,7 +89,16 @@ public class BrokenOath() : SpaceMercsCard(2,
         DynamicVars.Damage.UpgradeValueBy(5);
         DynamicVars[nameof(VulnerablePower)].UpgradeValueBy(1);
     }
-    
+
+    protected override void AfterDowngraded()
+    {
+        if (CostReduced)
+        {
+            EnergyCost.SetCustomBaseCost(1);
+        }
+        base.AfterDowngraded();
+    }
+
     protected override void AfterDeserialized()
     {
         if (CostReduced)

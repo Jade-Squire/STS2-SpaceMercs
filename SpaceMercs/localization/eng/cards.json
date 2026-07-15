@@ -1,4 +1,16 @@
 {
+  "SPACEMERCS-UNKNOWN_TARGET_ENEMY.description": "This card is a mystery...",
+  "SPACEMERCS-UNKNOWN_TARGET_ENEMY.title": "Unknown",
+  
+  "SPACEMERCS-UNKNOWN_TARGET_SELF.description": "This card is a mystery...",
+  "SPACEMERCS-UNKNOWN_TARGET_SELF.title": "Unknown",
+
+  "SPACEMERCS-UNKNOWN_TARGET_ALLY.description": "This card is a mystery...",
+  "SPACEMERCS-UNKNOWN_TARGET_ALLY.title": "Unknown",
+
+  "SPACEMERCS-UNKNOWN_TARGET_ANY_PLAYER.description": "This card is a mystery...",
+  "SPACEMERCS-UNKNOWN_TARGET_ANY_PLAYER.title": "Unknown",
+  
   "SPACEMERCS-STRIKE_COSMOPALADIN.description": "Deal {Damage:diff()} damage.",
   "SPACEMERCS-STRIKE_COSMOPALADIN.title": "Strike",
 
@@ -215,12 +227,21 @@
   "SPACEMERCS-OFF_AND_ON_AGAIN.selectionScreenPrompt": "Choose {Cards:diff()} cards to discard.",
   "SPACEMERCS-OFF_AND_ON_AGAIN.title": "Off And On Again",
 
-  "SPACEMERCS-GLACIER_GRENADE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have {BlockTarget:diff()} or more [gold]Block[/gold], apply {SlowedPower:diff()} to ALL enemies.",
+  "SPACEMERCS-GLACIER_GRENADE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have {BlockTarget:diff()} or more [gold]Block[/gold], apply {SlowedPower:diff()} [color=cyan]Slowed[/color] to ALL enemies.",
   "SPACEMERCS-GLACIER_GRENADE.title": "Glacier Grenade",
 
   "SPACEMERCS-ICEFALL.description": "Deal {Damage:diff()} damage.\nApply {SlowedPower:diff()} [color=cyan]Slowed[/color]",
   "SPACEMERCS-ICEFALL.title": "Icefall",
 
   "SPACEMERCS-GLACIAL_GUARD.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhenever you're attacked this turn while you have [gold]Block[/gold], apply {GlacialGuardPower:diff()} [color=cyan]Slowed[/color] to the enemy.{IfUpgraded:show:\nWhen your [gold]Block[/gold] is broken this turn, apply {GlacialGuardPlusPower:diff()} [color=cyan]Slowed[/color] to ALL enemies.}",
-  "SPACEMERCS-GLACIAL_GUARD.title": "Glacial Guard"
+  "SPACEMERCS-GLACIAL_GUARD.title": "Glacial Guard",
+
+  "SPACEMERCS-OUT_OF_OPTIONS.description": "[jitter][color=blue]Freeze[/color][/jitter] ALL enemies.\nEnd your turn.\nCan only be played as your first card this turn.",
+  "SPACEMERCS-OUT_OF_OPTIONS.title": "Out of Options",
+
+  "SPACEMERCS-HOWLING_REVENGE.description": "Prevent your next death and heal to {IfUpgraded:show:75%|25%} Hp.\n[gold]Purge[/gold] this card from your deck when this effect is used.",
+  "SPACEMERCS-HOWLING_REVENGE.title": "Howling Revenge",
+
+  "SPACEMERCS-BLISSFUL_IGNORANCE.description": "Gain {Determination:diff()} [rainbow]Determination[/rainbow].\nGain {Block:diff()} [gold]Block[/gold] next turn.\nYou can't see your cards next turn.",
+  "SPACEMERCS-BLISSFUL_IGNORANCE.title": "Blissful Ignorance"
 }
