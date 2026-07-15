@@ -10,7 +10,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
 public class PhoenixRising() : SpaceMercsCard(0,
     CardType.Skill, CardRarity.Common,
-    TargetType.Self)
+    TargetType.Self), IPermaScalingCard
 {
     private int _currentCure = 1;
     private int _increasedCure;
@@ -52,12 +52,7 @@ public class PhoenixRising() : SpaceMercsCard(0,
         CardPlay play)
     {
         await PowerCmd.Apply<CurePower>(choiceContext, Owner.Creature, DynamicVars[nameof(CurePower)].BaseValue, Owner.Creature, this);
-        BuffFromPlay(DynamicVars["CureIncrease"].IntValue);
-        if (!(DeckVersion is PhoenixRising deckVersion))
-        {
-            return;
-        }
-        deckVersion.BuffFromPlay(DynamicVars["CureIncrease"].IntValue);
+        BuffCard();
     }
 
     protected override void OnUpgrade()
@@ -76,5 +71,15 @@ public class PhoenixRising() : SpaceMercsCard(0,
     private void UpdateStats()
     {
         this.CurrentCure = 1 + IncreasedCure;
+    }
+
+    public void BuffCard()
+    {
+        BuffFromPlay(DynamicVars["CureIncrease"].IntValue);
+        if (!(DeckVersion is PhoenixRising deckVersion))
+        {
+            return;
+        }
+        deckVersion.BuffFromPlay(DynamicVars["CureIncrease"].IntValue);
     }
 }

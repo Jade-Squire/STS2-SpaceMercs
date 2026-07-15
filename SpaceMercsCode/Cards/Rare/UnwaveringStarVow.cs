@@ -18,7 +18,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Rare;
 [Pool(typeof(CosmopaladinUniqueCardPool))]
 public class UnwaveringStarVow() : SpaceMercsCard(2,
     CardType.Skill, CardRarity.Rare,
-    TargetType.Self)
+    TargetType.Self), IPermaScalingCard
 {
     public override bool GainsBlock => true;
 
@@ -82,33 +82,7 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
         await PowerCmd.Apply<HungerPower>(choiceContext, Owner.Creature, DynamicVars[nameof(HungerPower)].BaseValue,
             Owner.Creature, this);
 
-        if (IsUpgraded)
-        {
-            BuffFromPlay(1, 1);
-            if (!(DeckVersion is UnwaveringStarVow deckVersion))
-            {
-                return;
-            }
-            deckVersion.BuffFromPlay(1, 1);
-        }
-        else if (Owner.RunState.Rng.Niche.NextBool())
-        {
-            BuffFromPlay(1, 0);
-            if (!(DeckVersion is UnwaveringStarVow deckVersion))
-            {
-                return;
-            }
-            deckVersion.BuffFromPlay(1, 0);
-        }
-        else
-        {
-            BuffFromPlay(0, 1);
-            if (!(DeckVersion is UnwaveringStarVow deckVersion))
-            {
-                return;
-            }
-            deckVersion.BuffFromPlay(0, 1);
-        }
+        BuffCard();
     }
 
     protected override void OnUpgrade()
@@ -154,7 +128,7 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
     {
         if (card is RememberedVow)
         {
-            CardModel endCard = ModelDb.Card<AnswerTheCall>().ToMutable();
+            CardModel endCard = ModelDb.Card<UnwaveringStarBase>().ToMutable();
             endCard.Owner = Owner;
             if (IsUpgraded)
             {
@@ -178,5 +152,36 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
     {
         CurrentBlock = 1 + IncreasedBlock;
         CurrentHunger = 1 + IncreasedHunger;
+    }
+
+    public void BuffCard()
+    {
+        if (IsUpgraded)
+        {
+            BuffFromPlay(1, 1);
+            if (!(DeckVersion is UnwaveringStarVow deckVersion))
+            {
+                return;
+            }
+            deckVersion.BuffFromPlay(1, 1);
+        }
+        else if (Owner.RunState.Rng.Niche.NextBool())
+        {
+            BuffFromPlay(1, 0);
+            if (!(DeckVersion is UnwaveringStarVow deckVersion))
+            {
+                return;
+            }
+            deckVersion.BuffFromPlay(1, 0);
+        }
+        else
+        {
+            BuffFromPlay(0, 1);
+            if (!(DeckVersion is UnwaveringStarVow deckVersion))
+            {
+                return;
+            }
+            deckVersion.BuffFromPlay(0, 1);
+        }
     }
 }

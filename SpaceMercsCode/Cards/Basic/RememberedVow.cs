@@ -14,7 +14,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
 public class RememberedVow() : SpaceMercsCard(1,
     CardType.Attack, CardRarity.Basic,
-    TargetType.AnyEnemy)
+    TargetType.AnyEnemy), IPermaScalingCard
 {
     private const string _increaseBlockKey = "IncreaseBlock";
     private const string _increaseDamageKey = "IncreaseDamage";
@@ -107,36 +107,7 @@ public class RememberedVow() : SpaceMercsCard(1,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
-        if (IsUpgraded)
-        {
-            BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, DynamicVars[_increaseDamageKey].IntValue);
-            if (!(DeckVersion is RememberedVow deckVersion))
-            {
-                return;
-            }
-            deckVersion.BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, DynamicVars[_increaseDamageKey].IntValue);
-        }
-        else
-        {
-            if (Owner.RunState.Rng.Niche.NextBool())
-            {
-                BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, 0);
-                if (!(DeckVersion is RememberedVow deckVersion))
-                {
-                    return;
-                }
-                deckVersion.BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, 0);
-            }
-            else
-            {
-                BuffFromPlay(0, DynamicVars[_increaseDamageKey].IntValue);
-                if (!(DeckVersion is RememberedVow deckVersion))
-                {
-                    return;
-                }
-                deckVersion.BuffFromPlay(0, DynamicVars[_increaseDamageKey].IntValue);
-            }
-        }
+        BuffCard();
     }
 
     protected override void OnUpgrade()
@@ -225,6 +196,40 @@ public class RememberedVow() : SpaceMercsCard(1,
         if (CostReduced)
         {
             EnergyCost.SetCustomBaseCost(0);
+        }
+    }
+
+    public void BuffCard()
+    {
+        if (IsUpgraded)
+        {
+            BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, DynamicVars[_increaseDamageKey].IntValue);
+            if (!(DeckVersion is RememberedVow deckVersion))
+            {
+                return;
+            }
+            deckVersion.BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, DynamicVars[_increaseDamageKey].IntValue);
+        }
+        else
+        {
+            if (Owner.RunState.Rng.Niche.NextBool())
+            {
+                BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, 0);
+                if (!(DeckVersion is RememberedVow deckVersion))
+                {
+                    return;
+                }
+                deckVersion.BuffFromPlay(DynamicVars[_increaseBlockKey].IntValue, 0);
+            }
+            else
+            {
+                BuffFromPlay(0, DynamicVars[_increaseDamageKey].IntValue);
+                if (!(DeckVersion is RememberedVow deckVersion))
+                {
+                    return;
+                }
+                deckVersion.BuffFromPlay(0, DynamicVars[_increaseDamageKey].IntValue);
+            }
         }
     }
 }

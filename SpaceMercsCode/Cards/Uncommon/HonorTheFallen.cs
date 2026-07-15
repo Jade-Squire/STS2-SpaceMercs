@@ -13,7 +13,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 
 public class HonorTheFallen() : SpaceMercsCard(2,
     CardType.Skill, CardRarity.Uncommon,
-    TargetType.Self)
+    TargetType.Self), IPermaScalingCard
 {
     public override bool GainsBlock => true;
 
@@ -56,7 +56,7 @@ public class HonorTheFallen() : SpaceMercsCard(2,
     {
         if (creature.IsEnemy && !wasRemovalPrevented)
         {
-            BuffStats(DynamicVars["BlockIncrease"].IntValue);
+            BuffCard();
         }
         return base.AfterDeath(choiceContext, creature, wasRemovalPrevented, deathAnimLength);
     }
@@ -75,5 +75,15 @@ public class HonorTheFallen() : SpaceMercsCard(2,
     protected override void OnUpgrade()
     {
         AddKeyword(CardKeyword.Retain);
+    }
+
+    public void BuffCard()
+    {
+        BuffStats(DynamicVars["BlockIncrease"].IntValue);
+        if (!(DeckVersion is HonorTheFallen deckVersion))
+        {
+            return;
+        }
+        deckVersion.BuffStats(DynamicVars["BlockIncrease"].IntValue);
     }
 }

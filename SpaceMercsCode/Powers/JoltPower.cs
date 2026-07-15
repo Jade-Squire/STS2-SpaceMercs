@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.ValueProps;
+using SpaceMercs.SpaceMercsCode.Hooks;
 using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Powers;
@@ -29,12 +30,14 @@ public class JoltPower() : SpaceMercsPower
             if (randomTarget != null)
             {
                 Flash();
+                SpaceMercsHooks.BeforeEnemyJolted(CombatState, choiceContext, randomTarget, dealer, cardSource, damageToDeal);
                 await Cmd.CustomScaledWait(.2f, .4f);
                 VfxCmd.PlayOnCreature(randomTarget, "vfx/vfx_attack_lightning");
                 SfxCmd.Play("event:/sfx/characters/defect/defect_lightning_passive");
                 PowerCmd.ModifyAmount(choiceContext, this, -damageToDeal, null, null);
                 await CreatureCmd.Damage(choiceContext, randomTarget, new DamageVar(damageToDeal, ValueProp.Unpowered),
                     Owner, null);
+                SpaceMercsHooks.AfterEnemyJolted(CombatState, choiceContext, randomTarget, dealer, cardSource, damageToDeal);
             }
         }
     }

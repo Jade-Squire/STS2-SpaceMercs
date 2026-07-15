@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Keywords;
 using SpaceMercs.SpaceMercsCode.Powers;
 
@@ -27,6 +28,10 @@ public class FrigidFortification() : SpaceMercsCard(3,
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
         SpaceMercsKeywords.Exert,
         CardKeyword.Retain
+    ];
+    
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.Slows
     ];
 
     public override bool HasDeterminationAbility => true;

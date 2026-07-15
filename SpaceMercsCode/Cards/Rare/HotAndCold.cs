@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Commands;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Hooks;
 using SpaceMercs.SpaceMercsCode.Keywords;
 using SpaceMercs.SpaceMercsCode.Powers;
@@ -31,6 +32,10 @@ public class HotAndCold() : SpaceMercsCard(3,
         HoverTipFactory.FromPower<ScorchPower>(),
         HoverTipFactory.FromPower<SlowedPower>(),
         HoverTipFactory.FromPower<FrozenPower>()
+    ];
+    
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.Slows
     ];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [];

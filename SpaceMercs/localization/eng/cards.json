@@ -273,5 +273,32 @@
   "SPACEMERCS-HOT_AND_COLD.title": "Hot and Cold",
 
   "SPACEMERCS-EMPTY_AND_UNMOVING.description": "Whenever you gain [gold]Hunger[/gold], gain {EmptyAndUnmovingPower:diff()} [gold]Frost Armor[/gold].",
-  "SPACEMERCS-EMPTY_AND_UNMOVING.title": "Empty and Unmoving"
+  "SPACEMERCS-EMPTY_AND_UNMOVING.title": "Empty and Unmoving",
+
+  "SPACEMERCS-QUICK_AND_RELENTLESS.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, {IfUpgraded:show:gain that much [gold]Amp[/gold] and }apply that much [color=cyan]Slowed[/color] to that enemy.",
+  "SPACEMERCS-QUICK_AND_RELENTLESS.title": "Quick and Relentless",
+
+  "SPACEMERCS-RIME_OR_REASON.description": "Choose Rime or Reason.\nThe created card costs 0 {IfUpgraded:show:this combat|until played}.",
+  "SPACEMERCS-RIME_OR_REASON.title": "Rime or Reason",
+
+  "SPACEMERCS-REASON.description": "Add 1 random Colorless card into your [gold]Hand[/gold].\nIt costs 0 {IfUpgraded:show:this combat|until played}.",
+  "SPACEMERCS-REASON.title": "Reason",
+
+  "SPACEMERCS-RIME.description": "Add 1 random card that applies [color=cyan]Slowed[/color] into your [gold]Hand[/gold].\nIt costs 0 {IfUpgraded:show:this combat|until played}.",
+  "SPACEMERCS-RIME.title": "Rime",
+
+  "SPACEMERCS-COLD_SHOULDER.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nCan only be played if an enemy is [jitter][color=blue]Frozen[/color][/jitter].",
+  "SPACEMERCS-COLD_SHOULDER.title": "Cold Shoulder",
+
+  "SPACEMERCS-INDECISIVE.description": "Does nothing until you've chosen a path.{IfUpgraded:show:\n(Remove either [gold]Remembered Vow[/gold] or [gold]Broken Oath[/gold] from your deck.)}",
+  "SPACEMERCS-INDECISIVE.title": "Indecisive",
+
+  "SPACEMERCS-STAND_FIRM.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].\nScale ALL your permanent scaling cards once.",
+  "SPACEMERCS-STAND_FIRM.title": "Stand Firm",
+
+  "SPACEMERCS-CHILLING_PAST.description": "",
+  "SPACEMERCS-CHILLING_PAST.title": "Chilling Past",
+
+  "SPACEMERCS-NEW_PATH.description": "",
+  "SPACEMERCS-NEW_PATH.title": "New Path"
 }

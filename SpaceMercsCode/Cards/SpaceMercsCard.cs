@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Runs;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
@@ -286,8 +287,145 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
                 {
                     rewardOptions.ModifyCard(RunState.CreateCard<AnswerTheCall>(rewardOptions.Card.Owner));
                 }
+            } 
+            else if (rewardOptions.Card is Indecisive)
+            {
+                bool hasOath = false;
+                bool hasVow = false;
+                foreach (var card in rewardOptions.Card.Owner.Deck.Cards)
+                {
+                    if (card is BrokenOath)
+                    {
+                        hasOath = true;
+                        if (hasVow)
+                        {
+                            return base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
+                        }
+                    }
+                    else if (card is RememberedVow)
+                    {
+                        hasVow = true;
+                        if (hasOath)
+                        {
+                            return base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
+                        }
+                    }
+                }
+
+                if (!hasOath && hasVow)
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<StandFirm>(rewardOptions.Card.Owner));
+                } 
+                else if (hasOath && !hasVow)
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<ChillingPast>(rewardOptions.Card.Owner));
+                }
+                else
+                {
+                    rewardOptions.ModifyCard(RunState.CreateCard<NewPath>(rewardOptions.Card.Owner));
+                }
             }
         }
         return base.TryModifyCardRewardOptions(player, cardRewardOptions, creationOptions);
+    }
+
+    public override void ModifyMerchantCardCreationResults(Player player, List<CardCreationResult> cards)
+    {
+        foreach (var shopCard in cards)
+        {
+            if (shopCard.Card is UnwaveringStarBase or UnwaveringStarVow or UnwaveringStarVow or AnswerTheCall)
+            {
+                bool hasOath = false;
+                bool hasVow = false;
+                foreach (var card in player.Deck.Cards)
+                {
+                    if (card is BrokenOath)
+                    {
+                        hasOath = true;
+                        if (hasVow)
+                        {
+                            base.ModifyMerchantCardCreationResults(player, cards);
+                            return;
+                        }
+                    }
+                    else if (card is RememberedVow)
+                    {
+                        hasVow = true;
+                        if (hasOath)
+                        {
+                            base.ModifyMerchantCardCreationResults(player, cards);
+                            return;
+                        }
+                    }
+                }
+
+                if (hasOath && hasVow)
+                {
+                    if (shopCard.Card is not UnwaveringStarBase)
+                    {
+                        shopCard.ModifyCard(RunState.CreateCard<UnwaveringStarBase>(player));
+                    }
+                }
+                else if (!hasOath && hasVow)
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<UnwaveringStarOath>(player));
+                } 
+                else if (hasOath && !hasVow)
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<UnwaveringStarVow>(player));
+                }
+                else
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<AnswerTheCall>(player));
+                }
+            }
+            else if (shopCard.Card is Indecisive or StandFirm or ChillingPast or NewPath)
+            {
+                bool hasOath = false;
+                bool hasVow = false;
+                foreach (var card in player.Deck.Cards)
+                {
+                    if (card is BrokenOath)
+                    {
+                        hasOath = true;
+                        if (hasVow)
+                        {
+                            base.ModifyMerchantCardCreationResults(player, cards);
+                            return;
+                        }
+                    }
+                    else if (card is RememberedVow)
+                    {
+                        hasVow = true;
+                        if (hasOath)
+                        {
+                            base.ModifyMerchantCardCreationResults(player, cards);
+                            return;
+                        }
+                    }
+                }
+
+                if (hasOath && hasVow)
+                {
+                    if (shopCard.Card is not Indecisive)
+                    {
+                        shopCard.ModifyCard(RunState.CreateCard<Indecisive>(player));
+                    }
+                }
+                else if (!hasOath && hasVow)
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<StandFirm>(player));
+                } 
+                else if (hasOath && !hasVow)
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<ChillingPast>(player));
+                }
+                else
+                {
+                    shopCard.ModifyCard(RunState.CreateCard<NewPath>(player));
+                }
+            }
+        }
+        base.ModifyMerchantCardCreationResults(player, cards);
     }
 }

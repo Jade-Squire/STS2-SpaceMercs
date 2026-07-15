@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Commands;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
@@ -24,6 +25,10 @@ public class ColdStare() : SpaceMercsCard(0,
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<SlowedPower>(),
         new HoverTip(new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.title"), new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.description"))
+    ];
+    
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.Slows
     ];
 
     public override bool HasDeterminationAbility => true;

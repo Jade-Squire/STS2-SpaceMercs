@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
@@ -20,6 +21,10 @@ public class Icefall() : SpaceMercsCard(1,
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<SlowedPower>()
+    ];
+
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.Slows
     ];
 
     protected override async Task OnPlay(

@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Keywords;
 using SpaceMercs.SpaceMercsCode.Powers;
 
@@ -26,6 +27,10 @@ public class ArcticBlast() : SpaceMercsCard(3,
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
         SpaceMercsKeywords.Exert
+    ];
+    
+    protected override HashSet<CardTag> CanonicalTags => [
+        SpaceMercsTags.Slows
     ];
 
     public override bool HasDeterminationAbility => true;

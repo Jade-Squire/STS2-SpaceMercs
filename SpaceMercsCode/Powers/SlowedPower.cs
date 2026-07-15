@@ -39,7 +39,6 @@ public class SlowedPower() : SpaceMercsPower
             await PowerCmd.Remove<SlowedPower>(Owner);
             await SpaceMercsHooks.BeforeEnemyFrozen(CombatState, choiceContext, Owner, applier, cardSource);
             await PowerCmd.Apply<FrozenPower>(choiceContext, Owner, 1, applier, cardSource);
-            await SpaceMercsHooks.AfterEnemyFrozen(CombatState, choiceContext, Owner, applier, cardSource);
         }
     }
 }

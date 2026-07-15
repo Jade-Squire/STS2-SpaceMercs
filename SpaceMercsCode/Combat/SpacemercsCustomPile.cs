@@ -19,6 +19,6 @@ public class SpacemercsCustomPile() : CustomPile(Aether)
 
     public override Vector2 GetTargetPosition(CardModel model, Vector2 size)
     {
-        return new Vector2(size.X / 2, (int)(size.Y / 2.5));
+        return new Vector2(size.X / 2, size.Y);
     }
 }

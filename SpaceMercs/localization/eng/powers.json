@@ -150,5 +150,13 @@
 
   "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.description": "Whenever you gain [gold]Hunger[/gold], gain 1 [gold]Frost Armor[/gold]",
   "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.smartDescription": "Whenever you gain [gold]Hunger[/gold], gain [blue]{Amount}[/blue] [gold]Frost Armor[/gold].",
-  "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.title": "Empty and Unmoving"
+  "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.title": "Empty and Unmoving",
+
+  "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, apply that much [color=cyan]Slowed[/color] to that enemy.",
+  "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.smartDescription": "{Amount:plural(en):|W|For the next [blue]{Amount}[/blue] turns, w}hen an enemy takes damage from [gold]Jolt[/gold]{Amount:plural(en):| this turn|}, apply that much [color=cyan]Slowed[/color] to that enemy.",
+  "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.title": "Quick and Relentless",
+
+  "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, gain that much [gold]Amp[/gold].",
+  "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.smartDescription": "{Amount:plural(en):|W|For the next [blue]{Amount}[/blue] turns, w}hen an enemy takes damage from [gold]Jolt[/gold]{Amount:plural(en):| this turn|}, gain that much [gold]Amp[/gold].",
+  "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.title": "Quick and Relentless+"
 }

@@ -14,7 +14,8 @@ public class GlacierGrenade() : SpaceMercsCard(1,
     TargetType.Self)
 {
     protected override HashSet<CardTag> CanonicalTags => [
-        SpaceMercsTags.Grenade
+        SpaceMercsTags.Grenade,
+        SpaceMercsTags.Slows
     ];
 
     public override bool GainsBlock => true;

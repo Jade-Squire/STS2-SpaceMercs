@@ -71,4 +71,32 @@ public static class SpaceMercsHooks
             model.InvokeExecutionFinished();
         }
     }
+    
+    public static async Task BeforeEnemyJolted(ICombatState combatState, PlayerChoiceContext choiceContext,
+        Creature joltedCreature, Creature? dealer, CardModel? cardSource, int joltUsed)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IEnemyJolted)
+            {
+                ((IEnemyJolted)model).BeforeEnemyJolted(choiceContext, joltedCreature, dealer, cardSource, joltUsed);
+            }
+            
+            model.InvokeExecutionFinished();
+        }
+    }
+    
+    public static async Task AfterEnemyJolted(ICombatState combatState, PlayerChoiceContext choiceContext, Creature joltedCreature, Creature? dealer,
+        CardModel? cardSource, int joltUsed)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IEnemyJolted)
+            {
+                ((IEnemyJolted)model).AfterEnemyJolted(choiceContext, joltedCreature, dealer, cardSource, joltUsed);
+            }
+
+            model.InvokeExecutionFinished();
+        }
+    }
 }

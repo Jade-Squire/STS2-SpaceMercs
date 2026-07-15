@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using MegaCrit.Sts2.Core.ValueProps;
+using SpaceMercs.SpaceMercsCode.Hooks;
 
 namespace SpaceMercs.SpaceMercsCode.Powers;
 
@@ -31,10 +32,10 @@ public class FrozenPower() : SpaceMercsPower
 
     private MoveState _nextMove;
     
-    public override Task AfterApplied(Creature? applier, CardModel? cardSource)
+    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
+        await SpaceMercsHooks.AfterEnemyFrozen(CombatState, new ThrowingPlayerChoiceContext(), Owner, applier, cardSource);
         StunCreature();
-        return base.AfterApplied(applier, cardSource);
     }
 
     public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
