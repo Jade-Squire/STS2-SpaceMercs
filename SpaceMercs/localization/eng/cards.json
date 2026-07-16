@@ -296,9 +296,13 @@
   "SPACEMERCS-STAND_FIRM.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].\nScale ALL your permanent scaling cards once.",
   "SPACEMERCS-STAND_FIRM.title": "Stand Firm",
 
-  "SPACEMERCS-CHILLING_PAST.description": "",
+  "SPACEMERCS-CHILLING_PAST.description": "Whenever a debuff is applied to an enemy, gain that much [gold]Temporary Strength[/gold].",
   "SPACEMERCS-CHILLING_PAST.title": "Chilling Past",
 
-  "SPACEMERCS-NEW_PATH.description": "",
+  "SPACEMERCS-NEW_PATH.description": "Remove this and up to 3 other cards from your deck.\nChoose a Common, Uncommon, and Rare card based on how many cards were removed.{IfUpgraded:show:\n[jitter][color=blue]Freeze[/color][/jitter] ALL enemies.}\nEnd your turn.",
+  "SPACEMERCS-NEW_PATH.selectionScreenPrompt": "Choose up to 3 cards to remove from your deck.",
+  "SPACEMERCS-NEW_PATH.selectRare": "Choose a Rare card to add to your deck.",
+  "SPACEMERCS-NEW_PATH.selectCommon": "Choose a Common card to add to your deck.",
+  "SPACEMERCS-NEW_PATH.selectUncommon": "Choose an Uncommon card to add to your deck.",
   "SPACEMERCS-NEW_PATH.title": "New Path"
 }

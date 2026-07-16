@@ -47,7 +47,7 @@ public class ColdShoulder() : SpaceMercsCard(1,
         {
             _creatureIsFrozen = true;
             frozenCreature.GetPower<FrozenPower>().FreezeRemoved += FreezeRemoved;
-            NCard.FindOnTable(this).UpdateVisuals(Pile.Type, CardPreviewMode.None);
+            NCard.FindOnTable(this)?.UpdateVisuals(Pile.Type, CardPreviewMode.None);
         }
     }
 

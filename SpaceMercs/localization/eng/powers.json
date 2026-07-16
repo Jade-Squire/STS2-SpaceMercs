@@ -158,5 +158,9 @@
 
   "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, gain that much [gold]Amp[/gold].",
   "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.smartDescription": "{Amount:plural(en):|W|For the next [blue]{Amount}[/blue] turns, w}hen an enemy takes damage from [gold]Jolt[/gold]{Amount:plural(en):| this turn|}, gain that much [gold]Amp[/gold].",
-  "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.title": "Quick and Relentless+"
+  "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.title": "Quick and Relentless+",
+
+  "SPACEMERCS-CHILLING_PAST_POWER.description": "Whenever a debuff is applied to an enemy, gain that much [gold]Temporary Strength[/gold]",
+  "SPACEMERCS-CHILLING_PAST_POWER.smartDescription": "Whenever a debuff is applied to an enemy, gain {Amount:plural(en):|that|[blue]{Amount:diff()}[/blue] times as} much [gold]Temporary Strength[/gold].",
+  "SPACEMERCS-CHILLING_PAST_POWER.title": "Chilling Past"
 }

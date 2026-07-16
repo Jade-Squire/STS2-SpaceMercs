@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Character;
+using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Rare;
 
@@ -16,18 +17,22 @@ public class ChillingPast() : SpaceMercsCard(2,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new PowerVar<ChillingPastPower>(1)
+    ];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        
+        await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
+        await PowerCmd.Apply<ChillingPastPower>(choiceContext, Owner.Creature,
+            DynamicVars[nameof(ChillingPastPower)].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-
+        AddKeyword(CardKeyword.Innate);
     }
     
     public override Task BeforeCardRemoved(CardModel card)

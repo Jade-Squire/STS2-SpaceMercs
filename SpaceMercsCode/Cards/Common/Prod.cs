@@ -9,7 +9,7 @@ using SpaceMercs.SpaceMercsCode.Powers;
 namespace SpaceMercs.SpaceMercsCode.Cards.Common;
 
 public class Prod() : SpaceMercsCard(0,
-    CardType.Attack, CardRarity.Common,
+    CardType.Skill, CardRarity.Common,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [

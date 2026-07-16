@@ -213,7 +213,7 @@ public abstract class SpaceMercsCard(int cost, CardType type, CardRarity rarity,
 
     public override Task BeforeCombatStart()
     {
-        if (!_hookedIntoDetChanged && Keywords.Contains(SpaceMercsKeywords.Exert))
+        if (!_hookedIntoDetChanged && Keywords.Contains(SpaceMercsKeywords.Exert) && Pile.Type != PileType.Deck)
         {
             if (Owner.PlayerCombatState == null) return base.BeforeCombatStart();
             Owner.PlayerCombatState.Cosmopaladin().DeterminationChanged += DeterminationChanged;
