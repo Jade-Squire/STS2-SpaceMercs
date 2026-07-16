@@ -27,7 +27,7 @@ public class HonorTheFallen() : SpaceMercsCard(2,
             field = value;
             DynamicVars.Block.BaseValue = field;
         }
-    }
+    } = 1;
 
     [SavedProperty]
     public int IncreasedBlock
