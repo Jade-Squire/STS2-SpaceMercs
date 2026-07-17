@@ -21,13 +21,12 @@ public class DesolateWillPower() : SpaceMercsPower
         HoverTipFactory.FromKeyword(CardKeyword.Unplayable)
     ];
 
-    public override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
+    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
         if (card.Keywords.Contains(CardKeyword.Unplayable))
         {
             Flash();
-            CardPileCmd.Draw(choiceContext, Amount, Owner.Player);
+            await CardPileCmd.Draw(choiceContext, Amount, Owner.Player);
         }
-        return base.AfterCardDrawn(choiceContext, card, fromHandDraw);
     }
 }

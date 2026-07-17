@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
@@ -13,6 +14,7 @@ using SpaceMercs.SpaceMercsCode.Powers;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
+[Pool(typeof(CosmopaladinUniqueCardPool))]
 public class Rime() : SpaceMercsCard(0,
     CardType.Status, CardRarity.Token,
     TargetType.Self)
@@ -58,6 +60,8 @@ public class Rime() : SpaceMercsCard(0,
         }
         
         ReturnCardsToHand();
+        
+        await CardPileCmd.RemoveFromCombat(this);
     }
 
     protected override void OnUpgrade()

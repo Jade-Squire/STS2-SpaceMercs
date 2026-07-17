@@ -3,5 +3,8 @@
   "SPACEMERCS-DETERMINATION_COUNTER.title": "Determination",
   
   "SPACEMERCS-DETERMINATION.description": "Cards with [gold]Exert[/gold] can use [rainbow]Determination[/rainbow] instead of Energy to play them.",
-  "SPACEMERCS-DETERMINATION.title": "Determination"
+  "SPACEMERCS-DETERMINATION.title": "Determination",
+  
+  "SPACEMERCS-EVEN_CHANCE.description": "50% chance to do either the first or second effect.",
+  "SPACEMERCS-EVEN_CHANCE.title": "Even Chance"
 }

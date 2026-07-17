@@ -2,6 +2,7 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -34,15 +35,19 @@ public class HungerPower() : SpaceMercsPower
         return base.AfterPowerAmountChanged(choiceContext, power, amount, applier, cardSource);
     }
 
-    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
-        if (side == Owner.Side && Owner.IsAlive && Owner.Player != null)
+        
+    }
+
+    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
+    {
+        if (Owner.IsAlive && Owner.Player != null)
         {
             Flash();
-            PlayerCmd.GainEnergy(Amount, Owner.Player);
-            PowerCmd.Remove(this);
+            await PlayerCmd.GainEnergy(Amount, Owner.Player);
+            await PowerCmd.Remove(this);
         }
-        return base.AfterSideTurnStart(side, participants, combatState);
     }
 }

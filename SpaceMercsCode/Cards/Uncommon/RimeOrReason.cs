@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
-using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Unique;
 using SpaceMercs.SpaceMercsCode.Combat;
 using SpaceMercs.SpaceMercsCode.Powers;
@@ -32,6 +31,8 @@ public class RimeOrReason() : SpaceMercsCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await RemoveOldRimeOrReasons();
+        
         List<CardModel> cardsToMove = new();
         foreach (var card in PileType.Hand.GetPile(Owner).Cards)
         {
@@ -59,5 +60,56 @@ public class RimeOrReason() : SpaceMercsCard(1,
     protected override void OnUpgrade()
     {
 
+    }
+
+    private async Task RemoveOldRimeOrReasons()
+    {
+        List<CardModel> rimeOrReasons = new();
+        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in PileType.Draw.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in PileType.Discard.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in PileType.Play.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in PileType.Exhaust.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in SpacemercsCustomPile.Aether.GetPile(Owner).Cards)
+        {
+            if (card is Rime or Reason)
+            {
+                rimeOrReasons.Add(card);
+            }
+        }
+        foreach (var card in rimeOrReasons)
+        {
+            await CardPileCmd.RemoveFromCombat(card);
+        }
     }
 }

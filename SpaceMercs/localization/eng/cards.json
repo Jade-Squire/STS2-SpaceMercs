@@ -176,7 +176,7 @@
   "SPACEMERCS-THUNDERCLAP.description": "Double the [gold]Jolt[/gold] on an enemy, then deal {Damage:diff()} damage.",
   "SPACEMERCS-THUNDERCLAP.title": "Thunderclap",
 
-  "SPACEMERCS-SEISMIC_STRIKE.description": "Deal X damage twice.\nApply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-SEISMIC_STRIKE.description": "Apply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(1)}.",
   "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike",
 
   "SPACEMERCS-STURDY_CIRCUITRY.description": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to {SturdyCircuitryPower:diff()}{energyPrefix:energyIcons(1)}.",
@@ -304,5 +304,29 @@
   "SPACEMERCS-NEW_PATH.selectRare": "Choose a Rare card to add to your deck.",
   "SPACEMERCS-NEW_PATH.selectCommon": "Choose a Common card to add to your deck.",
   "SPACEMERCS-NEW_PATH.selectUncommon": "Choose an Uncommon card to add to your deck.",
-  "SPACEMERCS-NEW_PATH.title": "New Path"
+  "SPACEMERCS-NEW_PATH.title": "New Path",
+
+  "SPACEMERCS-PAYDAY.description": "Costs {GoldCost:diff()} [gold]Gold[/gold] to play.\nDeal {Damage:diff()} damage.\nIf [gold]Fatal[/gold], gain {Gold:diff()} [gold]Gold[/gold].",
+  "SPACEMERCS-PAYDAY.title": "Payday",
+
+  "SPACEMERCS-MARKOV_CHAIN.description": "[gold]Even Chance[/gold] to gain {Block:diff()} [gold]Block[/gold] or gain {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-MARKOV_CHAIN.title": "Markov Chain",
+
+  "SPACEMERCS-SPLIT_ELECTRON.description": "Remove ALL [gold]Jolt[/gold] from the enemy and gain that much [gold]Block[/gold].",
+  "SPACEMERCS-SPLIT_ELECTRON.title": "Split Electron",
+
+  "SPACEMERCS-DISORIENT.description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} [gold]Weak[/gold].{IfUpgraded:show:\nGain {ArtifactPower:diff()} [gold]Artifact[/gold].}",
+  "SPACEMERCS-DISORIENT.title": "Disorient",
+
+  "SPACEMERCS-HEAT_SINK.description": "Remove your [color=springgreen]Cure[/color] and gain twice that much [gold]Block[/gold].\nYou don't lose [gold]Block[/gold] at the start of your next turn.",
+  "SPACEMERCS-HEAT_SINK.title": "Heat Sink",
+
+  "SPACEMERCS-BROADSIDE.description": "Remove {IfUpgraded:show:half|ALL} your [gold]Block[/gold] and deal {Damage:diff()} damage to a random creature for each [gold]Block[/gold] you had.",
+  "SPACEMERCS-BROADSIDE.title": "Broadside",
+
+  "SPACEMERCS-BULWARK.description": "Gain {WardPower:diff()} [gold]Ward[/gold].",
+  "SPACEMERCS-BULWARK.title": "Bulwark",
+
+  "SPACEMERCS-REMOTE_SHIELD.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhen you [gold]Retain[/gold] this card, reduce its cost by {energyPrefix:energyIcons(1)} this combat.",
+  "SPACEMERCS-REMOTE_SHIELD.title": "Remote Shield"
 }

@@ -1,12 +1,15 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.Character;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
+[Pool(typeof(CosmopaladinUniqueCardPool))]
 public abstract class UnknownBase(int cost, CardType type, CardRarity rarity, TargetType targetType) : SpaceMercsCard(cost, type, rarity, targetType)
 {
     public CardModel? ActualCard;

@@ -55,8 +55,8 @@ public class BlindedPower() : SpaceMercsPower
             case TargetType.AnyAlly:
                 return card.CombatState.CreateCard<UnknownTargetAlly>(card.Owner);
             default:
-                GD.PrintErr($"Target type {card.TargetType} is not supported.");
-                return card.CombatState.CreateCard<UnknownTargetEnemy>(card.Owner);
+                //GD.PrintErr($"Target type {card.TargetType} is not supported.");
+                return card.CombatState.CreateCard<UnknownTargetSelf>(card.Owner);
         }
     }
 }

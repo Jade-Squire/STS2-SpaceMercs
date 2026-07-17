@@ -4,17 +4,11 @@ using SpaceMercs.SpaceMercsCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.Models.Relics;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Common;
-using SpaceMercs.SpaceMercsCode.Cards.Rare;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
-using SpaceMercs.SpaceMercsCode.Powers;
 using SpaceMercs.SpaceMercsCode.Relics;
-using Poke = SpaceMercs.SpaceMercsCode.Cards.Common.Poke;
-using Thunderclap = SpaceMercs.SpaceMercsCode.Cards.Uncommon.Thunderclap;
 
 namespace SpaceMercs.SpaceMercsCode.Character;
 

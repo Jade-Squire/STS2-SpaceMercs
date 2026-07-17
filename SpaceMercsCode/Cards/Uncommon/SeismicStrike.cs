@@ -11,7 +11,7 @@ using SpaceMercs.SpaceMercsCode.Powers;
 namespace SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 
 public class SeismicStrike() : SpaceMercsCard(0,
-    CardType.Attack, CardRarity.Uncommon,
+    CardType.Skill, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
     protected override bool HasEnergyCostX => true;
@@ -21,7 +21,7 @@ public class SeismicStrike() : SpaceMercsCard(0,
     ];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new RefundVar(1)
+        new RefundVar(2)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -36,12 +36,6 @@ public class SeismicStrike() : SpaceMercsCard(0,
         int energyOnPlay = ResolveEnergyXValue();
         if (energyOnPlay <= 0)
             return;
-        await DamageCmd.Attack(new DamageVar(energyOnPlay, ValueProp.Move).BaseValue)
-            .FromCard(this)
-            .WithHitFx("vfx/vfx_attack_blunt")
-            .Targeting(play.Target)
-            .WithHitCount(2)
-            .Execute(choiceContext);
         await PowerCmd.Apply<JoltPower>(choiceContext, play.Target, energyOnPlay * 2, Owner.Creature, this);
         await PowerCmd.Apply<AmpPower>(choiceContext, Owner.Creature, energyOnPlay * 2, Owner.Creature, this);
         if (IsUpgraded)

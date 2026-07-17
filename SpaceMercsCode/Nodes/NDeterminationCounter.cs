@@ -51,23 +51,14 @@ public partial class NDeterminationCounter : NClickableControl
 
     public void OnUnhovered() => NHoverTipSet.Remove(this);
 
-    public async void onClicked(InputEvent inputEvent)
+    public void onClicked(InputEvent inputEvent)
     {
         if (!Visible) return;
 
         PlayerCombatStateExtensions.CosmopaladinCombatState cosmo = _player.PlayerCombatState.Cosmopaladin();
         if (cosmo.Determination >= 2)
         {
-            //await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), _player.Creature, new DamageVar(1, ValueProp.Move), _player.Creature);
-            /*
-            cosmo.LoseDetermination(2);
-            CardPileCmd.AddToCombatAndPreview<Manifest>(_player.Creature, PileType.Hand, 1, _player);
-            */
             RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(new ConvertDeterminationAction(_player));
-        }
-        else
-        {
-            GD.PrintErr("Not enough determination");
         }
     }
 
