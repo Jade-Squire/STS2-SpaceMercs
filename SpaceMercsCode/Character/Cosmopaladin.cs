@@ -40,7 +40,7 @@ public class Cosmopaladin : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<TestRelic>()
+        ModelDb.Relic<AutoResponsiveCuirass>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<CosmopaladinCardPool>();

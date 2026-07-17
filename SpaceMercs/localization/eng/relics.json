@@ -1,8 +1,8 @@
 {
 
-  "SPACEMERCS-TEST_RELIC.description": "",
-  "SPACEMERCS-TEST_RELIC.flavor": "",
-  "SPACEMERCS-TEST_RELIC.title": "TestRelic",
+  "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.description": "The first time you apply a debuff and gain a buff each turn, gain {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.flavor": "It radiates energy.",
+  "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.title": "Auto-Responsive Cuirass",
 
   "SPACEMERCS-OF_THE_VOID.description": "Whenever you draw a [gold]Void[/gold], heal [blue]1[/blue] hp and gain [blue]1[/blue] [gold]Hunger[/gold].",
   "SPACEMERCS-OF_THE_VOID.flavor": "It's calling...",
