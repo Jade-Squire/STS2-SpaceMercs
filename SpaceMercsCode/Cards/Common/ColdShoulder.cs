@@ -55,14 +55,30 @@ public class ColdShoulder() : SpaceMercsCard(1,
     {
         foreach (var enemy in CombatState.HittableEnemies)
         {
-            if (enemy.HasPower<FrozenPower>())
+            if (enemy.HasPower<FrozenPower>() && enemy != power.Owner)
             {
                 return;
             }
         }
         _creatureIsFrozen = false;
         
-        NCard.FindOnTable(this).UpdateVisuals(Pile.Type, CardPreviewMode.None);
+        NCard.FindOnTable(this)?.UpdateVisuals(Pile.Type, CardPreviewMode.None);
+    }
+
+    public override Task AfterCardEnteredCombat(CardModel card)
+    {
+        if (card == this)
+        {
+            foreach (var enemy in CombatState.HittableEnemies)
+            {
+                if (enemy.HasPower<FrozenPower>())
+                {
+                    enemy.GetPower<FrozenPower>().FreezeRemoved += FreezeRemoved;
+                    _creatureIsFrozen = true;
+                }
+            }
+        }
+        return base.AfterCardEnteredCombat(card);
     }
 
     protected override void OnUpgrade()
