@@ -47,6 +47,9 @@ public class AutoResponsiveCuirass() : SpaceMercsRelic
             GainedExtraReward = true;
         }
 
+        _buffed = false;
+        _debuffed = false;
+        _hasGainedEnergy = false;
         _hungerGained = 0;
         return base.AfterCombatVictory(room);
     }
@@ -84,7 +87,6 @@ public class AutoResponsiveCuirass() : SpaceMercsRelic
     {
         _debuffed = false;
         _buffed = false;
-        _hasGainedEnergy = false;
         return base.AfterSideTurnStart(side, participants, combatState);
     }
 }

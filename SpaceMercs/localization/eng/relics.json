@@ -1,6 +1,6 @@
 {
 
-  "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.description": "The first time you apply a debuff and gain a buff each turn, gain {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.description": "The first time each combat you apply a debuff and gain a buff in a single turn, gain {energyPrefix:energyIcons(1)}.",
   "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.flavor": "It radiates energy.",
   "SPACEMERCS-AUTO_RESPONSIVE_CUIRASS.title": "Auto-Responsive Cuirass",
 
