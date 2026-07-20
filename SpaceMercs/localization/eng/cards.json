@@ -176,7 +176,7 @@
   "SPACEMERCS-THUNDERCLAP.description": "Double the [gold]Jolt[/gold] on an enemy, then deal {Damage:diff()} damage.",
   "SPACEMERCS-THUNDERCLAP.title": "Thunderclap",
 
-  "SPACEMERCS-SEISMIC_STRIKE.description": "Apply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-SEISMIC_STRIKE.description": "Apply twice X [gold]Jolt[/gold].\nGain twice X [gold]Amp[/gold].{IfUpgraded:show:\nDraw X cards.}\n[gold]Refund[/gold] up to {energyPrefix:energyIcons(2)}.",
   "SPACEMERCS-SEISMIC_STRIKE.title": "Seismic Strike",
 
   "SPACEMERCS-STURDY_CIRCUITRY.description": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to {SturdyCircuitryPower:diff()}{energyPrefix:energyIcons(1)}.",
@@ -328,5 +328,8 @@
   "SPACEMERCS-BULWARK.title": "Bulwark",
 
   "SPACEMERCS-REMOTE_SHIELD.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhen you [gold]Retain[/gold] this card, reduce its cost by {energyPrefix:energyIcons(1)} this combat.",
-  "SPACEMERCS-REMOTE_SHIELD.title": "Remote Shield"
+  "SPACEMERCS-REMOTE_SHIELD.title": "Remote Shield",
+
+  "SPACEMERCS-ICE_BLOCK.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
+  "SPACEMERCS-ICE_BLOCK.title": "Ice Block"
 }

@@ -20,17 +20,16 @@ public class VengeancePowerDebuff() : SpaceMercsPower
         HoverTipFactory.FromPower<HungerPower>()
     ];
 
-    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
+    public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
     {
         if(wasRemovalPrevented)
-            return base.AfterDeath(choiceContext, creature, wasRemovalPrevented, deathAnimLength);
+            return;
         foreach (var player in CombatState.Players)
         {
             if (player.Creature.HasPower<VengeancePowerBuff>())
             {
-                PowerCmd.Apply<HungerPower>(choiceContext, player.Creature, 10 * player.Creature.GetPowerAmount<VengeancePowerBuff>(), player.Creature, null);
+                await PowerCmd.Apply<HungerPower>(choiceContext, player.Creature, 10 * player.Creature.GetPowerAmount<VengeancePowerBuff>(), player.Creature, null);
             }
         }
-        return base.AfterDeath(choiceContext, creature, wasRemovalPrevented, deathAnimLength);
     }
 }

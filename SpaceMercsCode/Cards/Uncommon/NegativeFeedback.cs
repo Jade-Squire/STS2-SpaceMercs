@@ -17,7 +17,8 @@ public class NegativeFeedback() : SpaceMercsCard(1,
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromPower<JoltPower>()
+        HoverTipFactory.FromPower<JoltPower>(),
+        HoverTipFactory.FromPower<AmpPower>()
     ];
 
     protected override async Task OnPlay(

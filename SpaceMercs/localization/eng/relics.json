@@ -6,5 +6,25 @@
 
   "SPACEMERCS-OF_THE_VOID.description": "Whenever you draw a [gold]Void[/gold], heal [blue]1[/blue] hp and gain [blue]1[/blue] [gold]Hunger[/gold].",
   "SPACEMERCS-OF_THE_VOID.flavor": "It's calling...",
-  "SPACEMERCS-OF_THE_VOID.title": "Of The Void"
+  "SPACEMERCS-OF_THE_VOID.title": "Of The Void",
+
+  "SPACEMERCS-MINIATURE_SUN.description": "The first time you lose HP during combat, gain [blue]10[/blue] [color=springgreen]Cure[/color]",
+  "SPACEMERCS-MINIATURE_SUN.flavor": "It hurts to look at.",
+  "SPACEMERCS-MINIATURE_SUN.title": "Miniature Sun",
+
+  "SPACEMERCS-EMPTY_CORNUCOPIA.description": "Whenever you gain [gold]Hunger[/gold], draw [blue]1[/blue] card.",
+  "SPACEMERCS-EMPTY_CORNUCOPIA.flavor": "It's empty... Sadge",
+  "SPACEMERCS-EMPTY_CORNUCOPIA.title": "Empty Cornucopia",
+
+  "SPACEMERCS-BROKEN_CODE.description": "The first time you gain [gold]Amp[/gold] each turn, gain that much [gold]Block[/gold].",
+  "SPACEMERCS-BROKEN_CODE.flavor": "",
+  "SPACEMERCS-BROKEN_CODE.title": "Broken Code",
+
+  "SPACEMERCS-EXPERIMENTAL_TECH.description": "Whenever you apply [orange]Scorch[/orange] or [gold]Jolt[/gold], apply an additional [blue]1[/blue] [orange]Scorch[/orange] or [blue]3[/blue] [gold]Jolt[/gold].",
+  "SPACEMERCS-EXPERIMENTAL_TECH.flavor": "It looks dangerous.",
+  "SPACEMERCS-EXPERIMENTAL_TECH.title": "Experimental Tech",
+
+  "SPACEMERCS-PORTABLE_IGLOO.description": "At the start of combat, add an [gold]Ice Block[/gold] to your hand.",
+  "SPACEMERCS-PORTABLE_IGLOO.flavor": "Surprisingly warm.",
+  "SPACEMERCS-PORTABLE_IGLOO.title": "Portable Igloo"
 }

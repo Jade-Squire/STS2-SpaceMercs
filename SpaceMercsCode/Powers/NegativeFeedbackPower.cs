@@ -18,7 +18,8 @@ public class NegativeFeedbackPower() : SpaceMercsPower
         PowerStackType.Counter;
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromPower<JoltPower>()
+        HoverTipFactory.FromPower<JoltPower>(),
+        HoverTipFactory.FromPower<AmpPower>()
     ];
 
     public override decimal ModifyHpLostAfterOstyLate(Creature target, decimal amount, ValueProp props, Creature? dealer,

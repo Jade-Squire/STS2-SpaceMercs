@@ -17,7 +17,8 @@ public class ArcticBlast() : SpaceMercsCard(3,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        new HoverTip(new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.title"), new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.description"))
+        new HoverTip(new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.title"), new LocString("static_hover_tips", "SPACEMERCS-DETERMINATION.description")),
+        HoverTipFactory.FromPower<SlowedPower>()
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [

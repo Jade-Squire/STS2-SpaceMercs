@@ -24,15 +24,14 @@ public class HungerPower() : SpaceMercsPower
         HoverTipFactory.FromCard<Void>()
     ];
 
-    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,
         CardModel? cardSource)
     {
         if (power is HungerPower && amount > 0 && Owner.Player != null && power == this)
         {
-            PlayerCmd.GainEnergy(amount, Owner.Player);
-            CardPileCmd.AddToCombatAndPreview<Void>(Owner, PileType.Draw, (int)amount, Owner.Player, CardPilePosition.Random);
+            await PlayerCmd.GainEnergy(amount, Owner.Player);
+            await CardPileCmd.AddToCombatAndPreview<Void>(Owner, PileType.Draw, (int)amount, Owner.Player, CardPilePosition.Random);
         }
-        return base.AfterPowerAmountChanged(choiceContext, power, amount, applier, cardSource);
     }
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,

@@ -35,10 +35,10 @@ public class FrozenPower() : SpaceMercsPower
     public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
         await SpaceMercsHooks.AfterEnemyFrozen(CombatState, new ThrowingPlayerChoiceContext(), Owner, applier, cardSource);
-        StunCreature();
+        await StunCreature();
     }
 
-    public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side == Owner.Side)
         {
@@ -47,13 +47,11 @@ public class FrozenPower() : SpaceMercsPower
             {
                 freezeRemoved(this);
             }
-            PowerCmd.Remove(this);
+            await PowerCmd.Remove(this);
         }
-
-        return base.AfterSideTurnEnd(choiceContext, side, participants);
     }
 
-    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
         if (cardSource != null && cardSource.Type == CardType.Attack && target == Owner)
@@ -61,18 +59,17 @@ public class FrozenPower() : SpaceMercsPower
             if (Owner.IsStunned)
             {
                 UnstunCreature();
-                CreatureCmd.Damage(choiceContext, Owner, new DamageVar(20, ValueProp.Unpowered), null, null);
-                PowerCmd.Remove(this);
-                PowerCmd.Apply<WeakPower>(choiceContext, Owner, 3, dealer, cardSource);
+                await CreatureCmd.Damage(choiceContext, Owner, new DamageVar(20, ValueProp.Unpowered), null, null);
+                await PowerCmd.Remove(this);
+                await PowerCmd.Apply<WeakPower>(choiceContext, Owner, 3, dealer, cardSource);
             }
         }
-        return base.AfterDamageReceived(choiceContext, target, result, props, dealer, cardSource);
     }
 
-    private void StunCreature()
+    private async Task StunCreature()
     {
         _nextMove = Owner.Monster.NextMove;
-        CreatureCmd.Stun(Owner);
+        await CreatureCmd.Stun(Owner);
     }
 
     private void UnstunCreature()

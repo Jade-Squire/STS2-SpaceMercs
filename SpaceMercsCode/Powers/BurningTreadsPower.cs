@@ -22,9 +22,8 @@ public class BurningTreadsPower() : SpaceMercsPower
         await PowerCmd.Apply<ScorchPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, cardPlay.Card.Owner.Creature, null);
     }
 
-    public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        PowerCmd.Remove<BurningTreadsPower>(Owner);
-        return base.AfterSideTurnEnd(choiceContext, side, participants);
+        await PowerCmd.Remove<BurningTreadsPower>(Owner);
     }
 }

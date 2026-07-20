@@ -27,16 +27,15 @@ public class EmptyEmbracePower() : SpaceMercsPower
         HoverTipFactory.FromKeyword(CardKeyword.Ethereal)
     ];
 
-    public override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
+    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
         if (card is Void)
         {
             foreach (var enemy in CombatState.HittableEnemies)
             {
-                CreatureCmd.Damage(choiceContext, enemy, new DamageVar(Amount, ValueProp.Unpowered), Owner, null);
+                await CreatureCmd.Damage(choiceContext, enemy, new DamageVar(Amount, ValueProp.Unpowered), Owner, null);
             }
         }
-        return base.AfterCardDrawn(choiceContext, card, fromHandDraw);
     }
 
     public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,

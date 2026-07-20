@@ -1,13 +1,16 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.RelicPools;
 using SpaceMercs.SpaceMercsCode.Powers;
 using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 
 namespace SpaceMercs.SpaceMercsCode.Relics;
 
+[Pool(typeof(EventRelicPool))]
 public class OfTheVoid() : SpaceMercsRelic
 {
     public override RelicRarity Rarity =>

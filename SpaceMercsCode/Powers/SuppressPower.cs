@@ -19,7 +19,7 @@ public class SuppressPower() : SpaceMercsPower
     public override PowerStackType StackType =>
         PowerStackType.Counter;
 
-    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
         if (target == Owner && result.UnblockedDamage > 0)
@@ -29,27 +29,25 @@ public class SuppressPower() : SpaceMercsPower
             weak = Owner.HasPower<WeakPower>() ? Owner.GetPowerAmount<WeakPower>() : 0;
             if (vuln < weak)
             {
-                PowerCmd.Apply<VulnerablePower>(choiceContext, Owner, 1, dealer, null);
+                await PowerCmd.Apply<VulnerablePower>(choiceContext, Owner, 1, dealer, null);
             }
             else if (weak < vuln)
             {
-                PowerCmd.Apply<WeakPower>(choiceContext, Owner, 1, dealer, null);
+                await PowerCmd.Apply<WeakPower>(choiceContext, Owner, 1, dealer, null);
             }
             else
             {
                 if (Owner.Monster.RunRng.Niche.NextBool())
                 {
-                    PowerCmd.Apply<WeakPower>(choiceContext, Owner, 1, dealer, null);
+                    await PowerCmd.Apply<WeakPower>(choiceContext, Owner, 1, dealer, null);
                 }
                 else
                 {
-                    PowerCmd.Apply<VulnerablePower>(choiceContext, Owner, 1, dealer, null);
+                    await PowerCmd.Apply<VulnerablePower>(choiceContext, Owner, 1, dealer, null);
                 }
             }
 
-            PowerCmd.Decrement(this);
+            await PowerCmd.Decrement(this);
         }
-        
-        return base.AfterDamageReceived(choiceContext, target, result, props, dealer, cardSource);
     }
 }

@@ -24,19 +24,18 @@ public class ScorchPower() : SpaceMercsPower
 
     private bool _hasGainedScorch = false;
 
-    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
         if (side != Owner.Side)
         {
-            return base.AfterSideTurnStart(side, participants, combatState);
+            return;
         }
         if (!_hasGainedScorch)
         {
-            PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), this, -Math.Max(Amount / 2, 1), null, null);
+            await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), this, -Math.Max(Amount / 2, 1), null, null);
         }
         _hasGainedScorch = false;
-        return base.AfterSideTurnStart(side, participants, combatState);
     }
 
     public override async Task AfterPowerAmountChanged(

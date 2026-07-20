@@ -23,13 +23,12 @@ public class VoidwallPower() : SpaceMercsPower
         HoverTipFactory.FromPower<SuppressPower>()
     ];
 
-    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
         if (target == Owner && dealer != null && dealer != Owner && result.BlockedDamage > 0 && props == ValueProp.Move)
         {
-            PowerCmd.Apply<SuppressPower>(choiceContext, dealer, Amount, Owner, null);
+            await PowerCmd.Apply<SuppressPower>(choiceContext, dealer, Amount, Owner, null);
         }
-        return base.AfterDamageReceived(choiceContext, target, result, props, dealer, cardSource);
     }
 }
