@@ -32,7 +32,7 @@
   "SPACEMERCS-JETPACK.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
   "SPACEMERCS-JETPACK.title": "Jetpack",
 
-  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease {IfUpgraded:show:both|one randomly} by 1 permanently.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
+  "SPACEMERCS-REMEMBERED_VOW.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease this damage {IfUpgraded:show:and|or} [gold]Block[/gold] by 1 permanently.\nCosts 1 less is [gold]Broken Oath[/gold] is not in your deck.",
   "SPACEMERCS-REMEMBERED_VOW.title": "Remembered Vow",
   
   "SPACEMERCS-BROKEN_OATH.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nCosts 1 less if [gold]Remembered Vow[/gold] is not in your deck.",
@@ -331,5 +331,11 @@
   "SPACEMERCS-REMOTE_SHIELD.title": "Remote Shield",
 
   "SPACEMERCS-ICE_BLOCK.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
-  "SPACEMERCS-ICE_BLOCK.title": "Ice Block"
+  "SPACEMERCS-ICE_BLOCK.title": "Ice Block",
+
+  "SPACEMERCS-GREATER_PURPOSE.description": "Does nothing. DO NOT PICK THIS! IT IS USELESS!",
+  "SPACEMERCS-GREATER_PURPOSE.title": "Greater Purpose",
+
+  "SPACEMERCS-OVERWHELMED.description": "{IfUpgraded:show:Can be removed at a rest site.}",
+  "SPACEMERCS-OVERWHELMED.title": "Overwhelmed"
 }

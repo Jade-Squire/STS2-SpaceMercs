@@ -16,7 +16,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 [Pool(typeof(CosmopaladinUniqueCardPool))]
 public class Rime() : SpaceMercsCard(0,
-    CardType.Status, CardRarity.Token,
+    CardType.Status, CardRarity.None,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];

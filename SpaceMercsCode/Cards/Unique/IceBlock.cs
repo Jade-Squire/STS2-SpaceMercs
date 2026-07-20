@@ -12,7 +12,7 @@ namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 [Pool(typeof(CosmopaladinUniqueCardPool))]
 public class IceBlock() : SpaceMercsCard(0,
-    CardType.Skill, CardRarity.Token,
+    CardType.Skill, CardRarity.None,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc505p52pk630"]
+
+[ext_resource type="Texture2D" uid="uid://ddm10jcghrprn" path="res://SpaceMercs/images/background_images/traveler_background.png" id="1_bmcpf"]
+
+[node name="traveler" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -260.0
+offset_top = -55.0
+offset_right = 2300.0
+offset_bottom = 1145.0
+texture = ExtResource("1_bmcpf")

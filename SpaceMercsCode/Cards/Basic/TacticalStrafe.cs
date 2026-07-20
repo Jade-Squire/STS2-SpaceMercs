@@ -5,10 +5,10 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
 
-namespace SpaceMercs.SpaceMercsCode.Cards.Common;
+namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
 public class TacticalStrafe() : SpaceMercsCard(0,
-    CardType.Skill, CardRarity.Common,
+    CardType.Skill, CardRarity.Basic,
     TargetType.Self)
 {
     public override bool GainsBlock => true;

@@ -8,10 +8,10 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
 
-namespace SpaceMercs.SpaceMercsCode.Cards.Common;
+namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
 public class SmokeScreen() : SpaceMercsCard(2,
-    CardType.Skill, CardRarity.Common,
+    CardType.Skill, CardRarity.Basic,
     TargetType.Self)
 {
     public override bool GainsBlock => true;

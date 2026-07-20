@@ -8,7 +8,7 @@ using SpaceMercs.SpaceMercsCode.Character;
 namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 [Pool(typeof(CosmopaladinUniqueCardPool))]
-public class UnknownTargetAnyPlayer() : UnknownBase(-1, CardType.Status, CardRarity.Token, TargetType.AnyPlayer)
+public class UnknownTargetAnyPlayer() : UnknownBase(-1, CardType.Status, CardRarity.None, TargetType.AnyPlayer)
 {
     
 }

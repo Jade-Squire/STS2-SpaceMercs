@@ -26,5 +26,11 @@
 
   "SPACEMERCS-PORTABLE_IGLOO.description": "At the start of combat, add an [gold]Ice Block[/gold] to your hand.",
   "SPACEMERCS-PORTABLE_IGLOO.flavor": "Surprisingly warm.",
-  "SPACEMERCS-PORTABLE_IGLOO.title": "Portable Igloo"
+  "SPACEMERCS-PORTABLE_IGLOO.title": "Portable Igloo",
+
+
+  "SPACEMERCS-FOCUSED_LIGHT.description": "Upon pickup, focus your deck around an element, but become [gold]Overwhelmed[/gold] with Light",
+  "SPACEMERCS-FOCUSED_LIGHT.eventDescription": "Focus your deck around an element, but become [gold]Overwhelmed[/gold] with Light.",
+  "SPACEMERCS-FOCUSED_LIGHT.flavor": "",
+  "SPACEMERCS-FOCUSED_LIGHT.title": "Focused Light"
 }

@@ -36,6 +36,13 @@ public class NewPath() : SpaceMercsCard(0,
         cardsInCombat = cardsInCombat.Concat(PileType.Exhaust.GetPile(Owner).Cards).ToList();
         cardsInCombat = cardsInCombat.Concat(SpacemercsCustomPile.Aether.GetPile(Owner).Cards).ToList();
 
+        List<CardModel> eternalCards = cardsInCombat.FindAll(card => card.Keywords.Contains(CardKeyword.Eternal));
+
+        foreach (var card in eternalCards)
+        {
+            cardsInCombat.Remove(card);
+        }
+
         IEnumerable<CardModel> cardsToRemove = await CardSelectCmd.FromSimpleGrid(choiceContext, cardsInCombat, Owner,
             new CardSelectorPrefs(SelectionScreenPrompt, 0, 3));
 

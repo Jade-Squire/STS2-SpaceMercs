@@ -10,7 +10,7 @@ using SpaceMercs.SpaceMercsCode.Character;
 namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 [Pool(typeof(CosmopaladinUniqueCardPool))]
-public class UnknownTargetEnemy() : UnknownBase(-1, CardType.Status, CardRarity.Token, TargetType.AnyEnemy)
+public class UnknownTargetEnemy() : UnknownBase(-1, CardType.Status, CardRarity.None, TargetType.AnyEnemy)
 {
     
 }
