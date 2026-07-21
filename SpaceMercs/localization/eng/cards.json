@@ -333,9 +333,16 @@
   "SPACEMERCS-ICE_BLOCK.description": "Gain {FrostArmorPower:diff()} [gold]Frost Armor[/gold].",
   "SPACEMERCS-ICE_BLOCK.title": "Ice Block",
 
-  "SPACEMERCS-GREATER_PURPOSE.description": "Does nothing. DO NOT PICK THIS! IT IS USELESS!",
+  "SPACEMERCS-GREATER_PURPOSE.description": "Choose a card in your hand that costs {IfUpgraded:show:{energyPrefix:energyIcons(3)}|{energyPrefix:energyIcons(2)}} or less.\n[gold]Exhaust[/gold] that card.\nIt is played at the start of each of your turns.",
+  "SPACEMERCS-GREATER_PURPOSE.selectionScreenPrompt": "Choose a card to [gold]Exhaust[/gold].",
   "SPACEMERCS-GREATER_PURPOSE.title": "Greater Purpose",
 
   "SPACEMERCS-OVERWHELMED.description": "{IfUpgraded:show:Can be removed at a rest site.}",
-  "SPACEMERCS-OVERWHELMED.title": "Overwhelmed"
+  "SPACEMERCS-OVERWHELMED.title": "Overwhelmed",
+
+  "SPACEMERCS-BLASPHEMY.description": "Deal {Damage:diff()} damage to ALL enemies.\nApply {SuppressPower:diff()} [gold]Suppress[/gold] to ALL enemies.",
+  "SPACEMERCS-BLASPHEMY.title": "Blasphemy",
+
+  "SPACEMERCS-KEPT_PROMISE.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease this damage {IfUpgraded:show:and|or} [gold]Block[/gold] by 2 permanently.",
+  "SPACEMERCS-KEPT_PROMISE.title": "Kept Promise"
 }

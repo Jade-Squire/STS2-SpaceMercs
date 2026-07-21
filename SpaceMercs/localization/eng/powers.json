@@ -2,127 +2,172 @@
   "SPACEMERCS-CURE_POWER.description": "Heal an amount of hp equal to [color=springgreen]Cure[/color] stacks at the end if your turn. Every instance of unblocked damage halves its [color=springgreen]Cure[/color].",
   "SPACEMERCS-CURE_POWER.smartDescription": "Heal [blue]{Amount}[/blue] hp at the end of your turn. Every instance of unblocked damage halves your [color=springgreen]Cure[/color].",
   "SPACEMERCS-CURE_POWER.title": "Cure",
+  
   "SPACEMERCS-SCORCH_POWER.description": "When the creature reaches [blue]10[/blue] stacks, it [color=orangered]Ignites[/color], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to the creature during your turn, the enemy loses half its stacks.",
   "SPACEMERCS-SCORCH_POWER.smartDescription": "When this creature reaches [blue]10[/blue] stacks, it [color=orangered]Ignites[/color], dealing [blue]30[/blue] damage to it and [blue]15[/blue] to all other enemies. If no stacks are applied to this creature during your turn, this enemy loses half its stacks.",
   "SPACEMERCS-SCORCH_POWER.title": "Scorch",
+  
   "SPACEMERCS-THERMITE_POWER.description": "At the start of your turn, apply [orange]Scorch[/orange] to ALL enemies equal to [gold]Thermite[/gold] stacks.",
   "SPACEMERCS-THERMITE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [orange]Scorch[/orange] to ALL enemies.",
   "SPACEMERCS-THERMITE_POWER.title": "Thermite",
+  
   "SPACEMERCS-ASHES_TO_ASHES_POWER.description": "Whenever you play a card containing \"Grenade\" without [gold]Exhaust[/gold], add a 0 cost copy with [gold]Exhaust[/gold] to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES_POWER.smartDescription": "Whenever you play a card containing \"Grenade\" without [gold]Exhaust[/gold], add [blue]{Amount}[/blue] 0 cost cop{Amount:plural(en):ies|y|ies} with [gold]Exhaust[/gold] to your hand.",
   "SPACEMERCS-ASHES_TO_ASHES_POWER.title": "Ashes to Ashes",
+  
   "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.description": "Whenever you apply [orange]Scorch[/orange], apply [blue]1[/blue] more.",
   "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.smartDescription": "Whenever you apply [orange]Scorch[/orange], apply [blue]{Amount}[/blue] more.",
   "SPACEMERCS-PERCUSSIVE_FLAMES_POWER.title": "Percussive Flames",
+  
   "SPACEMERCS-FORGE_MASTER_POWER.description": "[color=orangered]Ignitions[/color] you cause apply 2 [orange]Scorch[/orange] to ALL other enemies. ALL [color=orangered]Ignitions[/color] deal 30 damage to all other enemies instead of 15.",
   "SPACEMERCS-FORGE_MASTER_POWER.smartDescription": "[color=orangered]Ignitions[/color] you cause apply [blue]{Amount}[/blue] [orange]Scorch[/orange] to ALL other enemies. ALL [color=orangered]Ignitions[/color] deal 30 damage to all other enemies instead of 15.",
   "SPACEMERCS-FORGE_MASTER_POWER.title": "Forge Master",
+  
   "SPACEMERCS-BURNING_TREADS_POWER.description": "Whenever anybody plays a card, this creature gains 1 [orange]Scorch[/orange].",
   "SPACEMERCS-BURNING_TREADS_POWER.smartDescription": "Whenever anybody plays a card, this creature gains [blue]{Amount}[/blue] [orange]Scorch[/orange].",
   "SPACEMERCS-BURNING_TREADS_POWER.title": "Burning Treads",
+  
   "SPACEMERCS-FROST_ARMOR_POWER.description": "Gain [gold]Block[/gold] equal to the amount of [gold]Slowed[/gold] on enemies at the end of your turn. Lose [gold]Frost Armor[/gold] at the start of your turn.",
   "SPACEMERCS-FROST_ARMOR_POWER.smartDescription": "Gain [gold]Block[/gold] equal to the amount of [gold]Slowed[/gold] on enemies at the end of your turn for [blue]{Amount}[/blue] turn{Amount:plural(en):||s}. Lose a [gold]Frost Armor[/gold] at the start of your turn.",
   "SPACEMERCS-FROST_ARMOR_POWER.title": "Frost Armor",
+  
   "SPACEMERCS-SLOWED_POWER.description": "Doubles stacks at the start of the players' turn. When the enemy has [blue]20[/blue] [color=cyan]Slowed[/color], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
   "SPACEMERCS-SLOWED_POWER.smartDescription": "Doubles stacks at the start of the players' turn. When the enemy has [blue]20[/blue] [color=cyan]Slowed[/color], [jitter][color=blue]Freeze[/color][/jitter] the enemy.",
   "SPACEMERCS-SLOWED_POWER.title": "Slowed",
+  
   "SPACEMERCS-FROZEN_POWER.description": "The creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If it is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
   "SPACEMERCS-FROZEN_POWER.smartDescription": "This creature is [jitter][color=blue]Frozen[/color][/jitter] skipping its next turn. If this creature is attacked, it [gold]Shatters[/gold] dealing [blue]20[/blue] damage and applying [blue]3[/blue] [gold]Weak[/gold].",
   "SPACEMERCS-FROZEN_POWER.title": "Frozen",
+  
   "SPACEMERCS-HUNGER_POWER.description": "Gain Energy equal to stacks now and at the start of your next turn. Shuffle that many [gold]Voids[/gold] into your draw pile.",
   "SPACEMERCS-HUNGER_POWER.smartDescription": "When you gain [gold]Hunger[/gold], shuffle that many [gold]Voids[/gold] into your draw pile. Gain {Amount} Energy at the start of your next turn.",
   "SPACEMERCS-HUNGER_POWER.title": "Hunger",
+  
   "SPACEMERCS-VOIDWALL_POWER.description": "Whenever an enemy hits your [gold]Block[/gold], apply [gold]Suppress[/gold] equal to your [gold]Voidwall[/gold].",
   "SPACEMERCS-VOIDWALL_POWER.smartDescription": "Whenever an enemy hits your [gold]Block[/gold], apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the enemy.",
   "SPACEMERCS-VOIDWALL_POWER.title": "Voidwall",
+  
   "SPACEMERCS-SUPPRESS_POWER.description": "Whenever the enemy takes unblocked damage, apply 1 [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
   "SPACEMERCS-SUPPRESS_POWER.smartDescription": "Whenever the enemy takes unblocked damage, apply [blue]1[/blue] [gold]Vulnerable[/gold] or [gold]Weak[/gold] (whichever is lower), then reduce [gold]Suppress[/gold] by 1",
   "SPACEMERCS-SUPPRESS_POWER.title": "Suppress",
+  
   "SPACEMERCS-VENGEANCE_POWER_BUFF.description": "Whenever you take unblocked damage, apply [blue]1[/blue] [gold]Suppress[/gold] to the attacker equal to your [gold]Vengeance[/gold].\nWhen it dies, gain [gold]Hunger[/gold] equal to 10 times your [gold]Vengeance[/gold].",
   "SPACEMERCS-VENGEANCE_POWER_BUFF.smartDescription": "Whenever you take unblocked damage, apply [blue]{Amount}[/blue] [gold]Suppress[/gold] to the attacker.\nWhen it dies, gain [gold]Hunger[/gold] equal to [blue]10[/blue] times your [gold]Vengeance[/gold].",
   "SPACEMERCS-VENGEANCE_POWER_BUFF.title": "Vengeance",
+  
   "SPACEMERCS-VENGEANCE_POWER_DEBUFF.description": "When this enemy dies, gain [gold]Hunger[/gold] equal to 10 times your [gold]Vengeance[/gold].",
   "SPACEMERCS-VENGEANCE_POWER_DEBUFF.smartDescription": "When this creature dies, gain [gold]Hunger[/gold] equal to [blue]10[/blue] times your [gold]Vengeance[/gold].",
   "SPACEMERCS-VENGEANCE_POWER_DEBUFF.title": "Vengeance",
+  
   "SPACEMERCS-DESOLATE_WILL_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, draw a card.",
   "SPACEMERCS-DESOLATE_WILL_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, draw [blue]{Amount}[/blue] card{Amount:plural(en):||s}.",
   "SPACEMERCS-DESOLATE_WILL_POWER.title": "Desolate Will",
+  
   "SPACEMERCS-EMPTY_EMBRACE_POWER.description": "[gold]Voids[/gold] lose [gold]Ethereal[/gold]. Whenever you draw a [gold]Void[/gold], deal damage to ALL enemies equal to stacks.",
   "SPACEMERCS-EMPTY_EMBRACE_POWER.smartDescription": "[gold]Voids[/gold] lose [gold]Ethereal[/gold]. Whenever you draw a [gold]Void[/gold], deal [blue]{Amount}[/blue] damage to ALL enemies.",
   "SPACEMERCS-EMPTY_EMBRACE_POWER.title": "Empty Embrace",
+  
   "SPACEMERCS-SATIATION_POWER.description": "[gold]Block[/gold] is not removed at the start of your next turn.",
   "SPACEMERCS-SATIATION_POWER.smartDescription": "[gold]Block[/gold] is not removed at the start of your next {Amount:plural(en):||[blue]{Amount}[/blue]} turn{Amount:plural(en):||s}.",
   "SPACEMERCS-SATIATION_POWER.title": "Satiation",
+  
   "SPACEMERCS-STARVATION_POWER.description": "Gain 1 [gold]Hunger[/gold] at the start of your turn. Increase this amount by 1. Deal damage to ALL enemies equal to unspent Energy at the end of your turn.",
   "SPACEMERCS-STARVATION_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Hunger[/gold] at the start of your turn. Increase this amount by [blue]{IncreaseAmt:diff()}[/blue]. Deal damage to ALL enemies equal to unspent energy at the end of your turn.",
   "SPACEMERCS-STARVATION_POWER.title": "Starvation",
+  
   "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.description": "Whenever you draw a [gold]Void[/gold], draw 1 card and gain 1 [gold]Amp[/gold].",
   "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.smartDescription": "Whenever you draw a [gold]Void[/gold], draw [blue]{Amount}[/blue] {Amount:plural(en):|card|cards} and gain [blue]{Amount}[/blue] [gold]Amp[/gold].",
   "SPACEMERCS-KNOWLEDGE_SHOCK_POWER.title": "Knowledge Shock",
+  
   "SPACEMERCS-AMP_POWER.description": "Whenever you play a card, deal damage equal to your [gold]Amp[/gold] to a random enemy and lose 1 [gold]Amp[/gold]. Whenever you take unblocked damage, take extra damage equal to your [gold]Amp[/gold].",
   "SPACEMERCS-AMP_POWER.smartDescription": "Whenever you play a card, deal [blue]{Amount}[/blue] damage to a random enemy and lose 1 [gold]Amp[/gold]. Whenever you take unblocked damage, take [blue]{Amount}[/blue] more.",
   "SPACEMERCS-AMP_POWER.title": "Amp",
+  
   "SPACEMERCS-JOLT_POWER.description": "When the [gold]Jolted[/gold] creature takes damage, up to X of that damage is dealt to another random enemy, where X is this creatures [gold]Jolt[/gold]. When [gold]Jolt[/gold] does damage this way, remove that many stacks.",
   "SPACEMERCS-JOLT_POWER.smartDescription": "When this creature takes damage, deal up to [blue]{Amount}[/blue] of that damage to another random enemy, then remove that many stacks.",
   "SPACEMERCS-JOLT_POWER.title": "Jolt",
+  
   "SPACEMERCS-PULSE_GRENADE_POWER.description": "At the start of your turn, apply 1 [gold]Jolt[/gold] per stack to ALL enemies.",
   "SPACEMERCS-PULSE_GRENADE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Jolt[/gold] to ALL enemies.",
   "SPACEMERCS-PULSE_GRENADE_POWER.title": "Pulse Grenade",
+  
   "SPACEMERCS-STURDY_CIRCUITRY_POWER.description": "Whenever you play a card that costs more than 2, refund energy up to your stacks of [gold]Sturdy Circuitry[/gold].",
   "SPACEMERCS-STURDY_CIRCUITRY_POWER.smartDescription": "Whenever you play a card that costs more than {energyPrefix:energyIcons(2)}, refund up to [blue]{Amount}[/blue]{energyPrefix:energyIcons(1)}.",
   "SPACEMERCS-STURDY_CIRCUITRY_POWER.title": "Sturdy Circuitry",
+  
   "SPACEMERCS-SEARING_VOLTAGE_POWER.description": "Whenever an enemy gains [orange]Scorch[/orange], they gain 3 [gold]Jolt[/gold].",
   "SPACEMERCS-SEARING_VOLTAGE_POWER.smartDescription": "Whenever an enemy gains [orange]Scorch[/orange], they also gain [blue]{Amount}[/blue] [gold]Jolt[/gold].",
   "SPACEMERCS-SEARING_VOLTAGE_POWER.title": "Searing Voltage",
+  
   "SPACEMERCS-BATTERY_POWER.description": "Gain [gold]Amp[/gold] at the start of your next turn.",
   "SPACEMERCS-BATTERY_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Amp[/gold] at the start of your next turn.",
   "SPACEMERCS-BATTERY_POWER.title": "Battery",
+  
   "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.description": "Whenever you take unblocked damage while you have [gold]Amp[/gold], apply 6 [gold]Jolt[/gold] to ALL enemies.",
   "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.smartDescription": "Whenever you take unblocked damage while you have [gold]Amp[/gold], apply {Amount} [gold]Jolt[/gold] to ALL enemies.",
   "SPACEMERCS-NEGATIVE_FEEDBACK_POWER.title": "Negative Feedback",
+  
   "SPACEMERCS-POSITIVE_FEEDBACK_POWER.description": "At the start of you turn, if you didn't take unblocked damage since last turn, gain 10 [gold]Amp[/gold].",
   "SPACEMERCS-POSITIVE_FEEDBACK_POWER.smartDescription": "At the start of you turn, if you haven't taken unblocked damage since last turn, gain [blue]{Amount}[/blue] [gold]Amp[/gold].",
   "SPACEMERCS-POSITIVE_FEEDBACK_POWER.title": "Positive Feedback",
+  
   "SPACEMERCS-CONSUMING_ENERGY_POWER.description": "The next time more than 3 energy is spent at once this turn, refund up to 3 energy.",
   "SPACEMERCS-CONSUMING_ENERGY_POWER.smartDescription": "The next {Amount:plural(en):|time|[blue]{Amount}[/blue] times} more than 3 energy is spent at once, refund up to 3 energy.",
   "SPACEMERCS-CONSUMING_ENERGY_POWER.title": "Consuming Energy",
+  
   "SPACEMERCS-RECRUDESCE_POWER.description": "When an [color=orangered]Ignition[/color] is triggered, apply 2 [orange]Scorch[/orange] and 2 [gold]Jolt[/gold] to ALL enemies.",
   "SPACEMERCS-RECRUDESCE_POWER.smartDescription": "When an [color=orangered]Ignition[/color] is triggered, apply [blue]{Amount}[/blue] [orange]Scorch[/orange] and [blue]{Amount}[/blue] [gold]Jolt[/gold] to ALL enemies.",
   "SPACEMERCS-RECRUDESCE_POWER.title": "Recrudesce",
+  
   "SPACEMERCS-GLACIAL_GUARD_POWER.description": "Whenever you're attacked this turn while you have [gold]Block[/gold], apply 1 [color=cyan]Slowed[/color] to the enemy.",
   "SPACEMERCS-GLACIAL_GUARD_POWER.smartDescription": "Whenever you're attacked this turn while you have [gold]Block[/gold], apply [blue]{Amount}[/blue] [color=cyan]Slowed[/color] to the enemy",
   "SPACEMERCS-GLACIAL_GUARD_POWER.title": "Glacial Guard",
+  
   "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.description": "When your [gold]Block[/gold] is broken this turn, apply 5 [color=cyan]Slowed[/color] to ALL enemies.",
   "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.smartDescription": "When your [gold]Block[/gold] is broken this turn, apply [blue]{Amount}[/blue] [color=cyan]Slowed[/color] to ALL enemies.",
   "SPACEMERCS-GLACIAL_GUARD_PLUS_POWER.title": "Glacial Guard+",
+  
   "SPACEMERCS-HOWLING_REVENGE_POWER.description": "Prevent death and heal to [blue]25%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
   "SPACEMERCS-HOWLING_REVENGE_POWER.smartDescription": "Prevent death and heal to [blue]25%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
   "SPACEMERCS-HOWLING_REVENGE_POWER.title": "Howling Revenge",
+  
   "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.description": "Prevent death and heal to [blue]75%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
   "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.smartDescription": "Prevent death and heal to [blue]75%[/blue] HP. [gold]Purge[/gold] the card that applied this when this is used.",
   "SPACEMERCS-HOWLING_REVENGE_PLUS_POWER.title": "Howling Revenge+",
+  
   "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.description": "Gain 20 [gold]Block[/gold] at the start of your next turn. You cannot see the cards you draw next turn.",
   "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.smartDescription": "Gain [blue]{Block:diff()}[/blue] [gold]Block[/gold] at the start of your next {Amount:plural(en):|turn|[blue]{Amount}[/blue] turns}. You cannot see the cards you draw {Amount:plural(en):|next turn|for the next [blue]{Amount}[/blue] turns}.",
   "SPACEMERCS-BLISSFUL_IGNORANCE_POWER.title": "Blissful Ignorance",
+  
   "SPACEMERCS-BLINDED_POWER.description": "You cannot see the cards you draw this turn.",
   "SPACEMERCS-BLINDED_POWER.smartDescription": "You cannot see the cards you draw this turn.",
   "SPACEMERCS-BLINDED_POWER.title": "Blinded",
+  
   "SPACEMERCS-FRIGID_FORTIFICATION_POWER.description": "Gain [gold]Frost Armor[/gold] next turn.",
   "SPACEMERCS-FRIGID_FORTIFICATION_POWER.smartDescription": "Gain [gold]Frost Armor[/gold] {Amount:plural(en):|next turn|for the next [blue]{Amount}[/blue] turns}.",
   "SPACEMERCS-FRIGID_FORTIFICATION_POWER.title": "Frigid Fortification",
+  
   "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.description": "Whenever you gain [gold]Hunger[/gold], gain 1 [gold]Frost Armor[/gold]",
   "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.smartDescription": "Whenever you gain [gold]Hunger[/gold], gain [blue]{Amount}[/blue] [gold]Frost Armor[/gold].",
   "SPACEMERCS-EMPTY_AND_UNMOVING_POWER.title": "Empty and Unmoving",
+  
   "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, apply that much [color=cyan]Slowed[/color] to that enemy.",
   "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.smartDescription": "{Amount:plural(en):|W|For the next [blue]{Amount}[/blue] turns, w}hen an enemy takes damage from [gold]Jolt[/gold]{Amount:plural(en):| this turn|}, apply that much [color=cyan]Slowed[/color] to that enemy.",
   "SPACEMERCS-QUICK_AND_RELENTLESS_POWER.title": "Quick and Relentless",
+  
   "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.description": "When an enemy takes damage from [gold]Jolt[/gold] this turn, gain that much [gold]Amp[/gold].",
   "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.smartDescription": "{Amount:plural(en):|W|For the next [blue]{Amount}[/blue] turns, w}hen an enemy takes damage from [gold]Jolt[/gold]{Amount:plural(en):| this turn|}, gain that much [gold]Amp[/gold].",
   "SPACEMERCS-QUICK_AND_RELENTLESS_PLUS_POWER.title": "Quick and Relentless+",
+  
   "SPACEMERCS-CHILLING_PAST_POWER.description": "Whenever a debuff is applied to an enemy, gain that much [gold]Temporary Strength[/gold]",
   "SPACEMERCS-CHILLING_PAST_POWER.smartDescription": "Whenever a debuff is applied to an enemy, gain {Amount:plural(en):|that|[blue]{Amount}[/blue] times as} much [gold]Temporary Strength[/gold].",
   "SPACEMERCS-CHILLING_PAST_POWER.title": "Chilling Past",
-  "SPACEMERCS-WARD_POWER.title": "Ward",
+  
   "SPACEMERCS-WARD_POWER.description": "When you receive unblocked damage, gain [gold]Block[/gold] equal to [gold]Ward[/gold] stacks and increase [gold]Ward[/gold] by [blue]1[/blue].\nResets at the start of your turn.",
-  "SPACEMERCS-WARD_POWER.smartDescription": "When you receive unblocked damage, gain [blue]{Amount}[/blue] [gold]Block[/gold] and gain increase your [gold]Ward[/gold] by [blue]1[/blue].\nResets back to [blue]{BaseVal:diff()}[/blue] at the start of your turn."
+  "SPACEMERCS-WARD_POWER.smartDescription": "When you receive unblocked damage, gain [blue]{Amount}[/blue] [gold]Block[/gold] and gain increase your [gold]Ward[/gold] by [blue]1[/blue].\nResets back to [blue]{BaseVal:diff()}[/blue] at the start of your turn.",
+  "SPACEMERCS-WARD_POWER.title": "Ward",
+
+  "SPACEMERCS-GREATER_PURPOSE_POWER.description": "Play the selected card at the start of each of your turns.",
+  "SPACEMERCS-GREATER_PURPOSE_POWER.smartDescription": "Play the selected card at the start of each of your turns.",
+  "SPACEMERCS-GREATER_PURPOSE_POWER.title": "Greater Purpose"
 }

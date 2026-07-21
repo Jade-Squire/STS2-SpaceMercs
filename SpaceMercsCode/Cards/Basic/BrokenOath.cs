@@ -1,4 +1,5 @@
-﻿using Godot;
+﻿using BaseLib.Abstracts;
+using Godot;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -12,12 +13,13 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
+using SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
 public class BrokenOath() : SpaceMercsCard(2,
     CardType.Attack, CardRarity.Basic,
-    TargetType.AnyEnemy)
+    TargetType.AnyEnemy), ITranscendenceCard
 {
     private bool _costReduced;
 
@@ -138,5 +140,10 @@ public class BrokenOath() : SpaceMercsCard(2,
         }
             
         base.AfterTransformedTo();
+    }
+
+    public CardModel GetTranscendenceTransformedCard()
+    {
+        return ModelDb.Card<Blasphemy>();
     }
 }

@@ -17,11 +17,23 @@ public class ThrowingHammer() : SpaceMercsCard(0,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<CurePower>(),
-        HoverTipFactory.FromPower<ScorchPower>()
-    ];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips
+    {
+        get
+        {
+            List<IHoverTip> list =
+            [
+                HoverTipFactory.FromPower<CurePower>(),
+                HoverTipFactory.FromPower<ScorchPower>()
+            ];
+            if (IsUpgraded)
+            {
+                list.Add(HoverTipFactory.FromPower<StrengthPower>());
+            }
+            return list;
+        }
+
+    }
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(3M, ValueProp.Move),
@@ -60,6 +72,5 @@ public class ThrowingHammer() : SpaceMercsCard(0,
     protected override void OnUpgrade()
     {
         DynamicVars[nameof(StrengthPower)].UpgradeValueBy(1);
-        //HoverTips.AddItem(HoverTipFactory.FromPower<StrengthPower>());
     }
 }

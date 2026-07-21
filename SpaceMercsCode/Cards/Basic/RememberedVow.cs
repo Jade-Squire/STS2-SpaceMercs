@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Abstracts;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -9,12 +10,13 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
+using SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
 public class RememberedVow() : SpaceMercsCard(1,
     CardType.Attack, CardRarity.Basic,
-    TargetType.AnyEnemy), IPermaScalingCard
+    TargetType.AnyEnemy), IPermaScalingCard, ITranscendenceCard
 {
     private const string _increaseBlockKey = "IncreaseBlock";
     private const string _increaseDamageKey = "IncreaseDamage";
@@ -231,5 +233,10 @@ public class RememberedVow() : SpaceMercsCard(1,
                 deckVersion.BuffFromPlay(0, DynamicVars[_increaseDamageKey].IntValue);
             }
         }
+    }
+
+    public CardModel GetTranscendenceTransformedCard()
+    {
+        return ModelDb.Card<KeptPromise>();
     }
 }

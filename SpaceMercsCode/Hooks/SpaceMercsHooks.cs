@@ -91,7 +91,7 @@ public static class SpaceMercsHooks
     {
         foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
         {
-            if (model is IEnemyJolted)
+            if (model is IEnemyJolted && joltedCreature != null)
             {
                 ((IEnemyJolted)model).AfterEnemyJolted(choiceContext, joltedCreature, dealer, cardSource, joltUsed);
             }

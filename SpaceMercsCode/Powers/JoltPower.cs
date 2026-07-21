@@ -19,27 +19,47 @@ public class JoltPower() : SpaceMercsPower
 
     public override PowerStackType StackType =>
         PowerStackType.Counter;
+    
+    private int _damageToDeal;
+    private Creature? _dealer;
+    private CardModel? _cardSource;
 
-    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
-        Creature? dealer, CardModel? cardSource)
+    public override async Task AfterCurrentHpChanged(Creature creature, decimal delta)
     {
-        if (target == Owner && result.TotalDamage > 0)
+        if (_damageToDeal > 0 && creature == Owner)
         {
             Creature? randomTarget = GetFriendlyTargetOtherThanMe();
-            int damageToDeal = Math.Min(result.TotalDamage, Amount);
+            int damageToDeal = Math.Min(_damageToDeal, Amount);
             if (randomTarget != null)
             {
                 Flash();
-                SpaceMercsHooks.BeforeEnemyJolted(CombatState, choiceContext, randomTarget, dealer, cardSource, damageToDeal);
-                await Cmd.CustomScaledWait(.2f, .4f);
+                await SpaceMercsHooks.BeforeEnemyJolted(CombatState, new ThrowingPlayerChoiceContext(), randomTarget, _dealer, _cardSource, damageToDeal);
+                await Cmd.CustomScaledWait(.1f, .2f);
+                await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), this, -damageToDeal, null, null);
                 VfxCmd.PlayOnCreature(randomTarget, "vfx/vfx_attack_lightning");
                 SfxCmd.Play("event:/sfx/characters/defect/defect_lightning_passive");
-                PowerCmd.ModifyAmount(choiceContext, this, -damageToDeal, null, null);
-                await CreatureCmd.Damage(choiceContext, randomTarget, new DamageVar(damageToDeal, ValueProp.Unpowered),
-                    Owner, null);
-                SpaceMercsHooks.AfterEnemyJolted(CombatState, choiceContext, randomTarget, dealer, cardSource, damageToDeal);
+                await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), randomTarget, new DamageVar(damageToDeal, ValueProp.Unpowered),
+                    null, null);
+                if(CombatState != null)
+                    await SpaceMercsHooks.AfterEnemyJolted(CombatState, new ThrowingPlayerChoiceContext(), randomTarget, _dealer, _cardSource, damageToDeal);
             }
+            _damageToDeal = 0;
+            _dealer = null;
+            _cardSource = null;
         }
+    }
+
+    public override decimal ModifyHpLostAfterOsty(Creature target, decimal amount, ValueProp props, Creature? dealer,
+        CardModel? cardSource)
+    {
+        if (target == Owner && amount > 0)
+        {
+            _damageToDeal = Math.Min((int)amount, Amount);
+            _dealer = dealer;
+            _cardSource = cardSource;
+        }
+
+        return base.ModifyHpLostAfterOsty(target, amount, props, dealer, cardSource);
     }
 
     private Creature? GetFriendlyTargetOtherThanMe()
