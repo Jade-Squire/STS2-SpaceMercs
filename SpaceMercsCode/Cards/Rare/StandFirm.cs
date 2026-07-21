@@ -158,6 +158,10 @@ public class StandFirm() : SpaceMercsCard(1,
 
     public void RemovedRememberedVow(CardModel cardRemoved)
     {
+        if (cardRemoved.Owner != Owner)
+        {
+            return;
+        }
         // make sure theres no more vows
         foreach (var card in Owner.Deck.Cards)
         {

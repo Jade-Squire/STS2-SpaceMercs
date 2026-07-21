@@ -14,7 +14,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Unique;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Basic;
 
-public class RememberedVow() : SpaceMercsCard(1,
+public class RememberedVow() : SpaceMercsCard(2,
     CardType.Attack, CardRarity.Basic,
     TargetType.AnyEnemy), IPermaScalingCard, ITranscendenceCard
 {
@@ -136,7 +136,7 @@ public class RememberedVow() : SpaceMercsCard(1,
     {
         if (card is BrokenOath && card.Owner == Owner)
         {
-            EnergyCost.SetCustomBaseCost(1);
+            EnergyCost.SetCustomBaseCost(2);
             CostReduced = false;
         }
         return base.TryModifyCardBeingAddedToDeck(card, out newCard);
@@ -154,7 +154,7 @@ public class RememberedVow() : SpaceMercsCard(1,
                 }
             }
             
-            EnergyCost.SetCustomBaseCost(0);
+            EnergyCost.SetCustomBaseCost(1);
             CostReduced = true;
         }
         return base.BeforeCardRemoved(card);
@@ -164,6 +164,8 @@ public class RememberedVow() : SpaceMercsCard(1,
     {
         List<UnwaveringStarBase> bases = new();
         List<UnwaveringStarOath> oaths = new();
+        List<Indecisive> indecisives = new();
+        List<StandFirm> standFirms = new();
 
         foreach (var card in Owner.Deck.Cards)
         {
@@ -179,6 +181,14 @@ public class RememberedVow() : SpaceMercsCard(1,
             {
                 oaths.Add((UnwaveringStarOath)card);
             }
+            else if (card is Indecisive)
+            {
+                indecisives.Add((Indecisive)card);
+            }
+            else if (card is StandFirm)
+            {
+                standFirms.Add((StandFirm)card);
+            }
         }
 
         foreach (var card in bases)
@@ -190,6 +200,17 @@ public class RememberedVow() : SpaceMercsCard(1,
         {
             card.RemovedRememberedVow(this);
         }
+
+        foreach (var card in indecisives)
+        {
+            card.RemovedRememberedVow(this);
+        }
+
+        foreach (var card in standFirms)
+        {
+            card.RemovedRememberedVow(this);
+        }
+        
         base.AfterTransformedTo();
     }
 
@@ -197,7 +218,7 @@ public class RememberedVow() : SpaceMercsCard(1,
     {
         if (CostReduced)
         {
-            EnergyCost.SetCustomBaseCost(0);
+            EnergyCost.SetCustomBaseCost(1);
         }
     }
 

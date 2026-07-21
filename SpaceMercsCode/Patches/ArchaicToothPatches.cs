@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Models.Relics;
 using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Character;
 
-namespace SpaceMercs.SpaceMercsCode.Relics;
+namespace SpaceMercs.SpaceMercsCode.Patches;
 
 [HarmonyPatch(typeof(ArchaicTooth), nameof(ArchaicTooth.UpdateHoverTips))]
 public class ArchaicToothUpdateHoverTipsPatch

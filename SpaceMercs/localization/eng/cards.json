@@ -321,7 +321,7 @@
   "SPACEMERCS-HEAT_SINK.description": "Remove your [color=springgreen]Cure[/color] and gain twice that much [gold]Block[/gold].\nYou don't lose [gold]Block[/gold] at the start of your next turn.",
   "SPACEMERCS-HEAT_SINK.title": "Heat Sink",
 
-  "SPACEMERCS-BROADSIDE.description": "Remove {IfUpgraded:show:half|ALL} your [gold]Block[/gold] and deal {Damage:diff()} damage to a random creature for each [gold]Block[/gold] you had.",
+  "SPACEMERCS-BROADSIDE.description": "Remove {IfUpgraded:show:half|ALL} your [gold]Block[/gold] and deal {Damage:diff()} damage to a random enemy for each [gold]Block[/gold] you had.",
   "SPACEMERCS-BROADSIDE.title": "Broadside",
 
   "SPACEMERCS-BULWARK.description": "Gain {WardPower:diff()} [gold]Ward[/gold].",

@@ -57,9 +57,10 @@ public class Traveler : CustomAncientModel
             return relic != null && !relic.IsAllowedAtNeow(Owner);
         }));
         List<EventOption> items = new();
-        items.AddRange(list2.ToList().UnstableShuffle(Rng).Take(1));
+        items.AddRange(list2.ToList().UnstableShuffle(Rng).Take(Owner.Character is Cosmopaladin? 1 : 2));
         items.Add(eventOption);
-        items.Add(RelicOption<FocusedLight>());
+        if(Owner.Character is Cosmopaladin)
+            items.Add(RelicOption<FocusedLight>());
         return items;
     }
 

@@ -5,7 +5,7 @@
   "THE_ARCHITECT.talk.SPACEMERCS-COSMOPALADIN.0-attack": "Both",
 
   "SPACEMERCS-TRAVELER.epithet": "Source of Light",
-  "SPACEMERCS-TRAVELER.talk.ANY.0-0r.ancient": "Rise Guardian.",
-  "SPACEMERCS-TRAVELER.talk.firstVisitEver.0-0.ancient": "Rise Guardian.",
+  "SPACEMERCS-TRAVELER.talk.ANY.0-0r.ancient": "Rise [sine][gold]Guardian[/gold][/sine].",
+  "SPACEMERCS-TRAVELER.talk.firstVisitEver.0-0.ancient": "Rise [sine][gold]Guardian[/gold][/sine].",
   "SPACEMERCS-TRAVELER.title": "Traveler"
 }

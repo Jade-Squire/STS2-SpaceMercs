@@ -25,7 +25,23 @@ public class FocusedLight() : SpaceMercsRelic
 
     public override async Task AfterObtained()
     {
-        List<CardModel> cardsToRemove = Owner.Deck.Cards.ToList().FindAll(card => !card.Keywords.Contains(CardKeyword.Eternal) && card is not RememberedVow && card is not BrokenOath && card is not StrikeCosmopaladin && card is not DefendCosmopaladin);
+        int strikes = 0;
+        int defends = 0;
+        List<CardModel> cardsToRemove = new();
+        
+        foreach (var card in Owner.Deck.Cards)
+        {
+            if (strikes < 2 && card is StrikeCosmopaladin)
+            {
+                cardsToRemove.Add(card);
+                strikes++;
+            }
+            else if (defends < 2 && card is DefendCosmopaladin)
+            {
+                cardsToRemove.Add(card);
+                defends++;
+            }
+        }
 
         foreach (var card in cardsToRemove)
         {

@@ -77,6 +77,8 @@ public class HonorTheFallen() : SpaceMercsCard(2,
         AddKeyword(CardKeyword.Retain);
     }
 
+    protected override void AfterDowngraded() => UpdateStats();
+
     public void BuffCard()
     {
         BuffStats(DynamicVars["BlockIncrease"].IntValue);

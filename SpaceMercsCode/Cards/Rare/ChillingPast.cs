@@ -37,6 +37,7 @@ public class ChillingPast() : SpaceMercsCard(2,
     
     public override Task BeforeCardRemoved(CardModel card)
     {
+        
         if (Owner.Deck.Cards.Contains(this))
         {
             if (card is BrokenOath)
@@ -50,6 +51,10 @@ public class ChillingPast() : SpaceMercsCard(2,
 
     public void RemovedBrokenOath(CardModel cardRemoved)
     {
+        if (cardRemoved.Owner != Owner)
+        {
+            return;
+        }
         // make sure theres no more vows
         foreach (var card in Owner.Deck.Cards)
         {

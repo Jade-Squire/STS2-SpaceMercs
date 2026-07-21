@@ -113,6 +113,9 @@ public class BrokenOath() : SpaceMercsCard(2,
     {
         List<UnwaveringStarBase> bases = new();
         List<UnwaveringStarVow> vows = new();
+        List<Indecisive> indecisives = new();
+        List<ChillingPast> chillingPasts = new();
+
         foreach (var card in Owner.Deck.Cards)
         {
             if (card is RememberedVow)
@@ -127,6 +130,14 @@ public class BrokenOath() : SpaceMercsCard(2,
             {
                 vows.Add((UnwaveringStarVow)card);
             }
+            else if (card is Indecisive)
+            {
+                indecisives.Add((Indecisive)card);
+            }
+            else if (card is ChillingPast)
+            {
+                chillingPasts.Add((ChillingPast)card);
+            }
         }
 
         foreach (var card in bases)
@@ -138,7 +149,17 @@ public class BrokenOath() : SpaceMercsCard(2,
         {
             card.RemovedBrokenOath(this);
         }
-            
+
+        foreach (var card in indecisives)
+        {
+            card.RemovedBrokenOath(this);
+        }
+
+        foreach (var card in chillingPasts)
+        {
+            card.RemovedBrokenOath(this);
+        }
+
         base.AfterTransformedTo();
     }
 

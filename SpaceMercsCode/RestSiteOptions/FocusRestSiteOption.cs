@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using SpaceMercs.SpaceMercsCode.Cards.Unique;
 
-namespace SpaceMercs.SpaceMercsCode;
+namespace SpaceMercs.SpaceMercsCode.RestSiteOptions;
 
 public class FocusRestSiteOption(Player owner) : CustomRestSiteOption(owner)
 {

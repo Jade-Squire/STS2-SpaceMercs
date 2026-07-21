@@ -89,6 +89,7 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
     {
 
     }
+    protected override void AfterDowngraded() => UpdateStats();
 
     public override Task BeforeCardRemoved(CardModel card)
     {
@@ -105,6 +106,10 @@ public class UnwaveringStarVow() : SpaceMercsCard(2,
 
     public void RemovedBrokenOath(CardModel cardRemoved)
     {
+        if (cardRemoved.Owner != Owner)
+        {
+            return;
+        }
         // make sure theres no more vows
         foreach (var card in Owner.Deck.Cards)
         {

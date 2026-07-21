@@ -54,6 +54,10 @@ public class CantDieAgain() : SpaceMercsCard(3,
 
     private void HpChanged(int oldHp, int newHp)
     {
+        if (Pile == null)
+            return;
+        if (Pile.Type == PileType.Deck)
+            return;
         if (Owner.Creature.MaxHp / 2 > newHp)
         {
             EnergyCost.SetThisCombat(0);

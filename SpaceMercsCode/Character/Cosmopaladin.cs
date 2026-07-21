@@ -24,15 +24,15 @@ public class Cosmopaladin : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<Jetpack>(),
         ModelDb.Card<RememberedVow>(),
         ModelDb.Card<BrokenOath>(),
-        ModelDb.Card<ThrowingHammer>(),
-        ModelDb.Card<IncendiaryGrenade>(),
-        ModelDb.Card<HammerStrike>(),
         ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<StrikeCosmopaladin>(),
         ModelDb.Card<StrikeCosmopaladin>(),
+        ModelDb.Card<StrikeCosmopaladin>(),
+        ModelDb.Card<StrikeCosmopaladin>(),
+        ModelDb.Card<DefendCosmopaladin>(),
+        ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>(),
         ModelDb.Card<DefendCosmopaladin>()

@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using SpaceMercs.SpaceMercsCode.Cards;
+using SpaceMercs.SpaceMercsCode.RestSiteOptions;
 
 namespace SpaceMercs.SpaceMercsCode.Cards.Unique;
 
