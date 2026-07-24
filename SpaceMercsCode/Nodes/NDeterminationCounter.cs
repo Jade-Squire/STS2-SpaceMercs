@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Runs;
 using SpaceMercs.SpaceMercsCode.Cards;
 using SpaceMercs.SpaceMercsCode.CombatState;
 using SpaceMercs.SpaceMercsCode.GameActions;
+using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Nodes;
 
@@ -72,6 +73,12 @@ public partial class NDeterminationCounter : NClickableControl
                 Visible = true;
                 return;
             }
+        }
+
+        if (_player.GetRelic<FrozenCoat>() != null)
+        {
+            Visible = true;
+            return;
         }
 
         Visible = cosmo.Determination > 0;

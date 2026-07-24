@@ -10,6 +10,7 @@ using SpaceMercs.SpaceMercsCode.Cards.Basic;
 using SpaceMercs.SpaceMercsCode.Cards.Common;
 using SpaceMercs.SpaceMercsCode.Cards.Uncommon;
 using SpaceMercs.SpaceMercsCode.Cards.Unique;
+using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Relics;
@@ -56,12 +57,37 @@ public class FocusedLight() : SpaceMercsRelic
             bundles.Add(source);
         }
 
+        Subclasses subclass = Subclasses.Lightless;
         foreach (var card in await CardSelectCmd.FromChooseABundleScreen(Owner, bundles))
         {
+            if (subclass == Subclasses.Lightless)
+            {
+                if (card is HammerStrike)
+                {
+                    subclass = Subclasses.Solar;
+                }
+                else if (card is PurgingMaw)
+                {
+                    subclass = Subclasses.Void;
+                }
+                else if (card is Poke)
+                {
+                    subclass = Subclasses.Arc;
+                }
+                else if (card is Icefall)
+                {
+                    subclass = Subclasses.Stasis;
+                }
+            }
+
             await CardPileCmd.Add(card, PileType.Deck);
         }
         await CardPileCmd.Add(Owner.RunState.CreateCard<Overwhelmed>(Owner), PileType.Deck);
-        
+        AutoResponsiveCuirass? relic = Owner.GetRelic<AutoResponsiveCuirass>();
+        if (relic != null)
+        {
+            relic.Subclass = subclass;
+        }
     }
 
     private List<IReadOnlyList<CardModel>> GenerateBundles(Player owner)

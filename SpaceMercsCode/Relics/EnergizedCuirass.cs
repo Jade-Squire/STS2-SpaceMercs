@@ -1,31 +1,29 @@
-﻿using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Map;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rewards;
 using MegaCrit.Sts2.Core.Rooms;
-using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using SpaceMercs.SpaceMercsCode.Cards.Rare;
-using SpaceMercs.SpaceMercsCode.Enums;
 using SpaceMercs.SpaceMercsCode.Powers;
+using SpaceMercs.SpaceMercsCode.Relics;
 
 namespace SpaceMercs.SpaceMercsCode.Relics;
 
-public class AutoResponsiveCuirass() : SpaceMercsRelic
+public class EnergizedCuirass() : SpaceMercsRelic
 {
     public override RelicRarity Rarity =>
         RelicRarity.Starter;
 
-    private int _hungerGained = 0;
+    private int _hungerGained;
 
-    private bool _debuffed = false;
-    private bool _buffed = false;
-    private bool _hasGainedEnergy = false;
+    private bool _buffed;
+    private bool _debuffed;
+    private bool _hasGainedEnergy;
 
     [SavedProperty]
     public bool GainedExtraReward
@@ -37,17 +35,6 @@ public class AutoResponsiveCuirass() : SpaceMercsRelic
             field = value;
         }
     } = false;
-
-    [SavedProperty]
-    public Subclasses Subclass
-    {
-        get;
-        set
-        {
-            AssertMutable();
-            field = value;
-        }
-    } = Subclasses.Lightless;
 
     public override Task AfterCombatVictory(CombatRoom room)
     {
@@ -73,7 +60,7 @@ public class AutoResponsiveCuirass() : SpaceMercsRelic
         {
             _hungerGained += (int)amount;
         }
-
+        
         if (applier == Owner.Creature)
         {
             if (!_buffed && power.Type == PowerType.Buff)
@@ -99,6 +86,7 @@ public class AutoResponsiveCuirass() : SpaceMercsRelic
     {
         _debuffed = false;
         _buffed = false;
+        _hasGainedEnergy = false;
         return base.AfterSideTurnStart(side, participants, combatState);
     }
 }

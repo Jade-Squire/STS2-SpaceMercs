@@ -27,10 +27,29 @@
   "SPACEMERCS-PORTABLE_IGLOO.description": "At the start of combat, add an [gold]Ice Block[/gold] to your hand.",
   "SPACEMERCS-PORTABLE_IGLOO.flavor": "Surprisingly warm.",
   "SPACEMERCS-PORTABLE_IGLOO.title": "Portable Igloo",
-
-
+  
   "SPACEMERCS-FOCUSED_LIGHT.description": "Upon pickup, focus your deck around an element, but become [gold]Overwhelmed[/gold] with Light",
   "SPACEMERCS-FOCUSED_LIGHT.eventDescription": "Focus your deck around an element, but become [gold]Overwhelmed[/gold] with Light.",
   "SPACEMERCS-FOCUSED_LIGHT.flavor": "",
-  "SPACEMERCS-FOCUSED_LIGHT.title": "Focused Light"
+  "SPACEMERCS-FOCUSED_LIGHT.title": "Focused Light",
+  
+  "SPACEMERCS-ENERGIZED_CUIRASS.description": "Whenever you apply a buff and debuff in a single turn, gain {energyPrefix:energyIcons(1)}.",
+  "SPACEMERCS-ENERGIZED_CUIRASS.flavor": "",
+  "SPACEMERCS-ENERGIZED_CUIRASS.title": "Energized Cuirass",
+
+  "SPACEMERCS-FIREBALL.description": "At the start of combat, for each player, apply [blue]10[/blue] [orange]Scorch[/orange] to a random enemy.",
+  "SPACEMERCS-FIREBALL.flavor": "",
+  "SPACEMERCS-FIREBALL.title": "Fireball",
+
+  "SPACEMERCS-SHINING_FORK.description": "[gold]Hunger[/gold] is not lost at the start of your turn and instead gets decreased by [blue]1[/blue] when you draw a [gold]Void[/gold].",
+  "SPACEMERCS-SHINING_FORK.flavor": "",
+  "SPACEMERCS-SHINING_FORK.title": "Shining Fork",
+
+  "SPACEMERCS-FROZEN_COAT.description": "At the start of your turn, gain [blue]1[/blue] [gold]Frost Armor[/gold] and [blue]1[/blue] [rainbow]Determination[/rainbow].",
+  "SPACEMERCS-FROZEN_COAT.flavor": "",
+  "SPACEMERCS-FROZEN_COAT.title": "Frozen Coat",
+
+  "SPACEMERCS-LIGHTNING_IN_A_BOTTLE.description": "At the start of your turn, add a [gold]Bottle[/gold] to your hand.",
+  "SPACEMERCS-LIGHTNING_IN_A_BOTTLE.flavor": "[color=cyan][jitter]Bzzzzzt![/jitter][/color]",
+  "SPACEMERCS-LIGHTNING_IN_A_BOTTLE.title": "Lightning In A Bottle"
 }

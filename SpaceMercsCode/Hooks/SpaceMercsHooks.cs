@@ -99,4 +99,21 @@ public static class SpaceMercsHooks
             model.InvokeExecutionFinished();
         }
     }
+
+    public static bool ShouldLoseHungerAtTurnStart(ICombatState combatState, PlayerChoiceContext choiceContext, out AbstractModel? preventer)
+    {
+        foreach (AbstractModel model in IterateSpaceMercsCombatHookListeners(combatState))
+        {
+            if (model is IShouldLoseHunger)
+            {
+                if (!((IShouldLoseHunger)model).ShouldLoseHungerAtTurnStart())
+                {
+                    preventer = model;
+                    return false;
+                }
+            }
+        }
+        preventer = null;
+        return true;
+    }
 }

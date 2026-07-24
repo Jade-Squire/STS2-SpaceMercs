@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using SpaceMercs.SpaceMercsCode.Hooks;
 using SpaceMercs.SpaceMercsCode.Powers;
 using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 
@@ -46,7 +47,14 @@ public class HungerPower() : SpaceMercsPower
         {
             Flash();
             await PlayerCmd.GainEnergy(Amount, Owner.Player);
-            await PowerCmd.Remove(this);
+            AbstractModel? preventer;
+            if (!SpaceMercsHooks.ShouldLoseHungerAtTurnStart(combatState, choiceContext, out preventer))
+            {
+                if (preventer != null && preventer is IShouldLoseHunger)
+                    ((IShouldLoseHunger)preventer).AfterHungerLossPrevented();
+            }
+            else
+                await PowerCmd.Remove(this);
         }
     }
 }

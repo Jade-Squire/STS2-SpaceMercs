@@ -344,5 +344,17 @@
   "SPACEMERCS-BLASPHEMY.title": "Blasphemy",
 
   "SPACEMERCS-KEPT_PROMISE.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nIncrease this damage {IfUpgraded:show:and|or} [gold]Block[/gold] by 2 permanently.",
-  "SPACEMERCS-KEPT_PROMISE.title": "Kept Promise"
+  "SPACEMERCS-KEPT_PROMISE.title": "Kept Promise",
+
+  "SPACEMERCS-BOTTLE.description": "Interact with the bottle...",
+  "SPACEMERCS-BOTTLE.title": "Bottle",
+
+  "SPACEMERCS-PEER.description": "Gain {AmpPower:diff()} [gold]Amp[/gold].",
+  "SPACEMERCS-PEER.title": "Peer",
+
+  "SPACEMERCS-SHAKE.description": "Apply {JoltPower:diff()} [gold]Jolt[/gold]{IfUpgraded:show: to ALL enemies}.",
+  "SPACEMERCS-SHAKE.title": "Shake",
+
+  "SPACEMERCS-RELEASE.description": "Disable [gold]Lightning in a Bottle[/gold] for the rest of combat.\n{IfUpgraded:show:Triple|Double} your [gold]Amp[/gold] and the [gold]Jolt[/gold] on ALL enemies.",
+  "SPACEMERCS-RELEASE.title": "Release"
 }
